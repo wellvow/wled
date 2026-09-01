@@ -6,12 +6,11 @@ This branch is intended for the H705D controller. It includes the SM6812 firmwar
 
 | Path | Purpose |
 | --- | --- |
-| `firmware/SM6812/SK6812.bin` | Combined firmware image to load in ESP-Flasher |
-| `firmware/SM6812/firmware.bin` | Original application firmware |
+| `firmware/SM6812/SK6812.bin` | H705D/SM6812 firmware file to load in ESP-Flasher |
 | `firmware/SM6812/bootloader_dout_40m.bin` | Bootloader image |
 | `firmware/SM6812/partitions.bin` | Partition table |
 | `firmware/SM6812/boot_app0.bin` | Boot app image |
-| `firmware/SM6812/烧录Offset.txt` | Flash offsets for the separate image files |
+| `firmware/SM6812/FlashOffset.txt` | Flash offsets for the supporting image files |
 | `tools/ESP-Flasher.exe` | ESP-Flasher utility for Windows |
 | `drivers/CP210x_Universal_Windows_Driver_WIN7_8.zip` | CP210x USB-to-UART driver |
 
@@ -20,7 +19,7 @@ This branch is intended for the H705D controller. It includes the SM6812 firmwar
 1. Connect the controller to your Windows computer with a USB data cable.
 2. If no COM port appears, extract and install `drivers/CP210x_Universal_Windows_Driver_WIN7_8.zip`, then disconnect and reconnect the controller.
 3. Close any software that may be using the serial port, such as a serial monitor, another flashing utility, or a WLED logging window.
-4. Confirm that the controller model is H705D and that you are using the `SK6812.bin` file from this branch.
+4. Confirm that the controller model is H705D. `SK6812.bin` is the firmware file for this controller and is the only `.bin` file that should be selected in ESP-Flasher.
 
 ## Method B – Flash with ESP-Flasher
 
@@ -29,7 +28,7 @@ This procedure follows **Method B – Flash with ESP-Flasher** from the Wellvow 
 1. Run `tools/ESP-Flasher.exe`.
 2. Select the controller's COM port from the **Serial port** list. If you have just installed the driver, click the refresh button on the right.
 3. Click **Browse** beside the **Firmware** field.
-4. Select `firmware/SM6812/SK6812.bin`. This is the single combined firmware image required by this procedure.
+4. Select `firmware/SM6812/SK6812.bin`. This is the firmware file required by this procedure. Do not select the bootloader, partition, or boot app files in ESP-Flasher.
 5. Click **Flash ESP** to begin flashing.
 6. Keep the USB connection in place and wait until progress reaches 100% and the tool reports success.
 7. Power-cycle the controller, or disconnect and reconnect its USB cable.

@@ -6,10 +6,10 @@ For the complete procedure, file layout, safety notes, and SHA-256 checksums, se
 
 ## Package contents
 
-- `firmware/SM6812/SK6812.bin` — combined image to select in ESP-Flasher.
-- `firmware/SM6812/` — original SM6812 firmware binaries and offset reference.
+- `firmware/SM6812/SK6812.bin` — the H705D/SM6812 firmware file to select in ESP-Flasher.
+- `firmware/SM6812/` — the firmware plus supporting boot, partition, and offset files.
 - `tools/ESP-Flasher.exe` — Windows ESP-Flasher utility.
 - `drivers/CP210x_Universal_Windows_Driver_WIN7_8.zip` — CP210x serial driver package.
-- `docs/images/esp-flasher-load-bin.png` — annotated ESP-Flasher reference image.
+- `docs/images/esp-flasher-load-bin.png` — ESP-Flasher reference image showing `SK6812.bin` loaded.
 
 > Only use this firmware with the intended H705D/SM6812 controller hardware. Flashing an incompatible image may prevent the controller from booting.
