@@ -5,8 +5,6 @@ This guide explains how to flash the H705D ESP32 controller from a Mac through i
 ## Important Package Information
 
 - `firmware/SM6812/SK6812.bin` is the H705D/SM6812 application firmware.
-- `tools/ESP-Flasher.exe` is a Windows application and cannot run directly on macOS.
-- `drivers/CP210x_Universal_Windows_Driver_WIN7_8.zip` is a Windows driver and must not be installed on macOS.
 - For a complete recovery flash, use all four `.bin` files at the offsets listed below.
 
 ## 1. Connect the Controller
@@ -145,9 +143,9 @@ Use desktop **Chrome or Edge** on the Mac; Safari does not support the Web Seria
 
 ### Set the Correct Data GPIO
 
-The screenshot below currently shows `Data GPIO: 22`. Do not use GPIO22 for the H705D controller.
+The screenshot below shows `Data GPIO: 2`, which is the correct setting for the first H705D LED data output.
 
-![WLED LED Preferences Data GPIO field](images/wled-led-preferences-gpio.jpg)
+![WLED LED Preferences with Data GPIO set to 2](images/wled-led-preferences-gpio.png)
 
 Set **Data GPIO** according to the physical H705D output connector:
 
@@ -156,7 +154,7 @@ Set **Data GPIO** according to the physical H705D output connector:
 | First LED data output (OUT1) | `GPIO2` |
 | Second LED data output (OUT2) | `GPIO15` |
 
-- If the LED strip is connected to the **second output**, change the value shown in the screenshot from `22` to **`15`**.
+- If the LED strip is connected to the **second output**, change the value shown in the screenshot from `2` to **`15`**.
 - If the LED strip is connected to the **first output**, set it to **`2`**.
 - Click **Save** after changing the setting.
 
