@@ -2,7 +2,10 @@
 
 This branch contains the H705D controller firmware package, the Windows flashing utility, the CP210x USB-to-UART driver, and flashing/pin-assignment instructions.
 
-For the complete procedure, file layout, safety notes, and SHA-256 checksums, see [H705D flashing guide](docs/H705D-FLASHING-GUIDE.md).
+For the complete procedure, file layout, safety notes, and SHA-256 checksums, see:
+
+- [H705D Windows flashing guide](docs/H705D-FLASHING-GUIDE.md)
+- [H705D macOS flashing guide](docs/H705D-MACOS-FLASHING-GUIDE.md)
 
 ## Package contents
 
