@@ -129,13 +129,56 @@ Download the macOS asset, not the Windows `.exe`. If macOS blocks the applicatio
 
 For a new or fully erased controller, the complete esptool procedure above is preferred because it writes every required image at its documented offset. A single-file graphical flash of `SK6812.bin` should only be used when the controller already has the correct H705D bootloader and partition table.
 
-## 5. Can the WLED Website Flash This Firmware?
+## 5. Install Standard WLED Online and Configure H705D Manually
 
-### Official WLED Installer: Not for This Custom H705D Image
+Yes. The official [WLED web installer](https://install.wled.me/) can install standard WLED on the ESP32, after which the H705D GPIO assignments can be configured manually. This is a convenient option when standard WLED provides all the features you need.
 
-The official [WLED web installer](https://install.wled.me/) installs firmware supplied by the WLED project. It does not automatically select the custom H705D `SK6812.bin` from this repository. Using the normal **Install** button may replace the H705D build with generic WLED firmware and remove model-specific defaults.
+Use desktop **Chrome or Edge** on the Mac; Safari does not support the Web Serial workflow used by the installer.
 
-Therefore, do **not** use the standard WLED online installation flow when the goal is to install this exact H705D/SM6812 package.
+1. Connect the H705D controller to the Mac through USB.
+2. Open [install.wled.me](https://install.wled.me/).
+3. Click **Install** and select the CP2102 serial port.
+4. Select the standard ESP32 build. Select an Audioreactive build if microphone-driven effects are required and that option is offered for the selected WLED release.
+5. Wait for installation to finish without disconnecting USB or power.
+6. Connect to the `WLED-AP` Wi-Fi network. The default password is `wled1234`.
+7. Open `http://4.3.2.1`, then open **Config → LED Preferences**.
+
+### Set the Correct Data GPIO
+
+The screenshot below currently shows `Data GPIO: 22`. Do not use GPIO22 for the H705D controller.
+
+![WLED LED Preferences Data GPIO field](images/wled-led-preferences-gpio.jpg)
+
+Set **Data GPIO** according to the physical H705D output connector:
+
+| H705D connector | WLED Data GPIO |
+| --- | ---: |
+| First LED data output (OUT1) | `GPIO2` |
+| Second LED data output (OUT2) | `GPIO15` |
+
+- If the LED strip is connected to the **second output**, change the value shown in the screenshot from `22` to **`15`**.
+- If the LED strip is connected to the **first output**, set it to **`2`**.
+- Click **Save** after changing the setting.
+
+For an SK6812 RGBW strip, select the matching `SK6812/WS2814 RGBW` output type and configure the correct LED count and color order for the connected strip.
+
+### Configure Both Outputs
+
+If both physical outputs are in use:
+
+1. Configure the first LED output with **Data GPIO 2**.
+2. Click the **+** button in the LED outputs section.
+3. Configure the second LED output with **Data GPIO 15**.
+4. Enter the LED length for each output. WLED normally assigns the second output's start index after the end of the first output.
+5. Save and restart WLED.
+
+WLED supports multiple outputs and allows their GPIO pins, lengths, and color order to be configured at runtime.
+
+### Standard WLED Versus the H705D Firmware Package
+
+The official installer loads a standard WLED build, not this repository's custom `SK6812.bin`. Manual GPIO configuration makes the LED outputs usable, but any H705D-specific defaults or customizations included in `SK6812.bin` will not be installed automatically.
+
+Use the complete esptool procedure in this document if you specifically need the repository's H705D firmware. Use the official WLED installer when you prefer standard WLED and are comfortable configuring the controller manually.
 
 ### Browser Flashing Is Technically Possible
 
