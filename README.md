@@ -1,18 +1,14 @@
 # H705D / SM6812 firmware package
 
-This branch contains the H705D controller firmware package, the Windows flashing utility, the CP210x USB-to-UART driver, and flashing/pin-assignment instructions.
+This branch contains the H705D controller firmware package and macOS flashing, WLED Installer, and pin-assignment instructions.
 
-For the complete procedure, file layout, safety notes, and SHA-256 checksums, see:
-
-- [H705D Windows flashing guide](docs/H705D-FLASHING-GUIDE.md)
-- [H705D macOS flashing guide](docs/H705D-MACOS-FLASHING-GUIDE.md)
+For the complete procedure, file layout, safety notes, and SHA-256 checksums, see the [H705D macOS flashing guide](docs/H705D-MACOS-FLASHING-GUIDE.md).
 
 ## Package contents
 
-- `firmware/SM6812/SK6812.bin` — the H705D/SM6812 firmware file to select in ESP-Flasher.
+- `firmware/SM6812/SK6812.bin` — the H705D/SM6812 application firmware.
 - `firmware/SM6812/` — the firmware plus supporting boot, partition, and offset files.
-- `tools/ESP-Flasher.exe` — Windows ESP-Flasher utility.
-- `drivers/CP210x_Universal_Windows_Driver_WIN7_8.zip` — CP210x serial driver package.
-- `docs/images/esp-flasher-load-bin.png` — ESP-Flasher reference image showing `SK6812.bin` loaded.
+- `docs/H705D-MACOS-FLASHING-GUIDE.md` — macOS USB, esptool, WLED Installer, and GPIO configuration guide.
+- `docs/images/wled-led-preferences-gpio.png` — WLED LED Preferences reference image with Data GPIO set to 2.
 
 > Only use this firmware with the intended H705D/SM6812 controller hardware. Flashing an incompatible image may prevent the controller from booting.

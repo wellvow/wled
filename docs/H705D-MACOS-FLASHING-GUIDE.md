@@ -39,8 +39,6 @@ After installation:
 3. Restart the Mac if requested.
 4. Reconnect the controller and run `ls /dev/cu.*` again.
 
-Do not install the Windows CP210x ZIP file included in the H705D branch on a Mac.
-
 ## 3. Recommended Method — Espressif esptool
 
 Espressif's `esptool` works on both Intel and Apple silicon Macs. Python 3.10 or newer is recommended for the current release.
