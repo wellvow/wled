@@ -1,0 +1,1053 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#10151c"><title>WELLVOW STRIP</title><style>
+:root{--bg:#10151c;--card:#171d26;--card2:#232b36;--text:#f2f4f7;--sub:#8b93a0;--dim:#5f6b7a;--acc:#4b4fd6;--acct:#7f9cf0;--green:#2ea84f;--bl:#2a3442}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;background:var(--bg);color:var(--text);font:13px/1.45 system-ui,-apple-system,"PingFang SC",sans-serif;min-height:100vh}
+button,input,select{font:inherit;color:inherit}button{border:0;background:none;padding:0;cursor:pointer}
+.app{max-width:520px;margin:auto;padding:calc(14px + env(safe-area-inset-top)) 14px calc(28px + env(safe-area-inset-bottom))}
+.head{display:flex;align-items:center;gap:10px;margin-bottom:12px}.head .t{flex:1;min-width:0}.head h1{font-size:16px;font-weight:700;margin:0}.head .s{font-size:9px;color:var(--sub);margin-top:2px}
+.ib{width:32px;height:32px;border-radius:16px;background:var(--card);display:grid;place-items:center;flex:none}
+.bar{display:flex;align-items:center;gap:8px;border-radius:12px;padding:10px 11px;margin-bottom:10px;font-size:11px}
+.bar.y{background:rgba(240,200,40,.12);border:1px solid rgba(240,200,40,.35);color:#f0c828}.bar.g{background:rgba(46,168,79,.1);color:#7fe0a0}.bar.x{background:var(--card);color:var(--sub)}
+.bar .f{flex:1}.bar a,.bar .lk{color:var(--acct);font-size:10.5px}
+.card{background:var(--card);border-radius:14px;padding:12px;margin-bottom:12px}.hero{background:var(--card);border-radius:14px;padding:8px;margin-bottom:12px}
+canvas.pv{display:block;width:100%}
+.hf{display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding:0 4px}.fxn{font-size:10px;color:var(--acct)}
+.pw{width:36px;height:36px;border-radius:18px;display:grid;place-items:center;background:var(--card2)}.pw.on{background:var(--acc)}
+.sec{font-size:12px;color:var(--sub);margin-bottom:10px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{background:var(--card);border-radius:14px;padding:16px 8px;display:flex;flex-direction:column;align-items:center;gap:9px;font-size:12px;font-weight:600}
+.sl{display:flex;align-items:center;gap:9px;margin-bottom:8px}.sl label{font-size:10px;color:var(--sub);width:30px}.sl output{font-size:10px;color:var(--acct);width:34px;text-align:right}
+input[type=range]{flex:1;-webkit-appearance:none;appearance:none;height:26px;background:transparent;margin:0}
+input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:var(--card2)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:9px;background:#fff;margin-top:-7px}
+input[type=range]::-moz-range-track{height:4px;border-radius:2px;background:var(--card2)}input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:9px;background:#fff;border:0}
+.hint{font-size:9px;color:var(--dim);margin:10px 0 8px;line-height:15px}.blk{font-size:11px;color:var(--sub);margin-bottom:8px}
+.list{display:flex;flex-direction:column;gap:6px}.pr{background:var(--card);border-radius:12px;padding:8px;display:flex;align-items:center;gap:10px;border:1.5px solid transparent;text-align:left;width:100%}.pr.on{border-color:var(--acc)}
+.rd{width:20px;height:20px;border-radius:10px;border:2px solid var(--bl);display:grid;place-items:center;flex:none}.pr.on .rd{border-color:var(--acc)}.pr.on .rd:after{content:"";width:10px;height:10px;border-radius:5px;background:var(--acc)}
+.pn{flex:1;font-size:11.5px;font-weight:600}.ps{font-size:8.5px;color:var(--sub)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}.chip{background:var(--card);padding:6px 11px;border-radius:12px;font-size:10.5px;color:var(--sub)}.chip.on{background:var(--acc);color:#fff}
+.cats{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.cats::-webkit-scrollbar{display:none}.cats .chip{flex:none}
+.big{display:block;width:100%;background:var(--acc);border-radius:12px;padding:12px;text-align:center;color:#fff;font-size:12px;font-weight:600;margin-top:4px}.big.red{background:#e0473c}.big.ok{background:var(--green)}.big:disabled{opacity:.45}
+.cfg{background:var(--card);border-radius:12px;padding:12px;display:flex;align-items:center;gap:12px;margin-bottom:8px}.cfg .l{flex:1;font-size:12px}
+.st{width:26px;height:26px;border-radius:8px;background:var(--card2);display:grid;place-items:center;font-size:15px}.ni{width:54px;height:32px;border-radius:8px;background:var(--card2);border:1px solid var(--bl);text-align:center;font-size:12px;color:var(--text);font-variant-numeric:tabular-nums}
+.gr{background:var(--card);border-radius:12px;padding:13px;display:flex;justify-content:space-between;align-items:center;border:1.5px solid transparent;width:100%;font-size:12.5px;text-align:left}.gr.on{border-color:var(--acc)}
+.segs{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}.segrow{display:flex;gap:6px}.segslot{flex:1;min-width:0}
+.segt{width:100%;background:var(--card);border-radius:11px;padding:6px 4px;font-size:10px;color:var(--sub);display:flex;flex-direction:column;align-items:center;line-height:1.3}.segt.on{background:var(--acc);color:#fff}.segt small{font-size:8.5px;opacity:.8}
+.wheel{display:flex;gap:13px;align-items:center;margin-bottom:10px}.ring{position:relative;flex:none}.ring canvas{display:block;border-radius:50%}.ring .c{position:absolute;inset:0;display:grid;place-items:center;font-size:10px;font-weight:600;text-align:center;line-height:1.35;pointer-events:none}
+.stops{position:relative;height:52px}.stops .ln{position:absolute;top:11px;left:13px;right:13px;height:4px;border-radius:2px}.stops .d{position:absolute;top:2px;width:22px;height:22px;border-radius:50%;border:3px solid var(--bg);transform:translateX(-50%)}.stops .d.on{top:0;width:26px;height:26px;border-color:#fff}.stops .lb{position:absolute;top:30px;width:48px;text-align:center;font-size:8.5px;color:#5f6b7a;transform:translateX(-50%)}.stops .lb.on{color:#dfe4ea}
+.cap{background:var(--card);border-radius:13px;padding:11px;margin-bottom:10px}.cap .r{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:10px;color:var(--sub)}
+.pal{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.pb{width:34px;height:34px;border-radius:50%;border:2.5px solid transparent;overflow:hidden}.pb.on{border-color:#fff}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.mc{height:46px;border-radius:11px;padding:6px 8px;text-align:left;border:1.5px solid transparent;color:#fff;overflow:hidden;position:relative}.mc.on{border-color:#fff}.mc b{display:block;font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mc small{font-size:8px;opacity:.8;white-space:nowrap}.mc .hh{position:absolute;right:5px;top:4px;font-size:11px;opacity:.55}.mc .hh.on{opacity:1;color:#ff5a6e}
+.more{font-size:10px;color:var(--acct);text-align:center;padding:8px 0}
+.mask{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:20px;z-index:9}.box{background:var(--card);border-radius:16px;padding:16px;width:100%;max-width:400px;max-height:85vh;overflow:auto}.box h3{margin:0 0 12px;font-size:14px}
+.in{width:100%;background:#0d1117;border-radius:12px;padding:11px 12px;font-size:13px;color:var(--text);border:1px solid var(--bl);margin-bottom:8px}
+.bt2{display:flex;gap:8px}.bt2 button{flex:1;border-radius:12px;padding:11px;font-size:12px}.bt2 .no{background:var(--card2);color:var(--sub)}.bt2 .ok{background:var(--acc);color:#fff}
+.wi{background:var(--card2);border-radius:10px;padding:9px;margin-top:6px;border:1px solid transparent;width:100%;text-align:left}.wi.on{border-color:var(--acc)}.wi b{font-size:11.5px;display:block}.wi small{font-size:9px;color:var(--sub)}
+.wb{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}.wb button{background:var(--card2);border-radius:10px;padding:7px 10px;font-size:10.5px}.wb button.imp{background:rgba(75,79,214,.35);color:#c9d2ff}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#2a3140;color:#fff;padding:9px 16px;border-radius:12px;font-size:12px;opacity:0;transition:.25s;pointer-events:none;z-index:10}.toast.show{opacity:1}
+.net{display:flex;justify-content:space-between;background:#0d1117;border-radius:10px;padding:10px;margin-bottom:5px;width:100%;font-size:12px}.net small{font-size:10px;color:var(--sub)}
+.cal{display:flex;gap:10px;margin:10px 0}.cal button{flex:1;height:62px;border-radius:12px;color:#fff;font-weight:700;text-shadow:0 0 3px #000;border:2px solid #ffffff55;font-size:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}.cal button.on{border:4px solid #fff}.cal button.as{border-color:#7dff9b}.cal button small{font-size:10px;font-weight:400}
+.sch{background:var(--card);border-radius:12px;padding:12px;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}.sch input{background:var(--card2);border:0;border-radius:8px;padding:6px 8px;color:var(--acct);font-size:15px;font-weight:600}
+.tabs{display:flex;gap:8px;margin-bottom:14px}.tab{flex:1;text-align:center;padding:9px 0;border-radius:10px;background:var(--card);font-size:11.5px;color:var(--sub)}.tab.on{background:var(--acc);color:#fff}.sect{font-size:11.5px;font-weight:600;color:var(--text);margin:5px 0 8px}.pgrid{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}.pcard{width:calc(50% - 4px);box-sizing:border-box;background:var(--card);border-radius:11px;padding:10px}.phead{display:flex;align-items:center;gap:6px}.sdot{width:7px;height:7px;border-radius:4px;background:var(--dim);flex:none}.pname{flex:1;font-size:10px;font-weight:600;color:var(--text)}.pst{font-size:8.5px;color:var(--sub)}.pnum{width:58px;height:30px;border-radius:8px;background:var(--card2);color:var(--text);font-size:12px;text-align:center;border:0}.mline{display:flex;gap:3px;margin-top:9px}.mpx{flex:1;height:5px;border-radius:3px;background:var(--card2)}.apply{display:block;width:100%;text-align:center;padding:12px 0;border-radius:12px;background:var(--acc);color:#fff;font-size:12px;font-weight:600;margin-top:10px}.wnode{display:flex;align-items:center;gap:8px;border-top:.5px solid var(--bl);padding-top:9px;margin-top:9px}.pchk{width:18px;height:18px;border-radius:5px;border:1.5px solid var(--dim);display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;background:none;flex:none}.pchk.on{background:var(--acct);border-color:var(--acct)}.wname{flex:1;font-size:10.5px;color:var(--text)}.wlat{font-size:9px;color:var(--sub)}
+.ico{position:relative;border-radius:50%;background:#1b2230;border:2px solid rgba(255,255,255,.06);display:grid;place-items:center;flex:none}.ico.on{border-color:#fff}.ico .glow{position:absolute;border-radius:50%;opacity:.14}.ico svg{position:relative}.tile2{width:25%;height:103px;display:flex;flex-direction:column;align-items:center;padding:8px 4px;background:none;border:0}.tile2 .iw{position:relative}.tname{font-size:9.5px;color:var(--text);text-align:center;margin-top:5px;line-height:12px;height:24px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.tile2.on .tname{color:#fff}.pen{position:absolute;top:-3px;right:-5px;width:18px;height:18px;border-radius:9px;background:var(--card);border:1px solid #3a4453;display:grid;place-items:center;padding:0}.disc{width:58px;height:58px;border-radius:29px;overflow:hidden;display:flex;border:2px solid transparent}.disc.on{border-color:#fff}.disc span{flex:1}.disc.plus{background:var(--card);border:1.5px dashed #3a4453;display:grid;place-items:center;color:var(--acct);font-size:22px}.tabs2{display:flex;background:var(--card);border-radius:12px;padding:3px;margin-top:6px}.tab2{flex:1;text-align:center;padding:8px 0;border-radius:10px;font-size:12px;color:var(--sub);font-weight:600;background:none;border:0}.tab2.on{background:var(--acc);color:#fff}.catc{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:8px 0}.catc::-webkit-scrollbar{display:none}.catc .chip{flex:none;padding:7px 12px;font-size:11px}.rwin{overflow:hidden}.rwin .rg{display:flex;flex-wrap:wrap;transition:transform .25s}.rhint{font-size:9px;color:var(--dim);text-align:center;margin-top:2px;background:none;border:0;width:100%}.amask{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:20;display:flex;align-items:flex-end}.abox{background:var(--card);border-radius:18px 18px 0 0;padding:14px 14px 30px;width:100%;height:90%;box-sizing:border-box;display:flex;flex-direction:column;animation:up .22s}.ahead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;padding-top:6px;position:relative;touch-action:none}.agrip{position:absolute;top:-6px;left:50%;margin-left:-18px;width:36px;height:4px;border-radius:2px;background:#3a4453}.atitle{font-size:13px;font-weight:600}.aclose{font-size:11px;color:var(--acct);background:none;border:0}.abody{flex:1;overflow-y:auto}.acat{font-size:11px;color:var(--sub);margin:4px 0 2px}.agrid{display:flex;flex-wrap:wrap}@keyframes up{from{transform:translateY(40px);opacity:.6}to{transform:none;opacity:1}}.smask{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:21;display:flex;align-items:flex-end}.sheet{background:var(--bg);border-radius:18px 18px 0 0;padding:10px 16px 28px;width:100%;box-sizing:border-box;border-top:1px solid var(--bl);animation:up .22s}.sclose{display:block;margin-left:auto;width:28px;height:28px;background:none;border:0;color:var(--sub);font-size:18px}.ssec{font-size:12px;font-weight:600;margin:14px 0 8px}.stiny{font-size:9px;color:var(--sub)}.fav{width:34px;height:34px;border-radius:17px;border:1px solid var(--acct);background:none;display:grid;place-items:center;padding:0}.fav.on{background:var(--acc);border-color:var(--acc)}.sets{display:flex;flex-wrap:wrap;justify-content:space-between}.srow{width:48.5%;display:flex;align-items:center;gap:6px;background:var(--card);border-radius:20px;border:1.5px solid var(--bl);padding:7px 8px;margin-bottom:8px;box-sizing:border-box}.srow.on{border-color:var(--acc)}.snum{width:18px;height:18px;border-radius:9px;background:var(--card2);display:grid;place-items:center;font-size:9px;color:var(--sub);margin-right:2px}.srow.on .snum{background:var(--acc);color:#fff}.sdot2{width:18px;height:18px;border-radius:9px}.lvl{display:flex;align-items:center;gap:8px;margin-bottom:6px}.lvlbar{height:8px;border-radius:4px;background:var(--card2);overflow:hidden;position:relative}.lvlbar i{position:absolute;left:0;top:0;height:8px;background:#8b93a0}.lvlbar b{position:absolute;top:0;width:2px;height:8px;background:#f0c04a}.lvlvol{height:3px;border-radius:2px;background:var(--card2);overflow:hidden;margin-top:2px}.lvlvol i{display:block;height:3px;background:#3b7bff}.stopb{background:#e0473c;border-radius:10px;padding:7px 12px;color:#fff;font-size:11px;font-weight:600;border:0}.stopb.acc{background:var(--acc)}.dock{background:var(--bg);border-top:1px solid var(--bl)}.catrow{display:flex;align-items:center;gap:8px;margin-bottom:6px}.catrow .catc{padding:0;flex:1}.mcard{width:25%;height:88px;margin-bottom:8px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;padding-top:4px;background:none;border:0}.mcard .iw{position:relative}.heart{position:absolute;right:-6px;top:-6px;padding:4px;background:none;border:0;font-size:12px;line-height:1;color:rgba(255,255,255,.45)}.heart.on{color:#ff5a6e}.mname{font-size:9.5px;color:var(--text);text-align:center;margin-top:4px;line-height:12px;height:24px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.mcard.on .mname{color:#fff}.rolebox{margin-top:8px}.rolebox .chips{margin-top:4px}
+.capw{position:relative;min-height:72px;margin-bottom:6px}.caprow{padding-bottom:4px}.caplbl{white-space:nowrap}.modesec{margin-top:8px}.modesec .rg{display:flex;flex-wrap:wrap}.catrow{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+@media(min-width:900px){.app{max-width:780px}.mcard{width:16.666%}.tile2{width:16.666%}}.capbar{position:absolute;top:9px;left:4px;right:4px;height:46px;border-radius:23px;background:rgba(127,156,240,.07);border:1px solid rgba(127,156,240,.14)}.caprow{position:relative;display:flex;justify-content:space-between;padding:9px 4px 0}.capbtn{display:flex;flex-direction:column;align-items:center;gap:4px;background:none;border:0;padding:0}.capico{width:46px;height:46px;border-radius:23px;background:rgba(127,156,240,.06);display:grid;place-items:center;overflow:hidden}.caplbl{font-size:9px;color:var(--sub)}.pill{position:absolute;top:9px;height:46px;border-radius:23px;background:#171d26;display:flex;align-items:center;overflow:hidden;width:46px;transition:width .3s cubic-bezier(.4,0,.2,1)}.pill.left{left:4px}.pill.right{right:4px}.pill.open{width:calc(100% - 8px)}.pillico{width:46px;height:46px;border-radius:23px;background:var(--acc);display:grid;place-items:center;flex:none;border:0;padding:0}.pillbody{flex:1;display:flex;align-items:center;gap:10px;padding:0 14px;min-width:0;opacity:0;transition:opacity .25s .12s}.pill.open .pillbody{opacity:1}.pillbody input[type=range]{flex:1;min-width:0}.pillv{font-size:11px;color:#dfe4ea;width:36px;text-align:right;flex:none}.diropt{flex:1;text-align:center;padding:7px 0;border-radius:16px;font-size:11px;color:var(--sub);background:none;border:0}.diropt.on{background:var(--acc);color:#fff}.palb{background:none;border:0;padding:0;display:flex}.pie{border-radius:50%;display:inline-block;flex:none}.pie.on{box-shadow:0 0 0 2.5px #fff inset}.dock{position:fixed;left:50%;transform:translateX(-50%);width:100%;max-width:520px;box-sizing:border-box;bottom:0;z-index:5;margin:0;padding:8px 14px calc(10px + env(safe-area-inset-bottom))}
+</style></head><body><div id="app" class="app"></div><div id="toast" class="toast"></div>
+<script>
+'use strict';
+const ZH = /^zh/i.test((navigator.languages && navigator.languages[0]) || navigator.language || '');
+const T = (zh, en) => (ZH ? zh : en);
+document.documentElement.lang = ZH ? 'zh-CN' : 'en';
+/* ============================================================================
+ * WELLVOW STRIP 网页控制台 —— 与 App 的 open_strip 模块同一套页面结构与控制逻辑:
+ *   设备页(预览/电源/六个功能瓦片) → Presets & Saved / DIY / Music 律动 / 配置 / 分组 / 定时设置
+ * 所有控制都编成与 App 完全相同的 DP TLV 帧,经 POST /wellvow/dp?d=<hex> 交给固件同一个 handleDpSet(),
+ * 因此网页和 App 下发的字节、固件的处理路径完全一致。页面状态(上次效果/段配置/线序/DIY/定时/分组)
+ * 存在控制器 flash 的 /wvweb.json 里(经 WLED /upload),不依赖浏览器/IP,IP 变了资料也还在。
+ * ========================================================================== */
+const $=(s,r)=>(r||document).querySelector(s), $$=(s,r)=>[...(r||document).querySelectorAll(s)];
+const app=$('#app');
+const toast=(t)=>{const e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>e.classList.remove('show'),1800)};
+const h=(tag,attrs,...kids)=>{const e=document.createElement(tag);if(attrs)for(const k in attrs){const v=attrs[k];if(k==='class')e.className=v;else if(k==='style')e.style.cssText=v;else if(k.startsWith('on'))e.addEventListener(k.slice(2),v);else if(k==='html')e.innerHTML=v;else if(v===true)e.setAttribute(k,'');else if(v!=null&&v!==false)e.setAttribute(k,v);}
+  for(const k of kids.flat())if(k!=null&&k!==false)e.append(k.nodeType?k:document.createTextNode(String(k)));return e;};
+const ICON={back:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>',
+  power:(c)=>'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="'+c+'" stroke-width="2" stroke-linecap="round"><path d="M7 6a7.75 7.75 0 1 0 10 0M12 4v8"/></svg>',
+  wifi:(c)=>'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="'+c+'" stroke-width="2" stroke-linecap="round"><path d="M5 10a11 11 0 0 1 14 0M8 13.5a6.5 6.5 0 0 1 8 0"/><circle cx="12" cy="17.5" r="1" fill="'+c+'"/></svg>',
+  wifioff:(c)=>'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="'+c+'" stroke-width="2" stroke-linecap="round"><path d="M5 10a11 11 0 0 1 14 0M8 13.5a6.5 6.5 0 0 1 8 0M3 3l18 18"/><circle cx="12" cy="17.5" r="1" fill="'+c+'"/></svg>',
+  chev:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>',
+  tile:{hub:'<rect x="3" y="13" width="18" height="8" rx="2"/><path d="M9 13V9a3 3 0 0 1 6 0v4"/><circle cx="7" cy="17" r="1"/>',star:'<path d="M12 17.75l-6.17 3.25 1.18-6.88-5-4.87 6.91-1L12 2l3.09 6.26 6.91 1-5 4.87 1.18 6.88z"/>',brush:'<path d="M3 21v-4a4 4 0 1 1 4 4H3M21 3a16 16 0 0 0-12.8 10.2M21 3a16 16 0 0 1-10.2 12.8"/>',music:'<circle cx="6" cy="17" r="3"/><circle cx="16" cy="15" r="3"/><path d="M9 17V4h10v11"/>',layout:'<rect x="4" y="4" width="6" height="16" rx="2"/><rect x="14" y="4" width="6" height="16" rx="2"/>',cat:'<path d="M14 4h6v6h-6zM4 14h6v6H4zM17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0M7 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>'}};
+const svgIcon=(d,c)=>'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="'+c+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+d+'</svg>';
+
+/* ---------------- 效果表(与 App shared/fx2.js、shared/wledColorFx.js 一致) ---------------- */
+const ALL_FX='Solid|Android|Aurora|Blends|Blink|Blink Rainbow|Blurz|Bouncing Balls|Bpm|Breathe|Candle|Candle Multi|Chase|Chase 2|Chase 3|Chase Flash|Chase Flash Rnd|Chase Rainbow|Chase Random|Chunchun|Colorful|Colorloop|Colortwinkles|Colorwaves|Dancing Shadows|Dissolve|Dissolve Rnd|DJ Light|Drip|Dynamic|Dynamic Smooth|Fade|Fairy|Fairytwinkle|Fill Noise|Fire 2012|Fire Flicker|Fireworks|Fireworks 1D|Fireworks Starburst|Flow|Flow Stripe|Freqmap|Freqmatrix|Freqpixels|Freqwave|Glitter|Gradient|Gravcenter|Gravcentric|Gravfreq|Gravimeter|Halloween Eyes|Heartbeat|ICU|Juggle|Juggles|Lake|Lighthouse|Lightning|Loading|Matripix|Meteor|Meteor Smooth|Midnoise|Multi Comet|Noise 1|Noise 2|Noise 3|Noise 4|Noise Pal|Noisefire|Noisemeter|Noisemove|Oscillate|Pacifica|Palette|Percent|Perlin Move|Phased|Phased Noise|Pixels|Pixelwave|Plasma|Plasmoid|Popcorn|Pride 2015|Puddlepeak|Puddles|Railway|Rain|Rainbow|Rainbow Runner|Random Colors|Ripple|Ripple Peak|Ripple Rainbow|Rocktaves|Rolling Balls|Running|Running Dual|Saw|Scan|Scan Dual|Scanner|Scanner Dual|Sine|Sinelon|Sinelon Dual|Sinelon Rainbow|Solid Glitter|Solid Pattern|Solid Pattern Tri|Sparkle|Sparkle Dark|Sparkle+|Spots|Spots Fade|Stream|Stream 2|Strobe|Strobe Mega|Strobe Rainbow|Sunrise|Sweep|Sweep Random|Tetrix|Theater|Theater Rainbow|Traffic Light|Tri Fade|Tri Wipe|TV Simulator|Twinkle|Twinklecat|Twinklefox|Twinkleup|Two Dots|Washing Machine|Waterfall|Wavesins|Wipe'.split('|').map((name,id)=>({id,name}));
+const MUSIC_FX_IDS=new Set([6,27,42,43,44,45,48,49,50,51,56,61,64,72,81,82,84,87,88,95,97,139]);
+// 可改色 WLED 效果(进入 DIY):[id,中文名,色数,分类]
+const CB={'基础':'#5a5ee8','追逐':'#e0771a','扫描':'#2fa84f','点缀':'#d63a86','波纹':'#2fd1c5'};
+// 分类键保持中文(用于 ===/对象 key),只在界面上换成英文
+const CAT_T={'基础':'Basic','追逐':'Chase','扫描':'Scan','点缀':'Accent','波纹':'Wave','跳变':'Jump','流水':'Flow','七彩':'Rainbow','收藏':'Favorites'};
+const catName=c=>T(c,CAT_T[c]||c);
+const WLED_COLOR_FX=[[1,'安卓呼吸',2,'追逐'],[7,'弹跳球',3,'扫描'],[8,'节拍脉动',1,'波纹'],[10,'烛光',2,'基础'],[11,'多烛光',2,'基础'],[13,'双色追逐',2,'追逐'],[14,'三色追逐',3,'追逐'],[15,'追逐闪光',2,'追逐'],[16,'随机闪追',2,'追逐'],[17,'彩虹追逐',2,'追逐'],[18,'随机追逐',3,'追逐'],[19,'鸟群',2,'追逐'],[23,'色浪',1,'波纹'],[24,'舞动暗影',1,'波纹'],[25,'溶解',2,'点缀'],[28,'水滴',2,'扫描'],[31,'渐隐',2,'基础'],[32,'仙尘',2,'点缀'],[33,'仙尘闪',2,'点缀'],[34,'噪声填充',1,'波纹'],[35,'火苗',1,'基础'],[37,'烟花',2,'点缀'],[38,'线性烟花',2,'点缀'],[47,'渐变',2,'波纹'],[52,'万圣眼',2,'扫描'],[53,'心跳',2,'基础'],[54,'双眼',2,'扫描'],[57,'湖光',1,'波纹'],[59,'闪电',2,'扫描'],[60,'加载',2,'基础'],[62,'流星',1,'扫描'],[65,'多彗星',2,'扫描'],[66,'噪声1',1,'波纹'],[67,'噪声2',1,'波纹'],[68,'噪声3',1,'波纹'],[69,'噪声4',1,'波纹'],[77,'百分比',2,'基础'],[78,'柏林流动',2,'波纹'],[79,'相位',2,'波纹'],[80,'相位噪声',2,'波纹'],[83,'等离子',1,'波纹'],[85,'爆米花',3,'扫描'],[89,'铁轨',2,'追逐'],[90,'雨',2,'扫描'],[92,'彩虹跑',1,'波纹'],[98,'滚球',3,'扫描'],[99,'流动',2,'追逐'],[100,'双向流动',3,'追逐'],[101,'锯齿',2,'追逐'],[102,'扫描',3,'扫描'],[103,'双扫描',3,'扫描'],[104,'扫描仪',3,'扫描'],[105,'双扫描仪',3,'扫描'],[107,'正弦点',3,'扫描'],[108,'双正弦点',3,'扫描'],[110,'常亮闪粉',3,'基础'],[111,'固定图案',2,'基础'],[112,'三色图案',3,'基础'],[113,'火花',2,'点缀'],[114,'暗火花',2,'点缀'],[115,'火花+',2,'点缀'],[116,'光斑',2,'点缀'],[117,'渐隐光斑',2,'点缀'],[120,'频闪',2,'基础'],[121,'超级频闪',2,'基础'],[124,'扫入扫出',2,'追逐'],[126,'方块堆叠',2,'追逐'],[127,'跑马灯',2,'追逐'],[130,'三色渐隐',3,'基础'],[131,'三色扫入',3,'追逐'],[133,'闪烁点',2,'点缀'],[134,'猫眼闪',2,'点缀'],[135,'狐狸闪',2,'点缀'],[136,'随机闪',2,'点缀'],[137,'双点',3,'扫描'],[140,'正弦彩波',1,'波纹'],[141,'扫入',2,'追逐']]
+  .map(([id,cn,colors,cat])=>({id:'w'+id,name:T(cn,ALL_FX[id].name),sub:T(ALL_FX[id].name,CAT_T[cat]),fx:'wled',wledId:id,colors,block:CB[cat],cat}));
+const WLED_COLOR_CATS=['基础','追逐','扫描','点缀','波纹'];
+const DIY_BUILTIN_WLED_IDS=[0,4,9,12,58,76,91,2,29];
+const DIY_WLED_IDS=new Set([...WLED_COLOR_FX.map(e=>e.wledId),...DIY_BUILTIN_WLED_IDS]);
+const PRESET_FX=ALL_FX.filter(p=>!MUSIC_FX_IDS.has(p.id)&&!DIY_WLED_IDS.has(p.id));
+const MUSIC_FX=ALL_FX.filter(p=>MUSIC_FX_IDS.has(p.id));
+const MU_MODES=[T('频谱律动','Spectrum'),T('色相流动','Hue Flow'),T('节奏闪烁','Beat Blink'),T('低音脉冲','Bass Pulse')];
+// DIY 内置模式(App open_pix/fx.js MODE_GROUPS)与其 WLED 效果映射(App open_pix/index.js DIY_FX_WLED)
+const DIY_MODES=[
+  {id:'static',name:T('单色常亮','Solid'),sub:T('静态','Static'),fx:'static',colors:1,block:'#6d5ef0',cat:'基础'},{id:'breath',name:T('整备模式','Breathe'),sub:T('呼吸','Breath'),fx:'breath',colors:2,block:'#5a5ee8',cat:'基础'},{id:'blink',name:T('闪烁','Blink'),sub:T('明灭','On / Off'),fx:'blink',colors:1,block:'#4b8ad6',cat:'基础'},
+  {id:'jumpAll',name:T('整体跳变','Jump All'),sub:T('跳变','Jump'),fx:'jumpAll',colors:4,block:'#e0475a',cat:'跳变'},{id:'jumpSeq',name:T('依次跳变','Jump Sequence'),sub:T('段1→4','Seg 1→4'),fx:'jumpSeq',colors:1,block:'#e0771a',cat:'跳变'},{id:'altG',name:T('分组交替','Alternate'),sub:T('前2/后2','First 2 / Last 2'),fx:'altGroup',colors:2,block:'#d63a86',cat:'跳变'},
+  {id:'flow',name:T('脉冲扫描','Pulse Scan'),sub:T('流水','Flow'),fx:'flow',colors:3,block:'#34c759',cat:'流水'},{id:'pulse',name:T('流水追光','Chase'),sub:T('扫描','Scan'),fx:'pulse',colors:2,block:'#2fa84f',cat:'流水'},
+  {id:'rainbow',name:T('彩虹流动','Rainbow Flow'),sub:T('三色渐变','3-color gradient'),fx:'rainbow',colors:3,block:'#8b3dff',cat:'七彩'},{id:'aurora',name:T('极光闪烁','Aurora Flash'),sub:T('三色波','3-color waves'),fx:'auroraFlash',colors:3,block:'#2fd1c5',cat:'七彩'},{id:'neon',name:T('赛博霓虹','Cyber Neon'),sub:T('随机','Random'),fx:'random',colors:4,block:'#7b3de0',cat:'七彩'}];
+const DIY_FX_WLED={static:0,breath:9,blink:4,jumpAll:4,jumpSeq:12,altGroup:4,flow:76,pulse:58,rainbow:76,auroraFlash:34,random:29};   // rainbow→76 Palette 三色饱和渐变流动(10-22)
+const DIY_FX_PALETTE={flow:4,rainbow:4,auroraFlash:4};
+const DIY_CATS=['基础','跳变','流水','七彩'];
+const ALL_MODES=[...DIY_MODES,...WLED_COLOR_FX];
+const wledIdOf=m=>m.fx==='wled'?m.wledId:(DIY_FX_WLED[m.fx]!=null?DIY_FX_WLED[m.fx]:0);
+/* 与 App open_pix paletteOf 一致:WLED 模式按色数选调色板(以前发 0 = Party 七彩,吃调色板的效果会把所选颜色全忽略、三色只出两色) */
+const DIY_TONE_PALETTE_FX=new Set([35,23,24,34,57,66,67,68,69,83,78,79,80,8,62,21,76,89,92,29,134,135]),DIY_TONE_PALETTE_ID=253;   // 其余效果按色槽画,调色板发 0(发 3/5 会把两色揉成渐变)
+const diyPaletteFor=(fx,n)=>{const k=Math.max(1,Math.min(3,n||1));if(!DIY_TONE_PALETTE_FX.has(fx))return 0;if(k===1)return DIY_TONE_PALETTE_ID;if(k===2)return 3;return 4;};   // 火苗 / 噪声类:单色时用 黑→暗→本色→亮 的自定义调色板(槽 2),否则看不出颜色在动
+const tonePalette=(hex)=>{const c=hx(hex);const f=v=>'#'+v.map(x=>Math.max(0,Math.min(255,Math.round(x))).toString(16).padStart(2,'0')).join('');return ['#000000',f(c.map(x=>x*0.45)),f(c),f(c.map(x=>x+(255-x)*0.45))];};
+const paletteOf=m=>{if(m.fx!=='wled')return DIY_FX_PALETTE[m.fx]||0;return diyPaletteFor(m.wledId,m.colors||1);};
+const diyPalette=(fx,cols)=>diyPaletteFor(fx,(cols||[]).length||1);
+const SPEED_WLED=sp=>Math.round(25+(Math.max(1,Math.min(10,sp))-1)*(245-25)/9);
+const DEF={1:['#3a86e0'],2:['#e0475a','#3a86e0'],3:['#3a86e0','#8b3dff','#2fd1c5'],4:['#e0475a','#dba417','#34c759','#3a86e0']};
+const initSegColors=(colors,count)=>Array.from({length:count},()=>DEF[colors].slice());
+const PALETTES=[{name:T('海洋','Ocean'),cols:['#3a86e0','#2fd1c5','#8b3dff','#1e5c96']},{name:T('日落','Sunset'),cols:['#e0473c','#ff8c1a','#ffd23c','#d63a56']},{name:T('森林','Forest'),cols:['#34c759','#2fa84f','#a5d86a','#1e7c44']},{name:T('霓虹','Neon'),cols:['#ff4fa3','#8b3dff','#2fd1c5','#4b4fd6']}];
+const STOPL=[T('主色','Main'),T('过渡1','Blend 1'),T('过渡2','Blend 2'),T('过渡3','Blend 3')];
+const GROUPS=[{id:'living',name:T('客厅','Living Room')},{id:'kitchen',name:T('厨房','Kitchen')},{id:'entry',name:T('门口','Entry')},{id:'yard',name:T('庭院','Yard')},{id:'bedroom',name:T('卧室','Bedroom')}];
+const COLOR_ORDERS=['GRB','RGB','BRG','RBG','BGR','GBR'];
+
+/* ---------------- 预览模拟(移植 App shared/fx2.js wledFx / open_pix/fx.js wledDiyColor) ---------------- */
+const FX_SIM_MAP={0:['solid',210],1:['android',200],2:['aurora',200],3:['blends',null],4:['blink',210],5:['blink',null],6:['sparkle',260],7:['bounceballs',null],8:['bpm',null],9:['breathe',210],10:['candle',30],11:['candle',30],12:['chase',210],13:['chase2',210],14:['chase3',210],15:['chaseflash',200],16:['chaseflash',null],17:['theaterRb',null],18:['chaseRnd',null],19:['chunchun',180],20:['colorful',null],21:['colorloop',null],22:['twinkle',null],23:['colorwaves',210],24:['dancing',null],25:['dissolve',null],26:['dissolve',210],27:['plasma',null],28:['drip',null],29:['dynamic',null],30:['colorful',null],31:['fade',210],32:['fairy',null],33:['fairy',180],34:['noise',null],35:['fire',null],36:['fire',null],37:['fireworks',null],38:['fireworks',null],39:['fireworks',null],40:['flow',210],41:['stream',180],42:['plasma',null],43:['noise',null],44:['plasma',null],45:['noise',null],46:['glitter',null],47:['gradient',210],48:['scanner',30],49:['scanner',180],50:['scanner',300],51:['scanner',120],52:['halloween',null],53:['heartbeat',0],54:['icu',180],55:['juggle',null],56:['juggle',null],57:['lake',null],58:['lighthouse',200],59:['lightning',210],60:['loading',140],61:['comet',160],62:['meteor',30],63:['meteor',200],64:['noise',210],65:['multicomet',null],66:['noise',210],67:['noise',210],68:['noise',210],69:['noise',210],70:['plasma',null],71:['fire',null],72:['noise',210],73:['noise',210],74:['oscillate',210],75:['pacifica',null],76:['palette',210],77:['percent',140],78:['noise',210],79:['phased',280],80:['noise',210],81:['pixels',null],82:['comet',200],83:['plasma',null],84:['plasma',300],85:['popcorn',null],86:['pride',210],87:['scanner',260],88:['comet',200],89:['railway',210],90:['rain',null],91:['rainbow',null],92:['rainbowRun',null],93:['dynamic',null],94:['ripple',210],95:['ripple',null],96:['ripple',null],97:['plasma',280],98:['popcorn',null],99:['running',180],100:['running',300],101:['saw',40],102:['scan',180],103:['scan',300],104:['scanner',180],105:['scanner',300],106:['sine',210],107:['sinelon',null],108:['sinelon',null],109:['sinelon',null],110:['glitter',210],111:['pattern',210],112:['pattern',120],113:['sparkle',220],114:['sparkle',260],115:['sparkle',180],116:['spots',140],117:['spots',200],118:['stream',260],119:['stream',160],120:['strobe',null],121:['strobe',null],122:['strobe',null],123:['sunrise',null],142:['sunrise',null],124:['sweep',40],125:['sweep',280],126:['tetrix',null],127:['theater',50],128:['theaterRb',null],129:['trafficlight',null],130:['trifade',null],131:['triwipe',null],132:['tvsim',null],133:['twinkle',280],134:['twinkle',320],135:['twinkle',30],136:['twinkle',180],137:['twodots',210],138:['washing',null],139:['comet',180],140:['wavesins',null],141:['wipe',210]};
+const DIM='rgb(20,26,35)';
+const hsl=(hh,s,l)=>'hsl('+Math.round(((hh%360)+360)%360)+','+Math.round(s)+'%,'+Math.round(Math.max(0,Math.min(100,l)))+'%)';
+function h32(n){n=(n^61)^(n>>>16);n=n+(n<<3);n=n^(n>>>4);n=Math.imul(n,0x27d4eb2d);n=n^(n>>>15);return (n>>>0)/4294967295;}
+const hx=(s)=>{s=String(s).replace('#','');return [parseInt(s.slice(0,2),16),parseInt(s.slice(2,4),16),parseInt(s.slice(4,6),16)];};
+const N3=c=>typeof c==='string'?hx(c):c;
+const rg=(c,k)=>{c=N3(c);return 'rgb('+Math.round(c[0]*k)+','+Math.round(c[1]*k)+','+Math.round(c[2]*k)+')';};
+const mix=(a,b,t)=>{a=N3(a);b=N3(b);return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t];};
+/* pal:下发给灯带的调色板号。5 = Colors Only(WLED 把主色按位置分成三色块)、4 = Color Gradient(三色渐变);
+ * 这两种下主色 P 按像素位置取块色 / 渐变色,调色板驱动(rb)的家族也按块 / 渐变流动渲染 —— 否则三色配色组在预览里永远只见两色 */
+function wledFx(w,i,time,total,hue,cols,pal){
+  const H=(hue==null?210:hue), p=i/total, t=time, rb=(hue==null);
+  const cc=(cols&&cols.length)?cols.map(N3):null;
+  const blk=(c)=>!c||(!c[0]&&!c[1]&&!c[2]);
+  const rgbk=(c,f)=>'rgb('+Math.round(c[0]*f)+','+Math.round(c[1]*f)+','+Math.round(c[2]*f)+')';
+  const lf=(l)=>Math.max(0,Math.min(1,l/58));
+  const ncc=cc?cc.filter(c=>!blk(c)).length:0, palc=cc&&ncc>=2&&(pal===4||pal===5)?cc.filter(c=>!blk(c)):null;
+  const pcol=(q,f)=>{const n=palc.length,k=((q%1)+1)%1*n;if(pal===5)return rgbk(palc[Math.min(n-1,Math.floor(k))],f);const a=Math.floor(k)%n,b=(a+1)%n;return rgbk(mix(palc[a],palc[b],k-Math.floor(k)),f);};
+  if(rb&&palc)return pcol(p-t*0.12,1);   // 调色板驱动的效果(彩虹 / 调色板 / 流动 / 随机色…):所选颜色的块 / 渐变在流动
+  const P=(l,sat)=>palc?pcol(p,lf(l)):(cc?rgbk(cc[0],lf(l)):hsl(H,sat==null?80:sat,l));
+  const S=(l,sat)=>cc?(blk(cc[1])?DIM:rgbk(cc[1],lf(l))):hsl(H+150,sat==null?80:sat,l);
+  const T3=(l,sat)=>cc?((cc[2]&&!blk(cc[2]))?rgbk(cc[2],lf(l)):(blk(cc[1])?DIM:rgbk(cc[1],lf(l)))):hsl(H+240,sat==null?80:sat,l);
+  const BG=cc?(blk(cc[1])?DIM:rgbk(cc[1],1)):DIM;
+  switch(w){
+    case 'solid': return P(55);
+    case 'blink': return (Math.floor(t*4)%2===0)?(rb?hsl(t*90,85,58):P(58)):BG;
+    case 'strobe': return ((t*9%1)<0.12)?(rb?hsl(t*300,90,60):(cc?P(58):hsl(H,12,95))):BG;
+    case 'breathe': return P(8+46*Math.abs(Math.sin(t*1.6)));
+    case 'fade': return P(12+40*(0.5+0.5*Math.sin(t*1.2)),75);
+    case 'wipe': { const ph=(t*0.5)%2, fill=ph<1?ph:2-ph; return p<fill?(rb?hsl(p*360,85,55):P(55)):BG; }
+    case 'scan': { const hd=(Math.sin(t*2.2)+1)/2; return Math.abs(p-hd)<0.05?P(60):BG; }
+    case 'scanner': { const hd=(Math.sin(t*2.2)+1)/2, d=Math.abs(p-hd); return d<0.25?P(60-d*180):BG; }
+    case 'chase': { const head=(t*0.5)%1, d=((p-head)%1+1)%1; return d<0.15?(rb?hsl(p*360+t*60,85,58):P(58)):BG; }
+    case 'theater': return ((i+Math.floor(t*4))%3===0)?P(58):BG;
+    case 'theaterRb': return ((i+Math.floor(t*4))%3===0)?hsl(p*360+t*40,85,58):DIM;
+    case 'running': return P(15+45*((Math.sin(i*0.35-t*2.6)+1)/2));
+    case 'meteor': { const hp=(t*0.5)%1.3, d=hp-p; if(d<0)return BG; const k=Math.max(0,1-d*6); return k>0.03?P(18+58*k,70+20*k):BG; }
+    case 'comet': { const head=(t*0.6)%1, d=((head-p)%1+1)%1, k=Math.max(0,1-d*5); return k>0.04?P(18+56*k):BG; }
+    case 'rainbow': return hsl(p*360+t*40,85,55);
+    case 'rainbowRun': return hsl(p*720+t*120,85,55);
+    case 'colorloop': return hsl(t*45,85,55);
+    case 'colorwaves': return rb?hsl(p*300+120*Math.sin(t*0.7),80,55):hsl(H,78,18+38*(0.5+0.5*Math.sin(p*6.28*1.5-t*1.2)));
+    case 'sinelon': { const hd=(Math.sin(t*2.5)+1)/2, d=Math.abs(p-hd); return d<0.2?hsl(p*360+t*80,85,62-d*160):DIM; }
+    case 'twinkle': { const seed=h32(i*13+7); const ph=((t*0.6+seed*11)%1.4)/1.4; const b=(seed>0.4)?Math.pow(Math.sin(ph*Math.PI),2):0; return b>0.03?(rb?hsl(h32(i*5)*360,80,15+55*b):P(15+55*b)):BG; }
+    case 'sparkle': return h32(i*13+Math.floor(t*7)*97)>0.93?(cc?P(58):hsl(H,12,96)):(cc?BG:hsl(H,80,22));
+    case 'glitter': { if(h32(i*17+Math.floor(t*6)*53)>0.95)return hsl(0,0,98); return rb?hsl(p*300-t*40,80,46):P(46); }
+    case 'fire': { const n=h32(i*3+Math.floor(t*10)*(i+7)); const heat=Math.max(0,1-p*0.7)*(0.35+0.65*n); return hsl(8+22*heat,95,8+50*heat); }
+    case 'candle': { const fl=Math.min(1,Math.max(0.12,0.55+0.4*Math.sin(t*3.8)+0.2*(h32(Math.floor(t*8))-0.5))); return P(10+42*fl,88); }
+    case 'fireworks': { const r=h32(i*11+Math.floor(t*2)*71); if(r>0.9)return hsl(r*3600,90,60); const f=h32(i*11+Math.floor(t*2-1)*71); return f>0.9?hsl(f*3600,80,30):DIM; }
+    case 'lightning': return (h32(Math.floor(t*6))>0.7&&h32(i+Math.floor(t*6)*7)>0.5)?(cc?P(58):hsl(H,12,96)):BG;
+    case 'plasma': { const v=Math.sin(p*10+t*2)+Math.sin(p*6-t*1.5); return hsl((rb?200:H)+v*70,80,55); }
+    case 'noise': { const v=h32(Math.floor(p*20)+Math.floor(t*2)*97); return hsl(rb?(v*360+p*120):(H+v*140-70),72,18+42*v); }
+    case 'gradient': { if(!cc) return hsl(H+p*120,80,50); const c=(Math.sin(p*6.28-t*1.2)+1)/2; return rgbk(mix(blk(cc[1])?[0,0,0]:cc[1],cc[0],c),1); }
+    case 'dynamic': return hsl(h32(Math.floor(p*16)+Math.floor(t*1.2)*131)*360,75,52);
+    case 'ripple': { const w2=((t*0.35)%0.6); const d=Math.abs(Math.abs(p-0.5)-w2); return d<0.05?(rb?hsl(t*120,85,62):P(62)):BG; }
+    case 'dots': { const a=(Math.sin(t*2)+1)/2, b=(Math.sin(t*2+2)+1)/2; return Math.abs(p-a)<0.05?P(60):(Math.abs(p-b)<0.05?S(60):BG); }
+    case 'pattern': return (Math.floor(p*6)%2===0)?P(52):S(45,70);
+    case 'heartbeat': { const x=t%1.2, b=(x<0.1||(x>0.25&&x<0.35))?1:0.15; return cc?P(14+46*b):hsl(0,82,14+46*b); }
+    case 'sunrise': { /* 与固件 142 同构(10-21):整条同色,沿关键色(或所选配色组)整体渐变,走完停住;预览按 20 秒一轮循环演示 */
+      const SKY=(cc&&cc.length>=4)?cc:palc?palc:(pal===254?['#dfe9f5','#ffc14a','#f5731f','#c84a7a','#2a2566']:['#2a2566','#c84a7a','#f5731f','#ffc14a','#dfe9f5']).map(N3);
+      const N=SKY.length, c=Math.min(N-1,((t*0.05)%1.2)*(N-1)); const a=Math.floor(c), b=Math.min(N-1,a+1);
+      return rgbk(mix(SKY[a],SKY[b],c-a),1); }
+    case 'washing': { const hd=0.5+0.4*Math.sin(t*2); return Math.abs(p-hd)<0.12?hsl(p*360,80,55):DIM; }
+    case 'android': { const c=(0.5-0.5*Math.sin(t*0.85)), w2=0.08+0.05*(1+Math.sin(t*0.4)), d=Math.abs(p-c); return d<w2?P(62-d/w2*28):BG; }
+    case 'bounceballs': { for(let bl=0;bl<4;bl++){ const per=0.7+bl*0.22, ph=(t/per)%1, y=1-Math.pow(2*ph-1,2); if(Math.abs(p-y)<0.045) return hsl(bl*70+20,85,60);} return DIM; }
+    case 'bpm': { const beat=0.4+0.6*Math.pow(Math.sin(t*3)*0.5+0.5,2); return hsl(p*300+t*40,90,20+50*beat); }
+    case 'chaseflash': { const head=(t*0.8)%1, d=((p-head)%1+1)%1; return d<0.06?(rb?hsl(t*200,90,60):(cc?P(60):hsl(H,12,96))):BG; }
+    case 'aurora': { let w2=0; for(let k=0;k<3;k++){ const c=Math.sin(p*Math.PI*(1.4+k*0.5)+t*(0.4+k*0.13)+k*2.1); w2+=Math.max(0,c-0.35); } w2=Math.min(1,w2); return hsl(H,20+65*w2,6+40*w2); }
+    case 'chase2': { const hd=(t*0.9)%1, d=((p-hd)%1+1)%1; return d<0.12?P(58):(d>0.5&&d<0.62?S(46):BG); }
+    case 'chase3': { const hd=(t*0.9)%1, d=((p-hd)%1+1)%1; return d<0.1?P(58):(d>0.33&&d<0.43?S(50):(d>0.66&&d<0.76?T3(50):BG)); }
+    case 'chaseRnd': { const hd=(t*0.9)%1, d=((p-hd)%1+1)%1, sg=Math.floor(t*0.9); return d<0.14?hsl(h32(sg)*360,85,58):DIM; }
+    case 'blends': return hsl(p*140+t*25,68,50);
+    case 'colorful': { const cols=[0,42,120,210]; const sg=Math.floor(p*8-t*1.2); return hsl(cols[((sg%4)+4)%4],85,52); }
+    case 'dancing': { const s=Math.sin(p*7-t*1.4)+Math.sin(p*4+t*0.9); return s>0.2?hsl(p*300+t*45,80,52):hsl(p*300,45,8); }
+    case 'dissolve': { const ph=(t*0.5)%2, thr=ph<1?ph:2-ph; return h32(i*7+3)<thr?(rb?hsl(p*360,80,52):P(52)):BG; }
+    case 'drip': { const hd=((t*0.7)%1); const d=hd-p; if(d<0||d>0.5)return BG; const k=1-d*2; return k>0.05?(rb?hsl(200,85,20+55*k):P(20+55*k)):BG; }
+    case 'fairy': return h32(i*17+Math.floor(t*2)*53)>0.9?(rb?hsl(h32(i*3)*360,70,70):P(70,70)):(h32(i*17+Math.floor(t*2)*53)>0.86?P(25,60):BG);
+    case 'flow': { const b=(Math.sin(p*6.28*1.5-t*1.2)+1)/2; return hsl(rb?(p*300+t*30):H,80,20+45*b); }
+    case 'lake': { const v=Math.sin(p*5+t*0.8)+0.5*Math.sin(p*9-t*1.1); return hsl(190+v*25,75,35+v*15); }
+    case 'lighthouse': { const hd=(t*0.35)%1, d=((p-hd)%1+1)%1, k=Math.max(0,1-d*4); return k>0.05?P(20+55*k):BG; }
+    case 'juggle': { let best=DIM; for(let j=0;j<3;j++){ const hd=(Math.sin(t*(1.6+j*0.5)+j*2)*0.5+0.5), d=Math.abs(p-hd); if(d<0.05) best=hsl(j*90+t*40,85,60);} return best; }
+    case 'loading': { const fill=(t*0.5)%1; return p<fill?P(50):(Math.abs(p-fill)<0.04?P(80,40):BG); }
+    case 'multicomet': { let best=BG; for(let c=0;c<3;c++){ const hd=((t*0.6+c*0.4)%1), d=((hd-p)%1+1)%1, k=Math.max(0,1-d*6); if(k>0.05) best=cc?[P,S,T3][c](20+55*k):hsl(H+c*40,80,20+55*k);} return best; }
+    case 'oscillate': { const a=(Math.sin(t*1.6)+1)/2, b=(Math.sin(t*1.6+Math.PI)+1)/2; return (Math.abs(p-a)<0.08)?P(55):(Math.abs(p-b)<0.08?S(55):BG); }
+    case 'pacifica': { const v=Math.sin(p*8+t*0.7)+Math.sin(p*13-t*0.5)+Math.sin(p*3+t*0.3); return hsl(175+v*22,80,22+v*10); }
+    case 'palette': return rb?hsl(p*360-t*50,80,52):hsl(H,80,15+40*(0.5+0.5*Math.sin(p*6.28*1.5-t*0.4)));
+    case 'percent': { const fill=(Math.sin(t*0.6)*0.5+0.5); return p<fill?P(52):BG; }
+    case 'phased': { const b=(Math.sin(p*20-t*3)+1)/2; return P(10+50*Math.pow(b,2)); }
+    case 'pixels': return h32(i*29+Math.floor(t*3)*7)>0.75?hsl(rb?(h32(i*5)*360):H,80,55):DIM;
+    case 'popcorn': { let best=DIM; for(let c=0;c<4;c++){ const per=0.9+c*0.2, ph=((t/per+c*0.3)%1), y=Math.max(0,1-Math.pow(2*ph-1,2)*1.1); if(Math.abs(p-y)<0.04) best=hsl(h32(c*7)*360,85,60);} return best; }
+    case 'pride': { const v=Math.sin(p*6+t*0.8); return rb?hsl(p*200+t*40+v*30,85,52):hsl(H,80,25+28*(0.5+0.5*v)); }
+    case 'railway': return (Math.floor(p*10)%2===Math.floor(t*1.2)%2)?P(55):S(45);
+    case 'rain': { const hd=((t*1.1)%1); const d=hd-p; if(d<0||d>0.35)return BG; const k=1-d*2.8; return k>0.05?(rb?hsl(205,80,20+55*k):P(20+55*k)):BG; }
+    case 'saw': { const v=((p*3 - t*0.8)%1+1)%1; return P(12+55*v); }
+    case 'sine': { const v=(Math.sin(p*6.28*2-t*2.5)+1)/2; return P(10+55*Math.pow(v,1.5)); }
+    case 'spots': { const c=(t*0.3)%1; return (Math.abs(((p-c)%0.5+0.5)%0.5-0.25)<0.06)?P(55):BG; }
+    case 'stream': { const v=(Math.sin(p*6.28*1.2-t*2)+1)/2; return hsl(p*300+t*20,80,15+50*v); }
+    case 'tetrix': { const fill=(t*0.35)%1.1; return p<fill?(cc?P(52):hsl((Math.floor(fill*6)*60)%360,80,52)):BG; }
+    case 'trafficlight': { const ph=Math.floor(t*0.8)%3; const cols=[0,45,120]; return (Math.abs(p-0.5)<0.15)?hsl(cols[ph],85,50):DIM; }
+    case 'trifade': { const ph=(t*0.4)%3; const bl=1-Math.abs((ph%1)-0.5)*0.6; if(cc) return [P,S,T3][Math.floor(ph)](50*bl); const h3=ph<1?H:(ph<2?H+120:H+240); return hsl(h3,80,50*bl); }
+    case 'triwipe': { const ph=(t*0.5)%3, seg=Math.floor(ph), fr=ph%1; if(cc) return (p<fr)?[P,S,T3][seg](55):[P,S,T3][(seg+2)%3](30,60); return (p<fr)?hsl(H+seg*120,85,55):hsl(H+((seg+2)%3)*120,60,30); }
+    case 'tvsim': { return h32(i*3+Math.floor(t*6)*11)>0.5?hsl(h32(Math.floor(t*6)+i)*360,60,45):hsl(0,0,12); }
+    case 'twodots': { const a=(Math.sin(t*1.4)*0.5+0.5), b=1-a; return (Math.abs(p-a)<0.05)?P(58):(Math.abs(p-b)<0.05?S(58):BG); }
+    case 'wavesins': { const v=Math.sin(p*6.28*2+t*1.5); return cc?P(35+v*20):hsl(H+v*40,80,35+v*20); }
+    case 'sweep': { const hd=((t*0.5)%2); const pos=hd<1?hd:2-hd; return p<pos?P(52,82):BG; }
+    case 'icu': { const e=(Math.sin(t*1.2)*0.5+0.5)*0.7+0.15; return (Math.abs(p-e)<0.04||Math.abs(p-e-0.12)<0.04)?P(55,90):BG; }
+    case 'halloween': { const e=0.35+0.15*Math.sin(t*0.8); return (Math.abs(p-e)<0.05||Math.abs(p-(1-e))<0.05)?hsl(20,95,50):DIM; }
+    case 'chunchun': { const hd=((t*0.7)%1); const d=((p-hd)%1+1)%1; return d<0.3?(cc?rgbk(mix(cc[0],blk(cc[1])?cc[0]:cc[1],d/0.3),1):hsl(H+d*200,85,55)):BG; }
+    default: return P(50,70);
+  }
+}
+function genericFx(id,i,time,total){return 'hsl('+Math.round((id*47+(i/total)*140+time*60)%360)+',80%,55%)';}
+const speedScale=(speed)=>0.3+(Math.max(0,Math.min(255,speed))/255)*1.7;
+function wledDiyColor(fx,cols,p,i,time,dir,speed){
+  cols=cols.map(N3); const n=cols.length,c0=cols[0],c1=cols[1]||[0,0,0];
+  const black=(c)=>!c[0]&&!c[1]&&!c[2]; const bg=()=>(black(c1)?DIM:rg(c1,1));
+  if(dir==='rev')p=1-p; const t=time*speedScale(speed);
+  if(fx==='blink'||fx==='jumpAll'||fx==='altGroup'){const cycle=((255-speed)*20+48)/1000;return ((time%cycle)<cycle/2)?rg(c0,1):bg();}
+  switch(fx){
+    case 'static': return rg(c0,1);
+    case 'breath': {const lum=0.1+0.9*Math.abs(Math.sin(t*1.6));return rg(mix(c1,c0,lum),1);}
+    case 'jumpSeq': {const head=(t*0.5)%1,d=((p-head)%1+1)%1;return d<0.15?rg(c0,1):bg();}
+    case 'pulse': {const head=(t*0.6)%1,d=((head-p)%1+1)%1,k=Math.max(0,1-d*5);return k>0.04?rg(mix(c1,c0,k),1):bg();}
+    case 'flow': {let ph=(p-t*0.3)%1;if(ph<0)ph+=1;const sg=ph*n,s2=Math.floor(sg)%n;return rg(mix(cols[s2],cols[(s2+1)%n],sg-Math.floor(sg)),1);}
+    case 'rainbow': {let hh=(p*360+t*60)%360;if(hh<0)hh+=360;return 'hsl('+Math.round(hh)+',80%,55%)';}
+    case 'auroraFlash': {let acc=[0,0,0],ws=0;for(let k=0;k<3;k++){const wk=0.5+0.5*Math.sin(p*Math.PI*(1.2+k*0.4)+t*(0.35+k*0.11)+k*2.1);const ck=cols[k%n];acc=acc.map((v,q)=>v+ck[q]*wk);ws+=wk;}return 'rgb('+acc.map(v=>Math.min(255,Math.round(v/Math.max(0.001,ws)))).join(',')+')';}   // 固件 Fill Noise + 三色渐变:三色缓慢平滑漂移
+    case 'random': return 'hsl('+Math.round(h32(Math.floor(p*16)+Math.floor(t*1.2)*131)*360)+',75%,52%)';
+    default: return rg(c0,1);
+  }
+}
+function musicColor(mode,on,sens,i,time,total){
+  let lvl=on?(0.3+0.7*Math.abs(Math.sin(time*3.1)+0.4*Math.sin(time*7.7))/1.4*(sens/6)):0.12; lvl=Math.min(1,lvl);
+  if(mode===0){const b=i/total;return b<lvl?'hsl('+Math.round(120-b*120)+',85%,55%)':'rgb(24,30,40)';}
+  if(mode===1)return 'hsl('+Math.round((i/total*360+time*80*lvl)%360)+',85%,'+Math.round(30+40*lvl)+'%)';
+  if(mode===2)return rg([47,209,197],(time*(2+lvl*6)%1)<0.5?lvl:0.06);
+  const ctr=Math.abs(i/total-0.5)*2; return ctr<lvl?rg([224,71,90],1-ctr*0.5):'rgb(24,30,40)';
+}
+function cssToHex(s){s=String(s||'');if(s[0]==='#')return s.length===7?s:'#ffffff';let m=s.match(/rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
+  if(m)return '#'+[m[1],m[2],m[3]].map(x=>Math.max(0,Math.min(255,+x)).toString(16).padStart(2,'0')).join('');
+  m=s.match(/hsl\(\s*(\d+)\s*,\s*(\d+)%\s*,\s*(\d+)%/i);
+  if(m){const hh=(+m[1])/360,sa=(+m[2])/100,l=(+m[3])/100;const q=l<0.5?l*(1+sa):l+sa-l*sa;const p=2*l-q;
+    const f=(t)=>{t=(t+1)%1;if(t<1/6)return p+(q-p)*6*t;if(t<1/2)return q;if(t<2/3)return p+(q-p)*(2/3-t)*6;return p;};
+    const to=(v)=>Math.round(v*255).toString(16).padStart(2,'0');return '#'+to(f(hh+1/3))+to(f(hh))+to(f(hh-1/3));}
+  return '#ffffff';}
+function hexHue(hex){const c=cssToHex(hex);if(!c||c.length!==7)return null;const r=parseInt(c.slice(1,3),16)/255,g=parseInt(c.slice(3,5),16)/255,b=parseInt(c.slice(5,7),16)/255;
+  const mx=Math.max(r,g,b),mn=Math.min(r,g,b),d=mx-mn;if(d<0.04)return null;let hh;if(mx===r)hh=((g-b)/d)%6;else if(mx===g)hh=(b-r)/d+2;else hh=(r-g)/d+4;return (hh*60+360)%360;}
+const hexLum=(hex)=>{const c=hx(hex);return 0.299*c[0]+0.587*c[1]+0.114*c[2];};
+
+/* ---------------- 传输层:与 App packages/sdk/dps.js 同一套 TLV 编码,经 HTTP 交给固件 handleDpSet ---------------- */
+const tohex=a=>a.map(b=>((b|0)&255).toString(16).padStart(2,'0')).join('');
+/* N4(无 PSRAM)堆紧时 AsyncWebServer 会直接 reset 连接(浏览器报 ERR_CONNECTION_RESET),一帧丢了灯带就停在上一个状态;
+ * 网络层失败(fetch 抛错)等 150ms 重发一次,HTTP 4xx/5xx 不重试 */
+async function dp(...tlvs){const body=[].concat(...tlvs);for(let k=0;k<2;k++){try{const r=await fetch('/wellvow/dp?d='+tohex(body),{method:'POST',cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return true;}catch(e){if(k||/^HTTP /.test(e.message))throw e;await new Promise(r=>setTimeout(r,150));}}}
+const tlv={bool:(d,v)=>[d,1,1,v?1:0],u8:(d,v)=>[d,2,1,v&255],u16:(d,v)=>[d,3,2,(v>>8)&255,v&255],bytes:(d,a)=>[d,5,a.length,...a.map(b=>(b|0)&255)]};
+const hexRGB=(hex)=>hx(hex);
+const colorSlots=(c)=>(Array.isArray(c)?c:[c]).filter(Boolean).slice(0,3).flatMap(hexRGB);
+const Dps={
+  power:(on)=>dp(tlv.bool(0x01,on)), brightness:(v)=>dp(tlv.u8(0x02,v)), speed:(v)=>dp(tlv.u8(0x03,v)),
+  brightSpeed:(b,s)=>dp(tlv.u8(0x02,b),tlv.u8(0x03,s)), direction:(rev)=>dp(tlv.u8(0x04,rev?1:0)),
+  mode:(bank,idx)=>dp(tlv.u16(0x05,((bank&255)<<8)|(idx&255))), color:(hex)=>dp(tlv.bytes(0x06,colorSlots(hex))),
+  async segmentColors(segs){const per=12;for(let start=0;start<segs.length;start+=per){const body=[];let n=0;for(let i=start;i<Math.min(segs.length,start+per);i++){const rgb=colorSlots(segs[i]||[]);if(!rgb.length)continue;body.push(i&255,rgb.length/3,...rgb);n++;}if(n)await dp(tlv.bytes(0x07,[n,...body]));}},
+  syncTime:(d=new Date())=>dp(tlv.bytes(0x08,[d.getFullYear()-2000,d.getMonth()+1,d.getDate(),d.getDay()||7,d.getHours(),d.getMinutes(),d.getSeconds()])),
+  schedule:(slots)=>dp(tlv.bytes(0x09,[].concat(...slots.map(s=>[s.id,s.enable?1:0,s.repeatMask,s.onH,s.onM,s.offH,s.offM])))),
+  setGroup:(mask)=>dp(tlv.u8(0x0A,mask)), pixelCount:(n)=>dp(tlv.u16(0x0D,n)), palette:(i)=>dp(tlv.u8(0x13,i)),
+  segment:(segId,{on=1,bri=255,fx=0,sx=128,ix=128,pal=0}={})=>dp(tlv.bytes(0x17,[segId,on?1:0,bri,fx,sx,ix,pal])),
+  presetSave:(slot)=>dp(tlv.u8(0x18,slot)),
+  segConfig:(leds)=>dp(tlv.bytes(0x1C,[leds.length,...leds.flatMap(n=>[(n>>8)&255,n&255])])),
+  colorOrder:(o)=>dp(tlv.u8(0x1D,o)),
+  // 与 packages/sdk/src/dps.js 同一字节布局:第 4 字节 = WLED 音频效果号(0 = 保持当前效果只改灵敏度);on=2 = 底噪校准
+  music:(en,mode=0,sens=5,fx=0)=>dp(tlv.bytes(0x1E,[en?1:0,mode&255,sens&255,fx&255])), musicCalibrate:(sens=5)=>dp(tlv.bytes(0x1E,[2,0,sens&255,0])),
+  // 开机 + 效果一帧(预设页 WLED 固定模式默认组);开机 + 效果 + 调色板 + 颜色一帧(场景 / DIY):顺序与 App 一致,颜色最后落
+  applyLook:({on=true,color=null,bank=0,index=null}={})=>{const a=[];if(on!==null)a.push(tlv.bool(0x01,on));if(color)a.push(tlv.bytes(0x06,colorSlots(color)));if(index!==null)a.push(tlv.u16(0x05,((bank&255)<<8)|(index&255)));return dp(...a);},
+  setName:(name)=>{const b=Array.from(new TextEncoder().encode(String(name||'').trim())).slice(0,32);return b.length?dp(tlv.bytes(0x29,b)):Promise.resolve();},
+  customPalette:(slot,colors)=>{const rgb=colors.slice(0,8).map(hexRGB).filter(Boolean);return dp(tlv.bytes(0x27,[slot&3,rgb.length,...rgb.flatMap(v=>v)]));},
+  applyDiyLook:({on=true,color=null,colors=null,fx=null,palette=null}={})=>{const a=[];if(on!==null)a.push(tlv.bool(0x01,on));if(fx!==null)a.push(tlv.u16(0x05,fx&255));if(palette!==null)a.push(tlv.u8(0x13,palette));const cs=(colors&&colors.length)?colors:(color?[color]:null);if(cs)a.push(tlv.bytes(0x06,colorSlots(cs)));return dp(...a);},
+  calibrateColor:(order,hex)=>dp(tlv.bytes(0x1F,[order,...hexRGB(hex)])),
+};
+// App 的 send(id, fn):确保链路后执行;网页里链路就是 HTTP,失败给提示。
+async function send(fn){try{await fn();return true;}catch(e){toast(T('设备无响应:','No response from device: ')+(e.message||e));return false;}}
+const get=async(p)=>{const r=await fetch(p,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json();};
+const getState=()=>get('/wellvow/state');
+const sleep=(ms)=>new Promise(r=>setTimeout(r,ms));
+
+/* ---------------- 页面数据存在控制器上(/wvweb.json),等价于 App 的 storage('app', ...) ---------------- */
+let W={};
+async function loadW(){try{W=await get('/wvweb.json?'+Date.now());if(!W||typeof W!=='object')W={};}catch(e){W={};}}
+let wTimer=null;
+function saveW(){clearTimeout(wTimer);wTimer=setTimeout(async()=>{try{const fd=new FormData();fd.append('data',new Blob([JSON.stringify(W)],{type:'application/json'}),'wvweb.json');await fetch('/upload',{method:'POST',body:fd});}catch(e){}},400);}
+
+/* ---------------- 设备信息 / 布线 ---------------- */
+let INFO={name:'WELLVOW STRIP',model:'WLED_STRIP_ESP32',leds:120,segments:[120]};
+let WIRING=null;   // {count, points:[{x,y}], hasWiring}
+async function loadInfo(){try{INFO=Object.assign(INFO,await get('/wellvow/info'));}catch(e){}}
+async function loadWiring(){
+  try{const j=await get('/wellvow/ledmap');const coords=Array.isArray(j.coords)?j.coords:null;if(coords&&coords.length){WIRING={points:coords.map(c=>({x:c[0],y:c[1]})),count:coords.length,hasWiring:true};return;}}catch(e){}
+  WIRING=null;
+}
+function segTotal(a){return a.reduce((s,n)=>s+n,0);}
+function currentSegCfg(){   // App useStripWiring:优先 strip_segcfg(段配置页保存的),否则设备实际分段
+  const cfg=W.segcfg; if(cfg&&Array.isArray(cfg.segments)&&cfg.segments.length)return {count:segTotal(cfg.segments),segments:cfg.segments.slice()};
+  const segs=(INFO.segments&&INFO.segments.length)?INFO.segments.slice():[INFO.leds||120];
+  return {count:segTotal(segs),segments:segs};
+}
+function straightPoints(n){n=Math.max(1,n);return Array.from({length:n},(_,i)=>({x:8+(i/Math.max(1,n-1))*604,y:30}));}
+function resample(points,count){if(!points||!points.length)return straightPoints(count);if(count===1){const p=points[Math.floor(points.length/2)];return [{x:p.x,y:p.y}];}
+  return Array.from({length:count},(_,i)=>{const p=points[Math.round(i*(points.length-1)/Math.max(1,count-1))];return {x:p.x,y:p.y};});}
+function layoutPoints(count,segments){   // 预览点 + 所属段(最多 600 个采样点)
+  const total=Math.max(1,count); const n=Math.min(total,600);
+  const raw=WIRING&&WIRING.hasWiring?resample(WIRING.points,n):straightPoints(n);
+  const ends=[];let acc=0;(segments||[total]).forEach(v=>{acc+=v;ends.push(acc);});
+  return raw.map((p,i)=>{const li=Math.min(total-1,Math.floor((i+0.5)*total/raw.length));let s=ends.findIndex(e=>li<e);if(s<0)s=ends.length-1;return {x:p.x,y:p.y,seg:s,li};});
+}
+
+/* ---------------- 预览画布(对应 App SignPreview layout="strip") ---------------- */
+function Preview(opts){
+  const cv=h('canvas',{class:'pv'}); const box=h('div',{class:'hero'},cv);
+  let pts=opts.points, effect=opts.effect, sel=opts.selected==null?-1:opts.selected, raf=0, dead=false, W0=0, H0=opts.height||(WIRING&&WIRING.hasWiring?110:70), t0=performance.now();
+  const ctx=cv.getContext('2d'); const dpr=Math.min(2,window.devicePixelRatio||1);
+  function fit(){W0=box.clientWidth-16;cv.width=W0*dpr;cv.height=H0*dpr;cv.style.height=H0+'px';}
+  function draw(){if(dead)return;raf=requestAnimationFrame(draw);if(!W0)fit();if(!W0)return;
+    const t=(performance.now()-t0)/1000; ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,W0,H0);
+    let minx=1e9,maxx=-1e9,miny=1e9,maxy=-1e9;for(const p of pts){minx=Math.min(minx,p.x);maxx=Math.max(maxx,p.x);miny=Math.min(miny,p.y);maxy=Math.max(maxy,p.y);}
+    const sw=Math.max(1,maxx-minx),sh=Math.max(1,maxy-miny); const sc=Math.min((W0-16)/sw,(H0-16)/sh); const ox=(W0-sw*sc)/2-minx*sc, oy=(H0-sh*sc)/2-miny*sc;
+    const r=Math.max(1.6,Math.min(5,(W0/pts.length)*0.42));
+    for(let i=0;i<pts.length;i++){const p=pts[i];ctx.fillStyle=effect(p.li,p.seg,t)||DIM;ctx.beginPath();ctx.arc(p.x*sc+ox,p.y*sc+oy,r,0,6.283);ctx.fill();
+      if(sel>=0&&p.seg===sel){ctx.strokeStyle='rgba(255,255,255,.55)';ctx.lineWidth=1;ctx.stroke();}}
+  }
+  if(opts.onPartPress)cv.addEventListener('click',(e)=>{const rc=cv.getBoundingClientRect();const x=(e.clientX-rc.left),y=(e.clientY-rc.top);
+    let minx=1e9,maxx=-1e9,miny=1e9,maxy=-1e9;for(const p of pts){minx=Math.min(minx,p.x);maxx=Math.max(maxx,p.x);miny=Math.min(miny,p.y);maxy=Math.max(maxy,p.y);}
+    const sw=Math.max(1,maxx-minx),sh=Math.max(1,maxy-miny);const sc=Math.min((W0-16)/sw,(H0-16)/sh);const ox=(W0-sw*sc)/2-minx*sc,oy=(H0-sh*sc)/2-miny*sc;
+    let best=-1,bd=1e9;for(const p of pts){const d=Math.hypot(p.x*sc+ox-x,p.y*sc+oy-y);if(d<bd){bd=d;best=p.seg;}}if(best>=0&&bd<30)opts.onPartPress(best);});
+  requestAnimationFrame(()=>{fit();draw();});
+  return {el:box,set(o){if(o.effect)effect=o.effect;if(o.points)pts=o.points;if(o.selected!=null)sel=o.selected;},stop(){dead=true;cancelAnimationFrame(raf);}};
+}
+
+/* ---------------- 通用小部件(对应 open_pix/parts.js) ---------------- */
+function Head(title,sub,back,right){return h('div',{class:'head'},h('button',{class:'ib',html:ICON.back,onclick:back||(()=>go('/'))}),h('div',{class:'t'},h('h1',null,title),sub?h('div',{class:'s'},sub):null),right);}
+function Slider({label,value,min,max,unit,onChange}){const out=h('output',null,value+(unit||''));const inp=h('input',{type:'range',min,max,value});
+  inp.oninput=()=>{out.textContent=inp.value+(unit||'');onChange(+inp.value);};const el=h('div',{class:'sl'},label?h('label',ZH?null:{style:'width:56px'},label):null,inp,out);
+  el.setValue=(v)=>{inp.value=v;out.textContent=v+(unit||'');};return el;}
+function Chips(items,value,onChange,cls){const el=h('div',{class:cls||'chips'});const draw=()=>{el.innerHTML='';items.forEach(it=>{const v=typeof it==='string'?it:it.v,lb=typeof it==='string'?it:it.label;el.append(h('button',{class:'chip'+(value===v?' on':''),onclick:()=>{value=v;draw();onChange(v);}},lb));});};draw();el.setValue=(v)=>{value=v;draw();};return el;}
+function modal(title,body,btns){const box=h('div',{class:'box'},h('h3',null,title),body,h('div',{class:'bt2'},...btns));const m=h('div',{class:'mask',onclick:(e)=>{if(e.target===m)m.remove();}},box);document.body.append(m);return m;}
+function bigBtn(txt,onclick,cls){return h('button',{class:'big'+(cls?' '+cls:''),onclick},txt);}
+
+
+/* ================= 与 App wled_strip 同构的数据与组件(scenes / sceneSets / wledFxMeta / fxGlyphs / sceneIcons / effectIcons / colorSheet) ================= */
+const SCENE_CATS=[{id:'natural',zh:'自然',en:'Natural'},{id:'festival',zh:'节日',en:'Festival'},{id:'life',zh:'生活',en:'Life'},{id:'emotion',zh:'情绪',en:'Emotion'},{id:'universe',zh:'宇宙',en:'Universe'},{id:'phenomena',zh:'自然现象',en:'Natural Phenomena'},{id:'light',zh:'光',en:'Light'},{id:'wled',zh:'WLED 模式',en:'WLED Mode'}];
+const SC_=(id,zh,en,fx,pal,cols,spd)=>({id,zh,en,fx,pal,cols,spd});   // spd:场景固定速度(Sunrise 效果里 = 时长分钟,1 = 日出 1 分钟,61 = 日落 1 分钟)
+const SCENES={
+  natural:[SC_('sunrise','日出','Sunrise',142,255,['#2a2566','#c84a7a','#f5731f','#ffc14a','#dfe9f5'],85),SC_('sunset','日落','Sunset',142,254,['#dfe9f5','#ffc14a','#f5731f','#c84a7a','#2a2566'],85),SC_('sunsetglow','晚霞','Sunset Glow',23,13,['#ff7e5f','#feb47b','#ff4e50']),SC_('nebula','星云','Nebula',83,45,['#7b2ff7','#f107a3','#2af598']),SC_('moonlight','月光','Moonlight',9,0,['#c9d6ff','#4b6cb7']),SC_('star','星星','Star',133,0,['#fff6c2','#ffd76a']),SC_('universe','宇宙','Universe',70,46,['#3b7bff','#a8c0ff','#7d5fff']),SC_('rainbow','彩虹','Rainbow',91,11,['#ff3b3b','#2ea84f','#3b7bff']),SC_('forest','森林','Forest',33,0,['#a8e063','#1f6b3a']),SC_('aurora','极光','Aurora',23,50,['#00ffa3','#00c2ff','#7d5fff']),SC_('karstcave','溶洞','Karst Cave',94,9,['#1c92d2','#f2fcfe']),SC_('wave','海浪','Wave',75,9,['#36d1dc','#005c97']),SC_('cornfield','麦田','Cornfield',99,0,['#ffd200','#c98a1a']),SC_('rustling','风吹叶动','Rustling Leaves',34,10,['#56ab2f','#a8e063']),SC_('flowerfield','花海','Flower Field',22,20,['#f857a6','#ffd3a5','#a1c4fd']),SC_('firefly','萤火虫','Firefly',135,0,['#d4fc79','#96e6a1']),SC_('fire','篝火','Fire',35,35,['#ff4e00','#ec9f05']),SC_('cherry','樱花','Cherry Blossoms',33,49,['#ffdde1','#ee9ca7']),SC_('spring','春','Spring',23,25,['#a8ff78','#78ffd6','#ffd3a5']),SC_('summer','夏','Summer',46,0,['#ffb347','#ff6a3d']),SC_('fall','秋','Fall',90,0,['#e65c00','#5a2a0a']),SC_('winter','冬','Winter',135,36,['#e0eafc','#cfdef3']),SC_('downpour','暴雨','Downpour',90,0,['#4b79a1','#a8c0ff']),SC_('desert','沙漠','Desert',66,4,['#f7b733','#c25a1a']),SC_('sandgrains','沙粒','Sand Grains',46,0,['#e6d5b8','#c9a86a']),SC_('grassland','草原','Grassland',34,10,['#11998e','#38ef7d']),SC_('mountainforest','山林','Mountain Forest',57,4,['#2c3e50','#4ca1af','#71b280']),SC_('sky','天空','Sky',34,4,['#56ccf2','#ffffff','#2f80ed']),SC_('sailboat','帆船','Sailboat',75,51,['#2193b0','#6dd5ed'])],
+  festival:[SC_('christmas','圣诞','Christmas',127,0,['#e0473c','#2ea84f']),SC_('christmastree','圣诞树','Christmas Tree',22,48,['#2ea84f','#ffd700','#e0473c']),SC_('christmasgift','圣诞礼物','Christmas Gift',13,0,['#e0473c','#ffd700']),SC_('sled','雪橇','Sled',99,0,['#e0473c','#ffffff']),SC_('halloween','万圣节','Halloween',52,0,['#ff7a00','#7d3cff']),SC_('halloweenb','万圣节 B','Halloween B',36,0,['#ff7a00','#ff3b00']),SC_('halloweenc','万圣节 C','Halloween C',126,0,['#ff7a00','#5b2a86']),SC_('halloweend','万圣节 D','Halloween D',21,47,['#ff9a00','#7d3cff','#2ea84f']),SC_('easter','复活节','Easter',22,20,['#ffd3e0','#c3f0ca','#a1c4fd']),SC_('mothersday','母亲节',"Mother's Day",40,38,['#ff8fab','#ffc2d1','#ff6b9e']),SC_('fathersday','父亲节',"Father's Day",47,0,['#2f80ed','#56ccf2']),SC_('birthday','生日','Birthday',37,6,['#ff4fa3','#ffd23c','#3b7bff']),SC_('newyears','新年','New Years',39,6,['#ffd700','#ff3b3b','#3b7bff']),SC_('thanksgiving','感恩节','Thanksgiving',11,0,['#e67e22','#c0392b']),SC_('carnival','狂欢节','Carnival',20,6,['#ff3b3b','#2ea84f','#3b7bff']),SC_('valentines','情人节',"Valentine's Day",53,0,['#ff1e56','#ff6b9e']),SC_('danceparty','舞会','Dance Party',24,6,['#7b2ff7','#f107a3','#2af598']),SC_('party','派对','Party',86,6,['#ff3b3b','#2ea84f','#3b7bff']),SC_('fireworks','烟花','Fireworks',37,11,['#e0473c','#2ea84f','#3b7bff']),SC_('candlelight','烛光','Candlelight',10,0,['#ffb347','#ff8c1a']),SC_('hanukkah','光明节','Hanukkah',133,0,['#1e5aa8','#ffffff']),SC_('babyshower','迎婴派对','Baby Shower',22,20,['#a8dadc','#ffc8dd','#fff5ba']),SC_('candycane','拐杖糖','Candy Cane',127,0,['#e0473c','#ffffff']),SC_('confetti','彩纸','Confetti',22,6,['#ff3b3b','#2ea84f','#3b7bff'])],
+  life:[SC_('whitelight','白光','White Light',0,0,['#ffffff']),SC_('bright','明亮','Bright',0,0,['#fff4d6']),SC_('morning','清晨','Morning',23,15,['#fbc2eb','#a6c1ee','#fff5ba']),SC_('afternoon','午后','Afternoon',140,4,['#f6d365','#fda085']),SC_('twilight','黄昏','Twilight',47,0,['#ff9966','#5b2a86']),SC_('night','夜晚','Night',9,0,['#3b5bdb','#8fb8de']),SC_('leisure','休闲','Leisure',40,20,['#a1c4fd','#c2e9fb','#ffd3a5']),SC_('refreshing','清爽','Refreshing',23,4,['#43e97b','#38f9d7']),SC_('candy','糖果','Candy',127,0,['#ff9a9e','#ffffff','#a18cd1']),SC_('spin','旋转','Spin',104,0,['#ff4fa3','#4b4fd6']),SC_('dancing','舞动','Dancing',24,6,['#f857a6','#ff5858','#3b7bff']),SC_('sports','运动','Sports',12,0,['#e0473c','#2f80ed']),SC_('swing','摇摆','Swing',106,6,['#ffd200','#f7971e','#2ea84f']),SC_('colorful','缤纷','Colorful',20,11,['#ff3b3b','#2ea84f','#3b7bff']),SC_('flow','流动','Flow',40,11,['#ff3b3b','#2ea84f','#3b7bff']),SC_('fluctuate','起伏','Fluctuate',74,6,['#00c6ff','#ff4fa3','#2ea84f']),SC_('stacking','堆叠','Stacking',126,0,['#ff4fa3','#ffd23c','#2fd1c5']),SC_('deepsea','深海','Deep Sea',57,9,['#3b7bff','#36d1dc']),SC_('underseaking','海底之王','Undersea King',75,51,['#2c5364','#36d1dc'])],
+  emotion:[SC_('gradient','渐变','Gradient',47,0,['#4b4fd6','#ff4fa3']),SC_('romantic','浪漫','Romantic',9,0,['#ff6b9e','#ffc2d1']),SC_('quiet','安静','Quiet',0,0,['#8fb8de']),SC_('happy','快乐','Happy',22,6,['#ffd200','#ff4fa3','#2fd1c5']),SC_('profound','深邃','Profound',9,0,['#7d5fff','#41295a']),SC_('enthusiastic','热情','Enthusiastic',35,35,['#ff416c','#ff4b2b']),SC_('mysterious','神秘','Mysterious',83,40,['#8e2de2','#ff4fa3']),SC_('soothing','舒缓','Soothing',9,15,['#a8edea','#fed6e3']),SC_('dreamlike','梦幻','Dreamlike',70,20,['#c471f5','#fa71cd','#a1c4fd']),SC_('warm','温暖','Warm',10,0,['#ffb75e','#ed8f03']),SC_('leisurely','悠闲','Leisurely',40,22,['#f6d365','#fda085','#36d1dc']),SC_('dreamland','梦境','Dreamland',23,46,['#667eea','#764ba2','#a8c0ff']),SC_('active','活跃','Active',12,6,['#ff3b3b','#2ea84f','#3b7bff']),SC_('lightoff','关灯','Light Off',null,null,['#222933'])],
+  universe:[SC_('venus','金星','Venus',9,0,['#f5e6a8','#8a7a3a']),SC_('jupiter','木星','Jupiter',66,4,['#d9a066','#f3e5ab','#b5651d']),SC_('mars','火星','Mars',9,0,['#e0532b','#5a1e0a']),SC_('saturn','土星','Saturn',99,0,['#e8d3a2','#c9a86a']),SC_('mercury','水星','Mercury',9,0,['#b8b8b8','#4a4a4a']),SC_('earth','地球','Earth',34,4,['#2f80ed','#2ea84f']),SC_('uranus','天王星','Uranus',9,0,['#8fdfe6','#2a6a70']),SC_('neptune','海王星','Neptune',9,0,['#2b4bd6','#101a5a']),SC_('milkyway','银河','Milky Way',135,46,['#a8c0ff','#7d5fff'])],
+  phenomena:[SC_('woodedpath','林间小路','Wooded Path',24,4,['#decba4','#3e5151','#71b280']),SC_('haystack','草垛','Haystack',9,0,['#ffd200','#f7971e']),SC_('riverside','河畔','Riverside',75,9,['#1c92d2','#71b280']),SC_('grove','树林','Grove',34,10,['#134e5e','#71b280']),SC_('starrynight','星夜','Starry Night',133,0,['#fff6c2','#8fb8de']),SC_('sunflower','向日葵','Sunflower',99,0,['#ffd200','#56ab2f']),SC_('greenwheat','青麦田','Green Wheat Field',34,10,['#a8e063','#56ab2f']),SC_('mountains','群山','Mountains',47,0,['#bdc3c7','#2c3e50']),SC_('goldenshore','金色海岸','Golden Shore',23,4,['#f7b733','#2193b0']),SC_('field','田野','Field',34,4,['#56ab2f','#a8e063']),SC_('dusk','薄暮','Dusk',9,0,['#ff7e5f','#5b2a86']),SC_('glassysea','静海','Glassy Sea',57,9,['#2193b0','#6dd5ed'])],
+  light:[SC_('cct2200','烛光 2200K','Candle 2200K',0,0,['#ff9329']),SC_('cct2700','暖白 2700K','Warm White 2700K',0,0,['#ffa957']),SC_('cct3000','柔白 3000K','Soft White 3000K',0,0,['#ffb46b']),SC_('cct4000','护眼 4000K','Eye-care 4000K',0,0,['#ffd1a3']),SC_('cct5000','自然白 5000K','Natural White 5000K',0,0,['#ffe4ce']),SC_('cct6500','正白 6500K','Daylight 6500K',0,0,['#fff9fd']),SC_('care','关怀','Care',9,37,['#43e97b','#38f9d7']),SC_('peach','蜜桃','Peach',0,0,['#ffb199']),SC_('meditation','冥想','Meditation',9,20,['#c3aed6','#8e9ee8']),SC_('mild','柔和','Mild',0,0,['#ffe6c7']),SC_('herbal','草本','Herbal',0,0,['#8fd19e']),SC_('berry','浆果','Berry',0,0,['#b23a6e']),SC_('sunny','晴朗','Sunny',0,0,['#ffe066']),SC_('beach','海滩','Beach',141,0,['#f6d365','#2193b0']),SC_('refreshinglight','清新','Refreshing',0,0,['#a8f0d8']),SC_('unspokenlove','不言之爱','Unspoken Love',9,0,['#ff8fab','#ffdde1'])],
+};
+/* WLED 0.15 效果元数据 id:[色槽数, 吃调色板, 名] */
+const WLED_FX_META={"0":[0,0,"Solid"],"1":[2,1,"Android"],"2":[3,1,"Aurora"],"3":[0,1,"Blends"],"4":[2,1,"Blink"],"5":[2,1,"Blink Rainbow"],"6":[2,1,"Blurz"],"7":[3,1,"Bouncing Balls"],"8":[1,1,"Bpm"],"9":[2,1,"Breathe"],"10":[2,1,"Candle"],"11":[2,1,"Candle Multi"],"12":[3,1,"Chase"],"13":[2,1,"Chase 2"],"14":[3,1,"Chase 3"],"15":[2,1,"Chase Flash"],"16":[2,1,"Chase Flash Rnd"],"17":[2,1,"Chase Rainbow"],"18":[3,1,"Chase Random"],"19":[2,1,"Chunchun"],"20":[3,1,"Colorful"],"21":[0,1,"Colorloop"],"22":[0,1,"Colortwinkles"],"23":[1,1,"Colorwaves"],"24":[1,1,"Dancing Shadows"],"25":[2,1,"Dissolve"],"26":[2,1,"Dissolve Rnd"],"27":[0,0,"DJ Light"],"28":[2,1,"Drip"],"29":[0,1,"Dynamic"],"30":[0,1,"Dynamic Smooth"],"31":[2,1,"Fade"],"32":[2,1,"Fairy"],"33":[2,1,"Fairytwinkle"],"34":[1,1,"Fill Noise"],"35":[0,1,"Fire 2012"],"36":[1,1,"Fire Flicker"],"37":[2,1,"Fireworks"],"38":[2,1,"Fireworks 1D"],"39":[2,1,"Fireworks Starburst"],"40":[0,1,"Flow"],"41":[0,0,"Flow Stripe"],"42":[2,1,"Freqmap"],"43":[0,0,"Freqmatrix"],"44":[3,1,"Freqpixels"],"45":[0,0,"Freqwave"],"46":[3,1,"Glitter"],"47":[2,1,"Gradient"],"48":[2,1,"Gravcenter"],"49":[2,1,"Gravcentric"],"50":[2,1,"Gravfreq"],"51":[2,1,"Gravimeter"],"52":[2,1,"Halloween Eyes"],"53":[2,1,"Heartbeat"],"54":[2,1,"ICU"],"55":[0,1,"Juggle"],"56":[2,1,"Juggles"],"57":[1,1,"Lake"],"58":[2,1,"Lighthouse"],"59":[2,1,"Lightning"],"60":[2,1,"Loading"],"61":[2,1,"Matripix"],"62":[1,1,"Meteor"],"63":[0,1,"Meteor Smooth"],"64":[2,1,"Midnoise"],"65":[2,1,"Multi Comet"],"66":[1,1,"Noise 1"],"67":[1,1,"Noise 2"],"68":[1,1,"Noise 3"],"69":[1,1,"Noise 4"],"70":[0,1,"Noise Pal"],"71":[0,0,"Noisefire"],"72":[2,1,"Noisemeter"],"73":[2,1,"Noisemove"],"74":[0,0,"Oscillate"],"75":[0,1,"Pacifica"],"76":[0,1,"Palette"],"77":[2,1,"Percent"],"78":[2,1,"Perlin Move"],"79":[2,1,"Phased"],"80":[2,1,"Phased Noise"],"81":[2,1,"Pixels"],"82":[2,1,"Pixelwave"],"83":[1,1,"Plasma"],"84":[2,1,"Plasmoid"],"85":[3,1,"Popcorn"],"86":[0,0,"Pride 2015"],"87":[2,1,"Puddlepeak"],"88":[2,1,"Puddles"],"89":[2,1,"Railway"],"90":[2,1,"Rain"],"91":[0,1,"Rainbow"],"92":[1,1,"Rainbow Runner"],"93":[0,1,"Random Colors"],"94":[2,1,"Ripple"],"95":[2,1,"Ripple Peak"],"96":[0,1,"Ripple Rainbow"],"97":[2,1,"Rocktaves"],"98":[3,1,"Rolling Balls"],"99":[2,1,"Running"],"100":[3,1,"Running Dual"],"101":[2,1,"Saw"],"102":[3,1,"Scan"],"103":[3,1,"Scan Dual"],"104":[3,1,"Scanner"],"105":[3,1,"Scanner Dual"],"106":[0,1,"Sine"],"107":[3,1,"Sinelon"],"108":[3,1,"Sinelon Dual"],"109":[3,1,"Sinelon Rainbow"],"110":[3,0,"Solid Glitter"],"111":[2,1,"Solid Pattern"],"112":[3,0,"Solid Pattern Tri"],"113":[2,1,"Sparkle"],"114":[2,1,"Sparkle Dark"],"115":[2,1,"Sparkle+"],"116":[2,1,"Spots"],"117":[2,1,"Spots Fade"],"118":[0,1,"Stream"],"119":[0,0,"Stream 2"],"120":[2,1,"Strobe"],"121":[2,1,"Strobe Mega"],"122":[2,1,"Strobe Rainbow"],"123":[0,1,"Sunrise"],"124":[2,1,"Sweep"],"125":[0,1,"Sweep Random"],"126":[2,1,"Tetrix"],"127":[2,1,"Theater"],"128":[2,1,"Theater Rainbow"],"129":[2,1,"Traffic Light"],"130":[3,1,"Tri Fade"],"131":[3,1,"Tri Wipe"],"132":[0,0,"TV Simulator"],"133":[2,1,"Twinkle"],"134":[2,1,"Twinklecat"],"135":[2,1,"Twinklefox"],"136":[2,1,"Twinkleup"],"137":[3,1,"Two Dots"],"138":[0,1,"Washing Machine"],"139":[2,1,"Waterfall"],"140":[1,1,"Wavesins"],"141":[2,1,"Wipe"],"143":[0,1,"Wipe Random"]};
+/* 配色组(sceneSets.js):第 1 组 = 场景默认色,后 11 组固定常用组合(第 1 组是纯红绿蓝,每个场景都有) */
+const SET_BASE=[['#ff0000','#00ff00','#0000ff'],['#2ee83c','#ffe12e','#ff2e2e'],['#2ee8a0','#8cff2e','#ff8a2e'],['#2e6aff','#2ee8a0','#ff2e2e'],['#2e2eff','#2ee8ff','#ff8a2e'],['#8a2eff','#2e6aff','#ffe12e'],['#ff2ee8','#2e2eff','#8cff2e'],['#ff2e8a','#8a2eff','#2ee83c'],['#ff2e2e','#ff2ee8','#2ee8ff'],['#ff8a2e','#ff2e8a','#8a2eff'],['#ffffff','#ffd9a0','#2e6aff']];
+const SUNRISE_SETS=[['#2a2566','#c84a7a','#f5731f','#ffc14a','#dfe9f5'],['#1b3a6b','#6b5aa0','#f28c5a','#ffd27a','#eaf4ff'],['#5a1e3c','#b4343a','#ff7a2a','#ffc04d','#fff0d0'],['#2c4a7a','#9a8ac0','#ffa0a0','#ffd8b0','#f4f8ff'],['#3b2a6a','#a34f8a','#ff8a60','#ffcf7a','#fff6e8'],['#164a6e','#3fa4b0','#ffb347','#ffe08a','#ffffff'],['#6a1030','#d0203a','#ff5a1e','#ffa02e','#ffe6b0']];   // 日出 7 组 × 5 色(经典/海上/沙漠/雪山/云海/热带/火烧云),破晓→亮;同一行里不能放 // 注释(之前把后面全注释掉了,页面黑屏)
+const SUNSET_SETS=SUNRISE_SETS.map(x=>x.slice().reverse());   // 日落 = 日出倒序(10-22)
+function sceneColorCount(sc){if(sc.id==='sunrise'||sc.id==='sunset')return 5;const meta=WLED_FX_META[sc.fx];const able=meta?(meta[1]?3:Math.max(1,meta[0])):3;return Math.max(1,Math.min(3,(sc.cols||[]).length||1,able));}
+function sceneColorSets(sc){if(sc.id==='sunrise')return SUNRISE_SETS.map(x=>x.slice());if(sc.id==='sunset')return SUNSET_SETS.map(x=>x.slice());const n=sceneColorCount(sc);return [sc.cols.slice(0,n),...SET_BASE.map(b=>b.slice(0,n))];}
+const GRADIENT_FX=new Set([91,21,23,76,47,40,57,70,83,75,123,34,106,74,24,3,86,142]);
+function paletteFor(sc,idx){if(sc.id==='sunrise')return 255;if(sc.id==='sunset')return 254;if(idx===0)return sc.pal;if(sc.pal>=0&&sc.pal<=5)return sc.pal;return GRADIENT_FX.has(sc.fx)?4:5;}
+const NO_COLOR_FX=new Set([86,27,43,45]);
+function wledColorable(fxId){if(NO_COLOR_FX.has(fxId))return false;const m=WLED_FX_META[fxId];return !!m&&(m[0]>0||m[1]===1||fxId===0);}
+function sceneColorable(sc){return sc.fx!=null&&!NO_COLOR_FX.has(sc.fx);}
+/* WLED 固定模式图标的颜色:单色类跟灯带当前色;调色板 / 固定多色的用它自己会出现的颜色 */
+const WLED_FX_COLORS={'Rainbow':['#ff3b3b','#2ea84f','#3b7bff'],'Colorloop':['#ff3b3b','#2ea84f','#3b7bff'],'Pride 2015':['#ff3b3b','#2ea84f','#3b7bff'],'Blink Rainbow':['#ff3b3b','#2ea84f','#3b7bff'],'Chase Rainbow':['#ff3b3b','#2ea84f','#3b7bff'],'Theater Rainbow':['#ff3b3b','#2ea84f','#3b7bff'],'Strobe Rainbow':['#ff3b3b','#2ea84f','#3b7bff'],'Sinelon Rainbow':['#ff3b3b','#2ea84f','#3b7bff'],'Ripple Rainbow':['#ff3b3b','#2ea84f','#3b7bff'],'Rainbow Runner':['#ff3b3b','#ffffff'],'Aurora':['#00ffa3','#7d5fff'],'Fire 2012':['#ff4e00','#ffb347'],'Noisefire':['#ff4e00','#ffd23c'],'Pacifica':['#36d1dc','#005c97'],'Sunrise':['#ff6a3d','#ffe08a'],'Traffic Light':['#e0473c','#f0c828','#2ea84f'],'Colorful':['#ff3b3b','#ffff3b','#3bffff'],'Random Colors':['#ff4fa3','#4b4fd6','#2ea84f'],'Dissolve Rnd':['#ff4fa3','#2fd1c5','#ffd23c'],'Dynamic':['#ff4fa3','#4b4fd6','#2ea84f'],'Dynamic Smooth':['#ff4fa3','#4b4fd6','#2ea84f'],'Sweep Random':['#ff8c1a','#4b4fd6'],'Wipe Random':['#ff8c1a','#4b4fd6'],'Stream':['#ff4fa3','#2fd1c5'],'Stream 2':['#ffd23c','#4b4fd6'],'TV Simulator':['#cfd8e3','#3b7bff'],'Washing Machine':['#36d1dc','#ffffff'],'Noise Pal':['#7d5fff','#2fd1c5','#ffd23c'],'Palette':['#ff8c1a','#2fd1c5','#7d5fff']};
+const wledIconCols=(pr,devCol)=>{const fm=FX_SIM_MAP[pr.id];if(fm&&fm[1]!=null)return [cssToHex(devCol||'#7f9cf0')];return WLED_FX_COLORS[pr.name]||['#ff3b3b','#2ea84f','#3b7bff'];};
+/* 每个效果一个图标(fxGlyphs.js 原样):基础笔画拼成,c=1 用第二色 */
+const FX_GLYPHS=(()=>{
+const dot=(x,y,r=1.5)=>`M${x} ${y}m-${r} 0a${r} ${r} 0 1 0 ${r*2} 0a${r} ${r} 0 1 0 -${r*2} 0`;
+const dots=(n,y=12,r=1.5,x0=4,x1=20)=>Array.from({length:n},(_,i)=>dot(n===1?12:x0+(x1-x0)*i/(n-1),y,r)).join('');
+const arrR=(y=12,x=17)=>`M${x} ${y-4}l4 4-4 4`;const arrL=(y=12,x=7)=>`M${x} ${y-4}l-4 4 4 4`;const track=(y=12)=>`M3 ${y}h18`;
+const arc=(r,y=18)=>`M${12-r} ${y}a${r} ${r} 0 0 1 ${r*2} 0`;
+const wave=(y=12,a=3)=>`M2 ${y}c3-${a*1.3} 5-${a*1.3} 8 0s5 ${a*1.3} 8 0 3-${a} 4 0`;
+const bolt=(x=12,y=12,s=1)=>`M${x+1*s} ${y-8*s}l-${6*s} ${9*s}h${5*s}l-${1*s} ${7*s}l${7*s} -${10*s}h-${5*s}Z`;
+const spark=(x,y,s=3)=>`M${x} ${y-s}q${s*0.15} ${s*0.85} ${s} ${s}q-${s*0.85} ${s*0.15} -${s} ${s}q-${s*0.15} -${s*0.85} -${s} -${s}q${s*0.85} -${s*0.15} ${s} -${s}Z`;
+const flame='M12 3c0 5-5 6-5 11a5 5 0 0 0 10 0c0-4-3-6-3-8 0 2-2 2-2-3Z';
+const circ=(cx,cy,r)=>`M${cx-r} ${cy}a${r} ${r} 0 1 0 ${r*2} 0a${r} ${r} 0 1 0 -${r*2} 0`;
+const bars=(ws,y0=6,step=4)=>ws.map((w,i)=>`M4 ${y0+i*step}h${w}`).join('');
+const S=(...st)=>st.map(x=>typeof x==='string'?{d:x}:x);const A=(d)=>({d,c:1});
+const scatter=(n,r=1.3)=>{const pts=[[5,6],[18,5],[9,12],[16,14],[5,18],[19,19],[12,9],[12,17]];return pts.slice(0,n).map(([x,y])=>dot(x,y,r)).join('');};
+const G={
+'Solid':S(circ(12,12,7),A(circ(12,12,3))),'Aurora':S('M2 8c3-3 5-3 8 0s5 3 8 0M2 14c3-3 5-3 8 0s5 3 8 0',A('M2 20c3-3 5-3 8 0s5 3 8 0')),'Blends':S('M3 8h18M3 16h18',A('M3 12h18M6 8v8M12 8v8M18 8v8')),
+'Blink':S(circ(12,12,4),A('M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2')),'Blink Rainbow':S(circ(12,14,3.5),A(arc(8,18)+'M12 4v3M5 7l2 2M19 7l-2 2')),'Breathe':S(circ(12,12,3)+circ(12,12,6.5),A(circ(12,12,9.5))),
+'Chase':S(dots(2,12,1.5,5,11),A(dot(17,12,2)+arrR())),'Colorful':S(dots(4,12,2,4,20),A('M4 7l2-2M20 7l-2-2M4 17l2 2M20 17l-2 2')),'Colorloop':S('M20 12a8 8 0 1 1-2.3-5.7',A('M20 3v4h-4'+arc(3,14))),
+'Colortwinkles':S(spark(7,7,3)+spark(16,14,3.5),A(dot(17,5,1)+dot(6,17,1)+dot(12,12,1))),'Dissolve Rnd':S(scatter(5,1.6),A(scatter(8,0.8))),'Dynamic':S(dots(4,8,1.6),A(dots(4,16,1.6,6,22))),'Dynamic Smooth':S(wave(9,2.5),A(wave(15,2.5))),
+'Fire 2012':S(flame,A('M9 20h6')),'Fireworks Starburst':S('M12 12v-7M12 12l5-5M12 12h7M12 12l5 5M12 12v7M12 12l-5 5M12 12h-7M12 12l-5-5',A(circ(12,12,2.5))),'Flow':S(wave(12,3),A(arrR(12,18))),'Flow Stripe':S('M3 8h18M3 16h18',A(wave(12,2))),
+'Glitter':S(circ(12,12,7),A(spark(9,9,1.8)+spark(15,13,1.8)+spark(12,16,1.4))),'Juggle':S(dot(5,15,2)+dot(19,15,2),A(dot(12,7,2)+'M6 12q6-9 12 0')),'Lighthouse':S(circ(17,12,2.5),A('M14 9L4 6M14 12H4M14 15L4 18')),
+'Meteor Smooth':S(circ(17,7,2.5),A('M14 9c-4 2-7 6-10 11M15 12c-3 2-5 5-7 8')),'Noise Pal':S('M2 12c2-6 4 6 6 0s4-6 6 0 4 6 6 0',A('M4 18h4M10 18h4M16 18h4')),'Noisefire':S(flame,A('M4 20c2-3 4 3 6 0s4-3 6 0 4 3 4 0')),
+'Noisemove':S('M2 12c2-6 4 6 6 0s4-6 6 0 4 6 6 0',A(arrR(12,18))),'Oscillate':S('M4 12h16',A(dot(8,12,2)+dot(16,12,2)+'M8 6v3M16 15v3')),'Pacifica':S(wave(9,2.5)+wave(15,2.5),A('M5 20h14')),'Palette':S('M3 6h6v6H3ZM15 6h6v6h-6Z',A('M9 14h6v6H9Z')),
+'Pride 2015':S(arc(9,18)+arc(6,18),A(arc(3,18)+'M3 21h18')),'Rainbow':S(arc(9,18)+arc(3,18),A(arc(6,18))),'Random Colors':S(dot(7,8,2.5)+dot(17,16,2.5),A(dot(17,8,1.5)+dot(7,16,1.5)+dot(12,12,1.2))),
+'Ripple':S(dot(12,12,1.8)+'M6.5 6.5a8 8 0 0 0 0 11',A('M17.5 6.5a8 8 0 0 1 0 11M3.5 3.5a12 12 0 0 0 0 17M20.5 3.5a12 12 0 0 1 0 17')),'Ripple Rainbow':S(dot(12,15,1.8)+arc(5,15),A(arc(9,15)+'M4 20h16')),'Sine':S('M2 12c2-8 4-8 6 0s4 8 6 0 4-8 6 0'),
+'Sinelon Rainbow':S('M2 14c2-6 4-6 6 0s4 6 6 0 4-6 6 0',A(arc(8,20))),'Stream':S('M3 12h13',A(dot(19,12,2)+'M8 8l3 4-3 4')),'Stream 2':S('M3 8h10M3 16h10',A(dot(18,8,2)+dot(18,16,2))),'Strobe Rainbow':S(bolt(12,12,1),A(arc(9,21))),
+'Sunrise':S('M3 17h18M7 17a5 5 0 0 1 10 0',A('M12 4v3M5 9l2 2M19 9l-2 2')),'Sweep Random':S('M3 12h12',A(arrR(12,15)+dot(5,6,1.2)+dot(11,18,1.2)+dot(19,6,1.2))),'Theater Rainbow':S(dots(5,15,1.4),A(arc(8,15)+'M4 20h16')),
+'Traffic Light':S('M8 3h8v18H8Z',A(circ(12,7,1.8)+circ(12,12,1.8)+circ(12,17,1.8))),'TV Simulator':S('M3 5h18v12H3ZM8 21h8',A('M6 8h6M6 11h4M14 8l4 4-4 4')),'Washing Machine':S(circ(12,12,9),A('M12 12c1.5 0 1.5-2 0-2-2 0-2.5 2.5-.5 3 3 1 4.5-2.5 3-4.5-2-2.5-6.5-1.5-7.5 2')),
+'Wipe':S('M3 12h18M17 8l4 4-4 4',A('M3 9h8v6H3Z')),'Wipe Random':S('M3 12h18M17 8l4 4-4 4',A('M3 9h3v6H3ZM8 9h3v6H8Z')),
+'Android':S('M6 10h12v9H6Z',A(circ(9,13,1)+circ(15,13,1)+'M7 10l-2-4M17 10l2-4M6 14H4M18 14h2')),'Bouncing Balls':S('M3 19q4-13 9-13t9 13',A(dot(12,6,2)+dot(5,16,1.4)+dot(19,16,1.4)+'M3 21h18')),'Bpm':S('M2 12h4l2-5 3 10 3-8 2 3h6',A(dot(19,6,1.2))),
+'Candle':S('M9 9h6v12H9ZM12 9V7',A('M12 3c-2 2-2 4 0 4s2-2 0-4Z')),'Candle Multi':S('M4 11h4v10H4ZM10 9h4v12h-4ZM16 12h4v9h-4Z',A('M6 5c-1.2 1.5-1.2 3 0 3s1.2-1.5 0-3ZM12 3c-1.2 1.5-1.2 3 0 3s1.2-1.5 0-3ZM18 6c-1.2 1.5-1.2 3 0 3s1.2-1.5 0-3Z')),
+'Chase 2':S(dots(2,12,2,6,12),A(dot(18,12,2)+arrR(12,20))),'Chase 3':S(dots(3,12,1.8,4,14),A(dot(19,12,1.8)+'M6 6h12')),'Chase Flash':S(dots(2,14,1.6,5,11),A(bolt(17,12,0.8))),'Chase Flash Rnd':S(scatter(4,1.4),A(bolt(15,13,0.8))),
+'Chase Rainbow':S(dots(3,15,1.6,5,19),A(arc(8,15))),'Chase Random':S(dot(5,8,1.6)+dot(12,14,1.6)+dot(19,9,1.6),A(arrR(12,15))),'Chunchun':S('M4 12q4-6 8 0t8 0',A(dot(6,9,1.2)+dot(12,9,1.2)+dot(18,9,1.2))),'Colorwaves':S(wave(8,2.5),A(wave(14,2.5)+wave(20,2.5))),
+'Dancing Shadows':S('M12 6a2 2 0 1 0 0 4a2 2 0 1 0 0-4M12 10v5l-3 6M12 15l3 6',A('M12 11l5-3M12 11L7 8M4 20h16')),'Dissolve':S(dots(3,8,1.6)+dots(3,16,1.6),A(dot(12,12,1.2))),'Drip':S('M12 3s-4 5-4 8a4 4 0 0 0 8 0c0-3-4-8-4-8Z',A('M9 19q3 2 6 0')),
+'Fade':S(bars([16,12,8]),A(bars([4],18))),'Fairy':S(spark(12,10,5),A('M12 15v6M9 21h6')),'Fairytwinkle':S(spark(8,8,3.5)+spark(16,14,3),A(dot(17,6,1)+dot(6,17,1))),'Fill Noise':S('M2 12c2-6 4 6 6 0s4-6 6 0 4 6 6 0',A('M2 17c2-3 4 3 6 0s4-3 6 0 4 3 6 0')),
+'Fire Flicker':S(flame,A('M12 12c-1.5 2-2 3-2 4.5a2 2 0 0 0 4 0c0-1.5-.5-2.5-2-4.5Z')),'Fireworks':S('M12 12v-8M12 12v8M12 12h-8M12 12h8M12 12l-5.7-5.7M12 12l5.7 5.7M12 12l5.7-5.7M12 12l-5.7 5.7',A(dot(12,3,.8)+dot(21,12,.8)+dot(3,12,.8)+dot(12,21,.8))),
+'Fireworks 1D':S('M12 20V9',A('M12 9l-5-4M12 9l5-4M12 9v-5M8 4l1 2M16 4l-1 2')),'Gradient':S(bars([16,16,16,16]),A(bars([4,8,12,16]))),'Halloween Eyes':S('M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12Z',A(circ(12,12,3))),
+'Heartbeat':S('M12 21L4 13a4.5 4.5 0 0 1 8-6a4.5 4.5 0 0 1 8 6Z',A('M7 13h3l1-2 2 4 1-2h3')),'ICU':S(circ(7,12,3)+circ(17,12,3),A(dot(7,12,1)+dot(17,12,1)+'M10 12h4')),'Lake':S(wave(11,2),A(wave(16,2)+'M4 21h16')),'Lightning':S(bolt(12,12,1.1)),
+'Loading':S('M4 12h16',A('M4 12h10M4 8v8M14 8v8')),'Meteor':S(circ(17,7,2.5),A('M14 9L4 19M15 12l-6 6M12 7l-5 5')),'Multi Comet':S(circ(6,7,1.8)+circ(18,12,1.8)+circ(9,17,1.8),A('M8 8l7 3M16 13l-5 3M11 18l7 2')),
+'Noise 1':S('M2 14c3-8 5-8 8 0s5 8 8 0',A('M18 6v4')),'Noise 2':S('M2 14c2-8 4-8 6 0s4 8 6 0 4-8 6 0',A('M17 5h3M18.5 4v3')),'Noise 3':S('M2 14c1.5-8 3-8 4.5 0s3 8 4.5 0 3-8 4.5 0 3 8 4.5 0',A('M16 5h4M18 4v4')),
+'Noise 4':S('M2 14c1-7 2-7 3 0s2 7 3 0 2-7 3 0 2 7 3 0 2-7 3 0 2 7 3 0',A('M15 4v5M19 4v5M15 8h4')),'Percent':S('M3 9h18v6H3Z',A('M3 9h11v6H3Z')),'Perlin Move':S('M2 12c2-6 4 6 6 0s4-6 6 0 4 6 6 0',A('M15 5l4 3-4 3')),
+'Phased':S('M2 12c2-7 4-7 6 0s4 7 6 0 4-7 6 0',A('M2 17c2-3 4-3 6 0s4 3 6 0 4-3 6 0')),'Phased Noise':S('M2 12c2-7 4-7 6 0s4 7 6 0 4-7 6 0',A('M3 18l2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2')),
+'Plasma':S('M12 4c5 0 8 3 8 7s-3 9-8 9-8-4-8-8 3-8 8-8Z',A('M12 9c2 0 3 1 3 3s-1 4-3 4-3-2-3-4 1-3 3-3Z')),'Popcorn':S('M6 15h12l-1 6H7Z',A(dot(8,9,1.4)+dot(13,6,1.4)+dot(17,10,1.4))),'Railway':S('M5 4v16M19 4v16',A('M5 7h14M5 12h14M5 17h14')),
+'Rain':S('M8 4s-3 4-3 6a3 3 0 0 0 6 0c0-2-3-6-3-6Z',A('M16 12s-3 4-3 6a3 3 0 0 0 6 0c0-2-3-6-3-6Z')),'Rainbow Runner':S(arc(8,16),A(dot(12,19,2)+'M14 19h5M17 17l2 2-2 2')),'Rolling Balls':S('M3 18h18',A(circ(7,14,3)+circ(17,14,3)+'M7 14l2-2M17 14l2-2')),
+'Running':S(wave(12,3),A(arrR(12,18))),'Running Dual':S(wave(9,2.5),A('M2 17c3 4 5 4 8 0s5-4 8 0 3 3 4 0')),'Saw':S('M2 18l5-12v12l5-12v12l5-12v12',A('M2 20h20')),'Scan':S(track(),A(dot(12,12,2.5)+arrL()+arrR())),
+'Scan Dual':S(track(),A(dot(7,12,2.2)+dot(17,12,2.2)+'M9 12h6')),'Scanner':S(track(),A(dot(14,12,2.5)+'M11 12H5M8 12h-3M17 8l4 4-4 4')),'Scanner Dual':S(track(),A(dot(6,12,2)+dot(18,12,2)+'M8 12h3M13 12h3')),
+'Sinelon':S('M2 12c2-8 4-8 6 0s4 8 6 0 4-8 6 0',A(dot(8,6,1.6))),'Sinelon Dual':S('M2 12c2-8 4-8 6 0s4 8 6 0 4-8 6 0',A(dot(8,6,1.6)+dot(16,18,1.6))),'Solid Glitter':S(circ(12,12,7),A(spark(10,10,1.8)+spark(14,14,1.8))),
+'Solid Pattern':S('M3 9h6v6H3ZM15 9h6v6h-6Z',A('M9 9h6v6H9Z')),'Solid Pattern Tri':S('M3 9h4v6H3ZM10 9h4v6h-4Z',A('M17 9h4v6h-4Z')),'Sparkle':S(spark(12,12,6),A(dot(5,5,1)+dot(19,19,1))),'Sparkle Dark':S(circ(12,12,9),A(spark(12,12,4))),
+'Sparkle+':S(spark(10,10,5),A('M17 15v6M14 18h6')),'Spots':S(dot(6,12,2.5)+dot(18,12,2.5),A(dot(12,12,2.5))),'Spots Fade':S(dot(6,12,2.5)+dot(18,12,2.5),A(circ(12,12,2.5)+circ(12,12,4.5))),
+'Strobe':S(bolt(12,12,1),A('M4 5l2 2M20 5l-2 2M4 19l2-2M20 19l-2-2')),'Strobe Mega':S(bolt(8,12,0.8)+bolt(16,12,0.8),A('M3 4l2 2M21 4l-2 2')),'Sweep':S('M3 12h14',A(arrR(12,15)+'M3 8h6M3 16h6')),'Tetrix':S('M4 19h16M6 15h12M8 11h8',A('M10 7h4M12 3v4')),
+'Theater':S(dots(5,12,1.4),A('M4 6h16M4 18h16')),'Tri Fade':S(bars([16,12,8],7,5)),'Tri Wipe':S('M3 12h18M17 8l4 4-4 4',A('M3 9h4v6H3ZM8 9h4v6H8Z')),'Twinkle':S(spark(7,7,3)+spark(16,15,3.5),A(dot(17,6,1)+dot(6,17,1))),
+'Twinklecat':S(spark(12,11,4),A('M8 4l2 3M16 4l-2 3M9 19q3 2 6 0')),'Twinklefox':S(spark(9,9,3.5)+spark(16,14,2.5),A('M5 20q3-2 6 0M13 20q3-2 6 0')),'Twinkleup':S(spark(12,13,4),A('M12 8V3M9 6l3-3 3 3')),'Two Dots':S(dot(7,12,2.5),A(dot(17,12,2.5)+'M10.5 12h3')),
+'Wavesins':S('M2 10c2-6 4-6 6 0s4 6 6 0 4-6 6 0',A('M2 16c2-4 4-4 6 0s4 4 6 0 4-4 6 0')),
+'static':S(circ(12,12,7),A(circ(12,12,3))),'breath':S(circ(12,12,3)+circ(12,12,6.5),A(circ(12,12,9.5))),'blink':S(circ(12,12,4),A('M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2')),
+'jumpAll':S('M3 8h18v8H3Z',A('M3 12h18M9 8v8M15 8v8')),'jumpSeq':S(dots(4,12,1.8,4,20),A('M4 7h4M10 7h4')),'altGroup':S(dot(5,12,2)+dot(10,12,2),A(dot(15,12,2)+dot(20,12,2))),'flow':S(wave(12,3),A(arrR(12,18))),
+'pulse':S(track(),A(dot(12,12,2.5)+'M12 5v3M12 16v3')),'rainbow':S(arc(9,18)+arc(3,18),A(arc(6,18))),'auroraFlash':S('M2 8c3-3 5-3 8 0s5 3 8 0M2 14c3-3 5-3 8 0s5 3 8 0',A(bolt(18,16,0.5))),'random':S(scatter(5,1.6),A(scatter(8,.8))),
+};
+const D=(d)=>({d}),D2=(d)=>({d,c:1});
+Object.assign(G,{'Blurz':[D('M4 14a3 3 0 1 0 6 0a3 3 0 1 0-6 0M13 10a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0'),D2('M15 17a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 6h3')],
+'DJ Light':[D('M12 12m-8 0a8 8 0 1 0 16 0a8 8 0 1 0-16 0M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0'),D2('M12 4v3M12 17v3M4 12h3M17 12h3')],'Freqmap':[D('M4 18v-3M8 18v-7M12 18v-11M16 18v-8M20 18v-4'),D2('M3 20h18')],
+'Freqmatrix':[D('M6 6h3v3H6zM11 6h3v3h-3zM16 6h3v3h-3zM6 11h3v3H6zM11 11h3v3h-3zM6 16h3v3H6z'),D2('M16 11h3v3h-3zM11 16h3v3h-3zM16 16h3v3h-3z')],'Freqpixels':[D('M4 12h2M8 12h2M12 12h2M16 12h2M20 12h1'),D2('M5 6l1 1M17 5l1 1M9 17l1 1M14 18l1 1M19 16l1 1')],
+'Freqwave':[D('M2 12c2-8 4-8 6 0s4 8 6 0 4-8 6 0'),D2('M2 12h20')],'Gravcenter':[D('M12 12h-8M12 12h8M12 9v6'),D2('M4 9v6M20 9v6M8 10v4M16 10v4')],'Gravcentric':[D('M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0M12 12m-6 0a6 6 0 1 0 12 0a6 6 0 1 0-12 0'),D2('M12 12m-9 0a9 9 0 0 1 18 0')],
+'Gravfreq':[D('M12 18v-10M8 18v-6M16 18v-6M4 18v-3M20 18v-3'),D2('M3 5c2-3 4-3 6 0s4 3 6 0 4-3 6 0')],'Gravimeter':[D('M3 12h13'),D2('M18 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0M3 9v6')],
+'Juggles':[D('M6 16m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0M18 16m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0'),D2('M12 6m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0M7 12c1-4 3-5 5-6M17 12c-1-4-3-5-5-6')],
+'Matripix':[D('M5 3v6M5 13v3M12 3v3M12 10v8M19 5v5M19 14v6'),D2('M5 20h0M12 20h0M19 21h0M5 10v1M12 7v1M19 12v1')],'Midnoise':[D('M2 12h4l2-5 2 9 2-8 2 6 2-4 2 2h4'),D2('M12 4v3M12 17v3')],
+'Noisemeter':[D('M4 18a8 8 0 0 1 16 0'),D2('M12 18l5-7M12 18m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0-3 0')],'Pixels':[D('M5 7h2v2H5zM11 5h2v2h-2zM17 8h2v2h-2zM8 13h2v2H8zM15 14h2v2h-2z'),D2('M4 17h2v2H4zM12 18h2v2h-2zM19 17h2v2h-2z')],
+'Pixelwave':[D('M12 4v16'),D2('M4 12h2M8 9h2M14 9h2M18 12h2M6 15h0M8 15h2M14 15h2')],'Plasmoid':[D('M12 12m-7 0a7 7 0 1 0 14 0a7 7 0 1 0-14 0'),D2('M6 10c2-3 4 3 6 0s4 3 6 0M6 14c2-3 4 3 6 0s4 3 6 0')],
+'Puddlepeak':[D('M4 17a8 3 0 1 0 16 0a8 3 0 1 0-16 0'),D2('M12 14V4M9 7l3-3 3 3')],'Puddles':[D('M3 9a4 2 0 1 0 8 0a4 2 0 1 0-8 0M13 15a4 2 0 1 0 8 0a4 2 0 1 0-8 0'),D2('M14 7a3 1.5 0 1 0 6 0a3 1.5 0 1 0-6 0M4 16a3 1.5 0 1 0 6 0a3 1.5 0 1 0-6 0')],
+'Ripple Peak':[D('M12 17m-3 0a3 1.5 0 1 0 6 0a3 1.5 0 1 0-6 0M12 17m-8 0a8 4 0 1 0 16 0a8 4 0 1 0-16 0'),D2('M12 13V3M9 6l3-3 3 3')],'Rocktaves':[D('M8 17m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0M10.5 17V5l8-2v10'),D2('M16 15m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0')],
+'Waterfall':[D('M5 3v8M9 3v12M13 3v7M17 3v11M21 3v6'),D2('M5 15v1M9 19v1M13 14v2M17 18v1M21 13v2')]});
+return G;})();
+/* 场景字形(sceneIcons.js G 表 + SCENE_GLYPH 映射) */
+const SCENE_G={sun:[{d:'M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8'},{d:'M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4',c:1}],sunrise:[{d:'M3 17h18M7 17a5 5 0 0 1 10 0'},{d:'M12 4v3M5 9l2 2M19 9l-2 2',c:1}],sunset:[{d:'M3 15h18M7 15a5 5 0 0 1 10 0'},{d:'M4 19q2-1.5 4 0t4 0t4 0t4 0M12 5v3',c:1}],glow:[{d:'M3 16h18M4 16a8 8 0 0 1 16 0'},{d:'M7.5 16a4.5 4.5 0 0 1 9 0',c:1}],cloud:[{d:'M7 17h10a4 4 0 0 0 .5-7.9A5 5 0 0 0 8 10a3.6 3.6 0 0 0-1 7Z'}],moon:[{d:'M14 3a9 9 0 1 0 7 9a7 7 0 0 1-7-9Z'},{d:'M6 6l.6 1.4L8 8l-1.4.6L6 10l-.6-1.4L4 8l1.4-.6Z',c:1}],star:[{d:'M12 3l2.6 6 6.4.6-5 4.4 1.5 6.5L12 17l-5.5 3.5L8 14 3 9.6l6.4-.6Z'}],sparkle:[{d:'M12 3q.5 7.5 9 9q-8.5 1.5-9 9q-.5-7.5-9-9q8.5-1.5 9-9Z'},{d:'M19 3v3M17.5 4.5h3',c:1}],planet:[{d:'M12 7a5 5 0 1 0 0 10a5 5 0 1 0 0-10'},{d:'M2 12c4 5 16 5 20 0M2 12c4-2 8-2 10-1',c:1}],galaxy:[{d:'M12 12c2 0 3-2 2-3.5C12 6 8 7 7 10c-1 4 2 7.5 6 7.5c5 0 7-4.5 6-8.5'},{d:'M5 4l.5 1L6.5 5.5 5.5 6 5 7l-.5-1L3.5 5.5 4.5 5Z',c:1}],rainbow:[{d:'M3 18a9 9 0 0 1 18 0M9 18a3 3 0 0 1 6 0'},{d:'M6 18a6 6 0 0 1 12 0',c:1}],pine:[{d:'M12 3L5 12h4l-5 7h16l-5-7h4Z'},{d:'M12 19v3',c:1}],leaf:[{d:'M4 20C4 10 12 4 20 4c0 8-8 16-16 16Z'},{d:'M4 20L16 8',c:1}],flower:[{d:'M12 4.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5M12 14.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5M4.5 12a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0M14.5 12a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0'},{d:'M12 10a2 2 0 1 0 0 4a2 2 0 1 0 0-4',c:1}],wave:[{d:'M2 13c3-4 5-4 8 0s5 4 8 0 3-3 4 0'},{d:'M2 19c3-4 5-4 8 0s5 4 8 0',c:1}],fire:[{d:'M12 3c0 5-5 6-5 11a5 5 0 0 0 10 0c0-4-3-6-3-8 0 2-2 2-2-3Z'},{d:'M12 12c-1.5 2-2 3-2 4.5a2 2 0 0 0 4 0c0-1.5-.5-2.5-2-4.5Z',c:1}],snow:[{d:'M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7'},{d:'M12 5l-2-2M12 5l2-2M12 19l-2 2M12 19l2 2',c:1}],drop:[{d:'M12 3s-6 8-6 12a6 6 0 0 0 12 0c0-4-6-12-6-12Z'},{d:'M9 15a3 3 0 0 0 3 3',c:1}],mountain:[{d:'M2 20L9 8l4 6 3-4 6 10Z'},{d:'M7 11.5L9 9l2 2',c:1}],cactus:[{d:'M12 4v17M8 9v4q0 2 4 2M16 8v4q0 2-4 2'},{d:'M6 21h12',c:1}],grass:[{d:'M4 20q2-8 1-14M8 20q1-8 4-15M12 20q1-7 5-12M16 20q1-6 4-10'}],sail:[{d:'M12 3v16M12 4l7 11h-7M12 7l-6 8h6'},{d:'M4 19h16l-2 3H6Z',c:1}],gift:[{d:'M4 10h16v11H4ZM3 7h18v3H3Z'},{d:'M12 7v14M12 7c-3 0-4-4 0-2c4-2 3 2 0 2',c:1}],xmas:[{d:'M12 3L5 12h4l-5 7h16l-5-7h4Z'},{d:'M9 15a.8.8 0 1 0 0 1.6a.8.8 0 1 0 0-1.6M14 16a.8.8 0 1 0 0 1.6a.8.8 0 1 0 0-1.6M11 10a.8.8 0 1 0 0 1.6a.8.8 0 1 0 0-1.6',c:1}],bell:[{d:'M12 3c-4 0-6 3-6 7v5l-2 3h16l-2-3v-5c0-4-2-7-6-7Z'},{d:'M10 20a2 2 0 0 0 4 0',c:1}],pumpkin:[{d:'M12 5C7 5 4 9 4 13s3 8 8 8 8-4 8-8-3-8-8-8ZM12 5V2'},{d:'M8 11l2 2H6ZM16 11l2 2h-4ZM7 16l2 1.5 2-1.5 2 1.5 2-1.5 2 1.5',c:1}],egg:[{d:'M12 3C8 3 5 9 5 14a7 7 0 0 0 14 0c0-5-3-11-7-11Z'},{d:'M6 12l2 2 2-2 2 2 2-2 2 2 2-2',c:1}],heart:[{d:'M12 21L4 13a4.5 4.5 0 0 1 8-6a4.5 4.5 0 0 1 8 6Z'}],cake:[{d:'M4 12h16v8H4ZM6 12V9q0-2 2-2h8q2 0 2 2v3'},{d:'M9 7V4M15 7V4M9 3a.6.6 0 1 0 0 1.2M15 3a.6.6 0 1 0 0 1.2',c:1}],popper:[{d:'M4 20l6-12 6 6Z'},{d:'M17 4l2 2M20 9h2M16 3a.8.8 0 1 0 0 1.6M21 5a.8.8 0 1 0 0 1.6',c:1}],fireworks:[{d:'M12 12v-8M12 12v8M12 12h-8M12 12h8M12 12l-5.7-5.7M12 12l5.7 5.7M12 12l5.7-5.7M12 12l-5.7 5.7'},{d:'M12 3a.8.8 0 1 0 0 1.6M21 12a.8.8 0 1 0 0 1.6M3 12a.8.8 0 1 0 0 1.6M12 20a.8.8 0 1 0 0 1.6',c:1}],candle:[{d:'M9 9h6v12H9ZM12 9V7'},{d:'M12 3c-2 2-2 4 0 4s2-2 0-4Z',c:1}],mask:[{d:'M3 9c0-4 6-4 9-1 3-3 9-3 9 1 0 6-6 8-9 5-3 3-9 1-9-5Z'},{d:'M8 9.5a1.2 1.2 0 1 0 0 2.4M16 9.5a1.2 1.2 0 1 0 0 2.4',c:1}],glass:[{d:'M8 3h8l-1 8a3 3 0 0 1-6 0ZM12 14v6M8 21h8'},{d:'M10 6h4',c:1}],note:[{d:'M9 16a3 3 0 1 0 0 6a3 3 0 1 0 0-6M12 19V4l8 2v2l-8-2'}],bulb:[{d:'M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5V16h8v-2.5A6 6 0 0 0 12 3Z'},{d:'M12 8v4',c:1}],coffee:[{d:'M4 8h13v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5ZM17 10h2a2 2 0 0 1 0 4h-2'},{d:'M8 4q-1 1.5 0 3M12 4q-1 1.5 0 3',c:1}],bolt:[{d:'M13 2L4 14h7l-1 8 10-13h-7Z'}],spiral:[{d:'M12 12c1.5 0 1.5-2 0-2-2 0-2.5 2.5-.5 3 3 1 4.5-2.5 3-4.5-2-2.5-6.5-1.5-7.5 2-1 4.5 3 8 7 7 4.5-1 6-6 4-9'}],bars:[{d:'M4 19h16M6 15h12M8 11h8M10 7h4'}],fish:[{d:'M3 12c4-6 11-6 15 0-4 6-11 6-15 0ZM18 12l4-4v8Z'},{d:'M8 11a.8.8 0 1 0 0 1.6',c:1}],sneaker:[{d:'M3 17h18v2H3ZM3 17v-5c3 0 5-3 7-4l4 5h7v4'},{d:'M10 8l2 3M12 10l2 3',c:1}],zzz:[{d:'M6 6h5l-5 5h5M13 11h4l-4 4h4'},{d:'M16 16h3l-3 3h3',c:1}],smile:[{d:'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18M8 14q4 4 8 0'},{d:'M9 9a.8.8 0 1 0 0 1.6M15 9a.8.8 0 1 0 0 1.6',c:1}],wheat:[{d:'M12 21V6M12 6l-3-2 3-2 3 2ZM12 10l-3-2M12 10l3-2M12 14l-3-2M12 14l3-2M12 18l-3-2M12 18l3-2'}],sunflower:[{d:'M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6'},{d:'M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8',c:1}],hills:[{d:'M2 18q5-8 10-2t10-4'},{d:'M2 21h20',c:1}],path:[{d:'M6 21c0-7 7-7 7-14M12 21c0-5 5-5 5-11'},{d:'M9 21c0-6 6-6 6-12',c:1}],haystack:[{d:'M4 19h16M6 19a6 6 0 0 1 12 0'},{d:'M9 19v-5M12 19v-7M15 19v-5M20 4v10',c:1}],river:[{d:'M3 3c7 3 3 9 9 12s2 6 9 6'},{d:'M7 3c5 2 2 7 6 10',c:1}],orbit:[{d:'M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6'},{d:'M2 12c4 5 16 5 20 0-4-5-16-5-20 0M19 9.5a1 1 0 1 0 0 2',c:1}],care:[{d:'M12 20L5 13a4 4 0 0 1 7-5a4 4 0 0 1 7 5Z'},{d:'M12 10v5M9.5 12.5h5',c:1}],peach:[{d:'M12 6a7 7 0 1 0 0 14a7 7 0 1 0 0-14M12 6v14'},{d:'M12 6q3-4 6-1',c:1}],lotus:[{d:'M12 20c-4 0-7-3-7-7 3 0 5 2 7 5 2-3 4-5 7-5 0 4-3 7-7 7Z'},{d:'M12 18c-2-4-2-9 0-12 2 3 2 8 0 12Z',c:1}],herb:[{d:'M12 21V8M12 12c-4 0-6-2-6-6 4 0 6 2 6 6ZM12 16c4 0 6-2 6-6-4 0-6 2-6 6Z'}],berry:[{d:'M9 10.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5M15 10.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5M12 15.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5'},{d:'M9 10.5L7 4M15 10.5l2-6.5',c:1}],beach:[{d:'M4 12a8 8 0 0 1 16 0ZM12 12v9'},{d:'M18 4a2 2 0 1 0 0 4a2 2 0 1 0 0-4',c:1}],mint:[{d:'M4 20C4 10 12 4 20 4c0 8-8 16-16 16Z'},{d:'M6 6l1 1M18 18l1 1M8 3v2M3 8h2',c:1}],eye:[{d:'M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12Z'},{d:'M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6',c:1}],sled:[{d:'M4 16h14a3 3 0 0 0 0-6M6 16v-8h8'},{d:'M4 19h16',c:1}],clover:[{d:'M12 12c-3-1-4-5 0-5s3 4 0 5Zm0 0c1-3 5-4 5 0s-4 3-5 0Zm0 0c3 1 4 5 0 5s-3-4 0-5Zm0 0c-1 3-5 4-5 0s4-3 5 0Z'},{d:'M12 17l-2 4',c:1}],cane:[{d:'M9 21V8a4 4 0 0 1 8 0v1'},{d:'M9 12h3M9 16h3M9 20h3',c:1}],confetti:[{d:'M5 5l2 2M17 4l-2 2M4 16l2-2M19 17l-2-2'},{d:'M12 3a1 1 0 1 0 0 2M12 19a1 1 0 1 0 0 2M3 12a1 1 0 1 0 0 2M19 12a1 1 0 1 0 0 2M9 9l6 6M15 9l-6 6',c:1}],baby:[{d:'M12 5a7 7 0 1 0 0 14a7 7 0 1 0 0-14'},{d:'M9 11a.8.8 0 1 0 0 1.6M15 11a.8.8 0 1 0 0 1.6M10 15q2 1.5 4 0M12 5V3l2-1',c:1}],menorah:[{d:'M4 8v8h16V8M8 8v8M12 5v11M16 8v8M6 19h12'},{d:'M12 2v3M8 5v3M16 5v3M4 5v3M20 5v3',c:1}],music:[{d:'M9 16a3 3 0 1 0 0 6a3 3 0 1 0 0-6M12 19V4l8 2v2l-8-2'},{d:'M17 12a3 3 0 1 0 0 6a3 3 0 1 0 0-6M20 15V9',c:1}],turkey:[{d:'M12 20c-5 0-8-3-8-7 0-3 2-6 6-6l2 3 2-3c4 0 6 3 6 6 0 4-3 7-8 7Z'},{d:'M8 20l-1 2M16 20l1 2M10 4l2 2 2-2',c:1}],dance:[{d:'M12 6a2 2 0 1 0 0 4a2 2 0 1 0 0-4M12 10v5l-3 6M12 15l3 6M12 11l5-3M12 11L7 8'}],spinner:[{d:'M12 3a9 9 0 0 1 9 9M21 12a9 9 0 0 1-9 9M12 21a9 9 0 0 1-9-9M3 12a9 9 0 0 1 9-9'},{d:'M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8',c:1}],swing:[{d:'M4 3v18M20 3v18M4 3h16'},{d:'M8 3v11M16 3v11M7 14h10',c:1}],gradient:[{d:'M4 6h16M4 10h16M4 14h16M4 18h16'},{d:'M4 6h4M4 10h8M4 14h12M4 18h16',c:1}],rose:[{d:'M12 13c-3 0-5-2-5-5 3 0 5 2 5 5Zm0 0c3 0 5-2 5-5-3 0-5 2-5 5Zm0 0c0-3 2-5 5-5'},{d:'M12 13v8M12 17q-3 0-4-3M12 18q3 0 4-3',c:1}],waves3:[{d:'M2 8c3-3 5-3 8 0s5 3 8 0M2 14c3-3 5-3 8 0s5 3 8 0M2 20c3-3 5-3 8 0s5 3 8 0'}],crown:[{d:'M4 18L3 7l5 4 4-6 4 6 5-4-1 11Z'},{d:'M4 21h16',c:1}],ring:[{d:'M12 8a6 6 0 1 0 0 12a6 6 0 1 0 0-12'},{d:'M12 8l-2-4h4Z',c:1}],power:[{d:'M12 3v9'},{d:'M7 6a8 8 0 1 0 10 0',c:1}]};
+const SCENE_GLYPH={cct2200:'bulb',cct2700:'bulb',cct3000:'bulb',cct4000:'bulb',cct5000:'bulb',cct6500:'bulb',sunrise:'sunrise',sunset:'sunset',sunsetglow:'glow',nebula:'galaxy',moonlight:'moon',star:'star',universe:'orbit',rainbow:'rainbow',forest:'pine',aurora:'waves3',karstcave:'mountain',wave:'wave',cornfield:'wheat',rustling:'leaf',flowerfield:'flower',firefly:'sparkle',fire:'fire',cherry:'flower',spring:'leaf',summer:'sun',fall:'leaf',winter:'snow',downpour:'drop',desert:'cactus',sandgrains:'confetti',grassland:'grass',mountainforest:'mountain',sky:'cloud',sailboat:'sail',christmas:'xmas',christmastree:'xmas',christmasgift:'gift',sled:'sled',halloween:'pumpkin',halloweenb:'pumpkin',halloweenc:'pumpkin',halloweend:'pumpkin',easter:'egg',mothersday:'rose',fathersday:'crown',birthday:'cake',newyears:'fireworks',thanksgiving:'turkey',carnival:'mask',valentines:'heart',danceparty:'dance',party:'popper',fireworks:'fireworks',candlelight:'candle',hanukkah:'menorah',babyshower:'baby',candycane:'cane',confetti:'confetti',whitelight:'bulb',bright:'sun',morning:'sunrise',afternoon:'sun',twilight:'sunset',night:'moon',leisure:'coffee',refreshing:'mint',candy:'clover',spin:'spinner',dancing:'dance',sports:'sneaker',swing:'swing',colorful:'rainbow',flow:'wave',fluctuate:'waves3',stacking:'bars',deepsea:'fish',underseaking:'crown',gradient:'gradient',romantic:'rose',quiet:'zzz',happy:'smile',profound:'eye',enthusiastic:'fire',mysterious:'mask',soothing:'lotus',dreamlike:'sparkle',warm:'candle',leisurely:'coffee',dreamland:'moon',active:'bolt',lightoff:'power',venus:'planet',jupiter:'planet',mars:'planet',saturn:'planet',mercury:'planet',earth:'orbit',uranus:'planet',neptune:'planet',milkyway:'galaxy',woodedpath:'path',haystack:'haystack',riverside:'river',grove:'pine',starrynight:'star',sunflower:'sunflower',greenwheat:'wheat',mountains:'mountain',goldenshore:'beach',field:'hills',dusk:'sunset',glassysea:'wave',care:'care',peach:'peach',meditation:'lotus',mild:'glow',herbal:'herb',berry:'berry',sunny:'sun',beach:'beach',refreshinglight:'mint',unspokenlove:'heart'};
+/* 效果关键词字形(effectIcons.js E 表 + RULES):FX_GLYPHS 没有精确命中时的退路 */
+const E_GLYPHS={solid:[{d:'M12 5a7 7 0 1 0 0 14a7 7 0 1 0 0-14'},{d:'M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6',c:1}],breathe:[{d:'M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6M12 5.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13'},{d:'M12 2.5a9.5 9.5 0 1 0 0 19',c:1}],blink:[{d:'M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8'},{d:'M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2',c:1}],wipe:[{d:'M3 12h18M17 8l4 4-4 4'},{d:'M3 9h8v6H3Z',c:1}],chase:[{d:'M5 12a1.5 1.5 0 1 0 0 .01M11 12a1.5 1.5 0 1 0 0 .01'},{d:'M17 12a2 2 0 1 0 0 .01M19 8l3 4-3 4',c:1}],theater:[{d:'M4 12a1.5 1.5 0 1 0 0 .01M12 12a1.5 1.5 0 1 0 0 .01M20 12a1.5 1.5 0 1 0 0 .01'},{d:'M8 12a1 1 0 1 0 0 .01M16 12a1 1 0 1 0 0 .01M4 6h16M4 18h16',c:1}],running:[{d:'M2 13c3-5 5-5 8 0s5 5 8 0'},{d:'M17 9l3 4-3 4',c:1}],rainbow:[{d:'M3 18a9 9 0 0 1 18 0M9 18a3 3 0 0 1 6 0'},{d:'M6 18a6 6 0 0 1 12 0',c:1}],twinkle:[{d:'M7 5q.3 3 3 3.5q-2.7.5-3 3.5q-.3-3-3-3.5q2.7-.5 3-3.5ZM16 11q.4 4 4 4.5q-3.6.5-4 4.5q-.4-4-4-4.5q3.6-.5 4-4.5Z'},{d:'M17 4v2M16 5h2M6 17v2M5 18h2',c:1}],fire:[{d:'M12 3c0 5-5 6-5 11a5 5 0 0 0 10 0c0-4-3-6-3-8 0 2-2 2-2-3Z'},{d:'M12 12c-1.5 2-2 3-2 4.5a2 2 0 0 0 4 0c0-1.5-.5-2.5-2-4.5Z',c:1}],candle:[{d:'M9 9h6v12H9ZM12 9V7'},{d:'M12 3c-2 2-2 4 0 4s2-2 0-4Z',c:1}],scan:[{d:'M3 12h18'},{d:'M12 12a2.5 2.5 0 1 0 0 .01M6 8l-3 4 3 4M18 8l3 4-3 4',c:1}],fade:[{d:'M4 6h16M4 10h12M4 14h8'},{d:'M4 18h4',c:1}],gradient:[{d:'M4 6h16M4 10h16M4 14h16M4 18h16'},{d:'M4 6h4M4 10h8M4 14h12M4 18h16',c:1}],meteor:[{d:'M17 7a3 3 0 1 0 0 .01'},{d:'M14 9L4 19M15 12l-6 6M12 7l-5 5',c:1}],ripple:[{d:'M12 12a2 2 0 1 0 0 .01M6.5 6.5a8 8 0 0 0 0 11'},{d:'M17.5 6.5a8 8 0 0 1 0 11M3.5 3.5a12 12 0 0 0 0 17M20.5 3.5a12 12 0 0 1 0 17',c:1}],wave:[{d:'M2 13c3-4 5-4 8 0s5 4 8 0 3-3 4 0'},{d:'M2 19c3-4 5-4 8 0s5 4 8 0',c:1}],fireworks:[{d:'M12 12v-8M12 12v8M12 12h-8M12 12h8M12 12l-5.7-5.7M12 12l5.7 5.7M12 12l5.7-5.7M12 12l-5.7 5.7'},{d:'M12 3a.8.8 0 1 0 0 1.6M21 12a.8.8 0 1 0 0 1.6M3 12a.8.8 0 1 0 0 1.6M12 20a.8.8 0 1 0 0 1.6',c:1}],noise:[{d:'M2 12c2-6 4 6 6 0s4-6 6 0 4 6 6 0'},{d:'M2 17c2-3 4 3 6 0s4-3 6 0 4 3 6 0',c:1}],plasma:[{d:'M12 4c5 0 8 3 8 7s-3 9-8 9-8-4-8-8 3-8 8-8Z'},{d:'M12 9c2 0 3 1 3 3s-1 4-3 4-3-2-3-4 1-3 3-3Z',c:1}],strobe:[{d:'M13 2L4 14h7l-1 8 10-13h-7Z'}],rain:[{d:'M8 4s-3 4-3 6a3 3 0 0 0 6 0c0-2-3-6-3-6ZM16 12s-3 4-3 6a3 3 0 0 0 6 0c0-2-3-6-3-6Z'}],bounce:[{d:'M3 19q4-13 9-13t9 13'},{d:'M12 6a2 2 0 1 0 0 .01M3 21h18',c:1}],sine:[{d:'M2 12c2-8 4-8 6 0s4 8 6 0 4-8 6 0'}],heartbeat:[{d:'M2 12h4l2-5 3 10 3-8 2 3h6'}],bars:[{d:'M4 19h16M6 15h12M8 11h8M10 7h4'}],palette:[{d:'M3 6h6v6H3ZM15 6h6v6h-6Z'},{d:'M9 14h6v6H9Z',c:1}],tv:[{d:'M3 5h18v12H3ZM8 21h8'},{d:'M6 8h6M6 11h4',c:1}],loop:[{d:'M20 12a8 8 0 1 1-2.3-5.7'},{d:'M20 3v4h-4',c:1}],eye:[{d:'M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12Z'},{d:'M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6',c:1}],dots:[{d:'M5 6a1.5 1.5 0 1 0 0 .01M18 8a1.5 1.5 0 1 0 0 .01M8 17a1.5 1.5 0 1 0 0 .01'},{d:'M13 12a2 2 0 1 0 0 .01M19 18a1.5 1.5 0 1 0 0 .01',c:1}],twodots:[{d:'M7 12a2.5 2.5 0 1 0 0 .01'},{d:'M17 12a2.5 2.5 0 1 0 0 .01M10.5 12h3',c:1}],juggle:[{d:'M5 15a2 2 0 1 0 0 .01M19 15a2 2 0 1 0 0 .01'},{d:'M12 7a2 2 0 1 0 0 .01M6 12q6-9 12 0',c:1}],waves3:[{d:'M2 8c3-3 5-3 8 0s5 3 8 0M2 14c3-3 5-3 8 0s5 3 8 0M2 20c3-3 5-3 8 0s5 3 8 0'}],sparkle:[{d:'M12 3q.5 7.5 9 9q-8.5 1.5-9 9q-.5-7.5-9-9q8.5-1.5 9-9Z'}]};
+const E_RULES=[[/solid|static|常亮/i,'solid'],[/breath|呼吸/i,'breathe'],[/blink|闪烁|明灭/i,'blink'],[/wipe|sweep/i,'wipe'],[/theater/i,'theater'],[/chase|追/i,'chase'],[/running|流水|stream|railway/i,'running'],[/rainbow|colorloop|pride|colorful|七彩|彩虹/i,'rainbow'],[/twinkle|sparkle|glitter|fairy|star|闪/i,'twinkle'],[/candle|烛/i,'candle'],[/fire|flicker|火/i,'fire'],[/scan|lighthouse|扫描/i,'scan'],[/dissolve|fade|blends/i,'fade'],[/gradient|渐变/i,'gradient'],[/meteor|comet|流星/i,'meteor'],[/ripple|波纹/i,'ripple'],[/lake|pacifica|wave|海|浪/i,'wave'],[/firework|starburst|popcorn|烟花/i,'fireworks'],[/noise|colorwaves|flow|色浪/i,'noise'],[/plasma/i,'plasma'],[/strobe|lightning|频闪|闪电/i,'strobe'],[/rain|drip|雨/i,'rain'],[/bounc|balls|弹跳/i,'bounce'],[/juggle/i,'juggle'],[/sine|phased|oscillate|sinelon/i,'sine'],[/heartbeat|bpm|心跳|脉动/i,'heartbeat'],[/tetrix|loading|percent|stack|堆/i,'bars'],[/palette|spots|pattern|jump|跳变|调色/i,'palette'],[/tv|电视/i,'tv'],[/wash|spin|旋/i,'loop'],[/eyes|halloween|万圣/i,'eye'],[/aurora|极光/i,'waves3'],[/dual|two|alternate|交替|分组/i,'twodots'],[/random|dynamic|android|chunchun|随机|鸟群/i,'dots']];
+function fxGlyph(name){const n=String(name||'');for(const [re,g] of E_RULES)if(re.test(n))return g;return 'sparkle';}
+/* 描边色要够亮:深色主色往白色混;光晕仍用原色 */
+function icoLum(hex){if(!/^#[0-9a-fA-F]{6}$/.test(hex))return .5;const n=parseInt(hex.slice(1),16);return (0.299*(n>>16&255)+0.587*(n>>8&255)+0.114*(n&255))/255;}
+function icoLighten(hex,t){const n=parseInt(hex.slice(1),16);const f=v=>Math.round(v+(255-v)*t);return '#'+[f(n>>16&255),f(n>>8&255),f(n&255)].map(v=>v.toString(16).padStart(2,'0')).join('');}
+function strokeColor(hex){if(!/^#[0-9a-fA-F]{6}$/.test(hex||''))return '#7f9cf0';const l=icoLum(hex);return l>=0.42?hex:icoLighten(hex,Math.min(0.75,(0.42-l)*1.6+0.25));}
+/* 圆形线稿图标(SceneIcon / EffectIcon 共用):深色圆底 + 淡光晕 + 彩色细线;≥3 色时每个子路径轮流上色 */
+function discIcon(glyph,c0,c1,multi,glow,size,bw,glowK,svgK){const el=h('div',{class:'ico',style:'width:'+size+'px;height:'+size+'px;border-width:'+bw+'px'});
+  el.append(h('span',{class:'glow',style:'width:'+Math.round(size*glowK)+'px;height:'+Math.round(size*glowK)+'px;background:'+glow}));
+  const paths=(multi?glyph.flatMap(st=>st.d.split(/(?=M)/i)).map((d,k)=>({d,col:strokeColor(multi[k%multi.length])})):glyph.map(st=>({d:st.d,col:st.c===1?c1:c0})))
+    .map(st=>'<path d="'+st.d+'" stroke="'+st.col+'" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>').join('');
+  const sz=Math.round(size*svgK);el.append(h('span',{html:'<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 24 24">'+paths+'</svg>'}));return el;}
+function sceneIconEl(id,cols,size=58,on=false){const glyph=SCENE_G[SCENE_GLYPH[id]]||SCENE_G.sparkle;const list=(cols&&cols.length?cols:['#7f9cf0']);const sorted=list.slice().sort((a,b)=>icoLum(b)-icoLum(a));
+  const el=discIcon(glyph,strokeColor(sorted[0]),strokeColor(sorted[1]||sorted[0]),list.length>=3?list:null,list[0]||'#7f9cf0',size,2,0.74,0.58);if(on)el.classList.add('on');return el;}
+function effectIconEl(name,cols,size=34,on=false,glyphKey){const g=FX_GLYPHS[name]||E_GLYPHS[glyphKey||fxGlyph(name)]||E_GLYPHS.sparkle;const list=(cols&&cols.length?cols:['#7f9cf0']).filter(c=>typeof c==='string');
+  const el=discIcon(g,strokeColor(list[0]||'#7f9cf0'),strokeColor(list[1]||list[0]||'#7f9cf0'),list.length>=3?list:null,list[0]||'#7f9cf0',size,1.5,0.7,0.6);if(on)el.classList.add('on');return el;}
+const tileIconEl=(sc,cols,on,size=58)=>sc.wled?effectIconEl(sc.en,cols,size,on):sceneIconEl(sc.id,cols,size,on);
+const PEN_SVG='<svg width="10" height="10" viewBox="0 0 24 24"><path d="M3 21l3.5-.8L19 7.7 16.3 5 3.8 17.5 3 21zM14.8 6.5l2.7 2.7M16.3 5l1.4-1.4a1.5 1.5 0 0 1 2.1 0l.6.6a1.5 1.5 0 0 1 0 2.1L19 7.7" stroke="#f0c04a" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const STAR_SVG=(c)=>'<svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 3l2.6 6 6.4.6-5 4.4 1.5 6.5L12 17l-5.5 3.5L8 14 3 9.6l6.4-.6Z" stroke="'+c+'" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>';
+const penBadge=(onclick)=>h('button',{class:'pen',html:PEN_SVG,onclick:(e)=>{e.stopPropagation();onclick();}});
+/* 胶囊(App open_pix/Capsule.js):收起 = 玻璃底条上四个圆按钮(亮度 / 速度 / 方向 / 配色);点哪个就从那一侧展开成药丸,只放那一个控件;点图标收起 */
+const CAP_ICON={bolt:(c)=>'<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="'+c+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 10-13h-7Z"/></svg>',
+  refresh:(c)=>'<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="'+c+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 3v4h-4"/></svg>',
+  chev:(c)=>'<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="'+c+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>'};
+function pieBallEl(cols,size,on){const list=(cols&&cols.length?cols:['#3a86e0']).slice(0,8),n=list.length;const bg=n===1?list[0]:'conic-gradient('+list.map((c,k)=>c+' '+(k*100/n)+'% '+((k+1)*100/n)+'%').join(',')+')';return h('span',{class:'pie'+(on?' on':''),style:'width:'+size+'px;height:'+size+'px;background:'+bg});}
+function Capsule(o){const wrap=h('div',{class:'capw'});let open=null;
+  const CT=[{id:'bright',label:T('亮度','Brightness'),icon:'bolt',side:'left'},{id:'speed',label:T('速度','Speed'),icon:'refresh',side:'left'},{id:'dir',label:T('方向','Direction'),icon:'chev',side:'right'},{id:'palette',label:T('配色','Palette'),icon:null,side:'right'}];
+  const draw=()=>{wrap.innerHTML='';
+    if(!open){const row=h('div',{class:'caprow'});CT.forEach(c=>row.append(h('button',{class:'capbtn',onclick:()=>{open=c.id;draw();}},h('span',{class:'capico'},c.icon?h('span',{html:CAP_ICON[c.icon]('#7fb8f0')}):pieBallEl(o.cols(),38,false)),h('span',{class:'caplbl'},c.label))));wrap.append(h('div',{class:'capbar'}),row);return;}
+    const c=CT.find(x=>x.id===open);const pill=h('div',{class:'pill '+c.side});const ico=h('button',{class:'pillico',onclick:()=>{open=null;draw();}},c.icon?h('span',{html:CAP_ICON[c.icon]('#fff')}):pieBallEl(o.cols(),38,false));
+    const body=h('div',{class:'pillbody'});
+    if(open==='bright'||open==='speed'){const isB=open==='bright';const inp=h('input',{type:'range',min:isB?5:1,max:isB?100:10,value:isB?o.bright():o.speed()});const val=h('span',{class:'pillv'},isB?o.bright()+'%':String(o.speed()));inp.oninput=()=>{val.textContent=isB?inp.value+'%':inp.value;(isB?o.onBright:o.onSpeed)(+inp.value);};body.append(inp,val);}
+    else if(open==='dir'){[['fwd',T('正向','Forward')],['rev',T('反向','Reverse')]].forEach(([v,lb])=>body.append(h('button',{class:'diropt'+(o.dir()===v?' on':''),onclick:()=>{o.onDir(v);draw();}},lb)));}
+    else{body.style.justifyContent='space-around';PALETTES.forEach((pl,i)=>body.append(h('button',{class:'palb',onclick:()=>{o.onPalette(pl,i);draw();}},pieBallEl(pl.cols.slice(0,Math.max(1,o.colorCount()||pl.cols.length)),38,o.activePal()===i))));}
+    if(c.side==='left')pill.append(ico,body);else pill.append(body,ico);wrap.append(pill);requestAnimationFrame(()=>requestAnimationFrame(()=>pill.classList.add('open')));};
+  draw();wrap.refresh=()=>{if(!open)draw();};wrap.collapse=()=>{if(open){open=null;draw();}};return wrap;}
+/* 固定 rows 行的格子窗口(RowWindow):列表不滚;点到最下一行且下面还有 → 上移一行;点到最上一行且上面还有 → 下移一行;
+ * 外部选中变化保证可见;在窗口里向上一划(或点提示行)→ onOpenAll 整页 */
+function RowWindow({rows=3,cols=4,tileH,renderTile,onOpenAll,hint=true}){
+  const grid=h('div',{class:'rg'});const win=h('div',{class:'rwin',style:'height:'+(tileH*rows)+'px'},grid);const hintEl=h('button',{class:'rhint',onclick:()=>onOpenAll&&onOpenAll()});
+  const el=h('div',null,win,hintEl);let items=[],top=0,lastLen=-1,lastSel=null;
+  const totalRows=()=>Math.ceil(items.length/cols);
+  const go=(t)=>{top=Math.max(0,Math.min(Math.max(0,totalRows()-rows),t));grid.style.transform='translateY(-'+(top*tileH)+'px)';};
+  let y0=null;win.addEventListener('touchstart',(e)=>{y0=e.touches[0].clientY;},{passive:true});
+  win.addEventListener('touchend',(e)=>{if(y0==null)return;const dy=e.changedTouches[0].clientY-y0;y0=null;if(dy<-25&&onOpenAll)onOpenAll();},{passive:true});
+  el.update=({items:it,selectedIndex})=>{items=it;grid.innerHTML='';items.forEach((x,i)=>grid.append(renderTile(x,i)));
+    if(items.length!==lastLen){lastLen=items.length;go(0);}
+    if(selectedIndex!=null&&selectedIndex>=0&&selectedIndex!==lastSel){const r=Math.floor(selectedIndex/cols),t=top;if(r===t+rows-1&&r<totalRows()-1)go(t+1);else if(r===t&&t>0)go(t-1);else if(r<t)go(r);else if(r>=t+rows)go(r-rows+1);}
+    lastSel=selectedIndex;hintEl.textContent=(hint&&totalRows()>rows)?T('↑ 上滑查看全部 · ','↑ Swipe up for all · ')+items.length:'';hintEl.style.display=hintEl.textContent?'':'none';};
+  return el;}
+/* 整页列表(AllModal):从底部滑上来占 90%;点遮罩 / 收起 / 按住标题下拖 60px 都收起 */
+function AllModal(title,fill){const body=h('div',{class:'abody'});const head=h('div',{class:'ahead'},h('div',{class:'agrip'}),h('div',{class:'atitle'},title),h('button',{class:'aclose',onclick:()=>close()},T('收起 ⌄','Collapse ⌄')));
+  const box=h('div',{class:'abox',onclick:(e)=>e.stopPropagation()},head,body);const mask=h('div',{class:'amask',onclick:()=>close()},box);
+  let y0=null,top0=0;box.addEventListener('touchstart',(e)=>{y0=e.touches[0].clientY;top0=body.scrollTop;},{passive:true});box.addEventListener('touchend',(e)=>{if(y0!=null&&top0<=0&&body.scrollTop<=0&&e.changedTouches[0].clientY-y0>60)close();y0=null;},{passive:true});   // 面板任意位置在列表顶部下拉 60px 都收起(10-22)
+  const close=()=>mask.remove();fill(body,close);document.body.append(mask);return close;}
+/* 改色弹层(ColorSheet):图标 + 名字 + 收藏星,(可选)速度,12 组配色;点一组立即应用并记住 */
+function ColorSheet(sc,{onPick,onToggleFav,spd,onSpeed}){const sets=sceneColorSets(sc);let cur=W.sceneSet[sc.id]||0;
+  const favB=h('button',{class:'fav'+(W.sceneFav[sc.id]?' on':'')});const drawFav=()=>{favB.innerHTML=STAR_SVG(W.sceneFav[sc.id]?'#fff':'#7f9cf0');favB.className='fav'+(W.sceneFav[sc.id]?' on':'');};drawFav();
+  favB.onclick=()=>{onToggleFav(sc);drawFav();};
+  const icoBox=h('div');const setsEl=h('div',{class:'sets'});
+  const draw=()=>{icoBox.innerHTML='';icoBox.append(tileIconEl(sc,sets[cur]||sc.cols,false,48));setsEl.innerHTML='';
+    sets.forEach((cols,i)=>setsEl.append(h('button',{class:'srow'+(cur===i?' on':''),onclick:()=>{cur=i;onPick(sc,i);draw();}},h('span',{class:'snum'},String(i+1)),...cols.map(col=>h('span',{class:'sdot2',style:'background:'+col})))));};
+  draw();
+  const sheet=h('div',{class:'sheet',onclick:(e)=>e.stopPropagation()},h('button',{class:'sclose',onclick:()=>close()},'×'),
+    h('div',{style:'display:flex;align-items:center;gap:12px;margin-top:8px'},icoBox,h('div',{style:'flex:1;font-size:14px;font-weight:600'},T(sc.zh,sc.en)),favB),
+    onSpeed?h('div',null,h('div',{class:'ssec'},T('速度','Speed')),Slider({value:spd,min:0,max:255,onChange:onSpeed}),h('div',{style:'display:flex;justify-content:space-between;margin-top:-4px'},h('span',{class:'stiny'},T('慢','Slow')),h('span',{class:'stiny'},T('快','Fast')))):null,
+    h('div',{style:'display:flex;justify-content:space-between;align-items:center;margin-top:10px'},h('div',{class:'ssec',style:'margin:0'},T('颜色切换','Color Sets')),h('button',{class:'lk',style:'font-size:11px',onclick:()=>{cur=0;onPick(sc,0);draw();}},T('恢复默认','Restore default'))),
+    setsEl,h('div',{class:'hint'},T('点一组颜色立刻应用到灯带并记住;第 1 组是默认配色。','Tap a set to apply it to the strip and remember it; set 1 is the default colors.')));
+  const mask=h('div',{class:'smask',onclick:()=>close()},sheet);const close=()=>mask.remove();document.body.append(mask);return close;}
+/* 场景格子(预设 / 音乐共用):图标 + 可改色的放笔 + 两行名字 */
+function sceneTile(sc,on,cols,colorable,onPick,onEdit){const iw=h('div',{class:'iw'},tileIconEl(sc,cols,on));if(colorable)iw.append(penBadge(()=>onEdit(sc)));
+  return h('button',{class:'tile2'+(on?' on':''),onclick:()=>onPick(sc)},iw,h('div',{class:'tname'},T(sc.zh,sc.en)));}
+const catChips=(items,value,onChange)=>{const el=h('div',{class:'catc'});items.forEach(c=>{const b=h('button',{class:'chip'+(value===c.id?' on':''),onclick:()=>onChange(c.id)},c.id==='favs'?h('span',{html:STAR_SVG(value===c.id?'#fff':'#8b93a0'),style:'display:inline-flex;margin-right:4px;vertical-align:-2px'}):null,T(c.zh,c.en));el.append(b);if(value===c.id)setTimeout(()=>{try{b.scrollIntoView({inline:'nearest',block:'nearest'});}catch(e){}},0);});return el;};
+
+/* ---------------- 路由 ---------------- */
+let cleanup=null;const WB_TIMERS=[];
+const PAGES={};
+function go(p){location.hash='#'+p;}
+async function route(){const p=(location.hash||'#/').slice(1)||'/';if(cleanup){try{cleanup();}catch(e){}cleanup=null;}WB_TIMERS.splice(0).forEach(clearInterval);app.innerHTML='';window.scrollTo(0,0);const f=PAGES[p]||PAGES['/'];cleanup=await f(app)||null;}
+window.addEventListener('hashchange',route);
+
+/* ============ 设备页(open_strip DevicePage) ============ */
+PAGES['/']=async(root)=>{
+  await loadInfo();
+  let st={on:true}; try{st=await getState();}catch(e){}
+  const cfg=currentSegCfg(); const pts=layoutPoints(cfg.count,cfg.segments);
+  let on=st.on!==false;
+  root.append(Head(INFO.name||'WELLVOW STRIP',(INFO.model||'WLED_STRIP_ESP32')+T(' · STRIP 灯带',' · LED Strip'),()=>{location.href='/';},
+    h('button',{class:'lk',style:'color:var(--acct);font-size:11px',onclick:async()=>{const v=prompt(T('设备显示名(型号不变)','Device display name (model unchanged)'),INFO.name||'');if(v&&v.trim()){await send(()=>Dps.setName(v));await sleep(400);await loadInfo();route();}}},T('✎ 重命名','✎ Rename'))));
+  root.append(WifiBar());
+  const pv=Preview({points:pts,effect:(i,l,t)=>on?wledFx('running',i,t,cfg.count):'rgb(20,25,33)'});
+  const meta=h('div',{style:'font-size:9px;color:var(--dim);text-align:center;margin-top:2px'},(WIRING&&WIRING.hasWiring?T('自定义布线 · ','Custom wiring · '):'')+cfg.count+T(' 点',' px'));
+  const pw=h('button',{class:'pw'+(on?' on':''),html:ICON.power(on?'#fff':'#8b93a0'),onclick:()=>{on=!on;pw.className='pw'+(on?' on':'');pw.innerHTML=ICON.power(on?'#fff':'#8b93a0');send(()=>Dps.power(on));}});
+  pv.el.append(meta,h('div',{class:'hf'},h('span',{class:'fxn'},'Running'),pw));
+  root.append(pv.el);
+  const panel=WifiPanel(); root.append(panel);
+  // 设备页常驻刷新:每 15s 和切回本页时重新读控制器的布线图/效果列表/分段(Studio 一键上传后网页不用手动刷新)
+  const sig=()=>JSON.stringify([INFO.segments,INFO.leds,INFO.playing,WIRING&&WIRING.count]);
+  let lastSig=sig();
+  const rescan=async()=>{await Promise.all([loadInfo(),loadWiring()]);if(sig()!==lastSig){lastSig=sig();route();}else if(panel.refresh)panel.refresh();};
+  const rt=setInterval(rescan,15000);const onVis=()=>{if(!document.hidden)rescan();};document.addEventListener('visibilitychange',onVis);
+  root.append(h('div',{class:'sec'},'Interaction Modes'));
+  const tiles=[['Presets & Saved','star','#f0c04a','/presets'],['DIY','brush','#7f9cf0','/diy'],[T('Music 律动','Music'),'music','#2fd1c5','/music'],[T('配置','Setup'),'layout','#e0479a','/segcfg'],[T('分组','Groups'),'cat','#34c7b5','/groupset'],[T('定时设置','Schedules'),'clock','#5cb3e0','/schedule'],[T('同步 / HUB','Sync / HUB'),'hub','#8a5adb','/hub']];
+  root.append(h('div',{class:'tiles'},...tiles.map(([n,ic,c,to])=>h('button',{class:'tile',onclick:()=>go(to)},h('span',{html:svgIcon(ICON.tile[ic],c)}),n))));
+  return ()=>{pv.stop();clearInterval(rt);document.removeEventListener('visibilitychange',onVis);};
+};
+
+/* Wi-Fi 状态条(对应 App WifiSetup.js WifiBar):已连接=绿色 wifi 图标 + IP;未连接=黄色条,点开配网 */
+function WifiBar(){
+  const el=h('div');
+  const draw=()=>{el.innerHTML='';const ok=INFO.connected&&INFO.ip;
+    if(ok)el.append(h('div',{class:'bar g'},h('span',{html:ICON.wifi('#2ea84f')}),h('span',{class:'f'},T('已连接 · ','Connected · ')+INFO.ip+(INFO.sta?' · '+INFO.sta:'')),h('button',{class:'lk',onclick:openSetup},T('重新配网','Reconfigure'))));
+    else el.append(h('button',{class:'bar y',style:'width:100%',onclick:openSetup},h('span',{html:ICON.wifi('#f0c828')}),h('span',{class:'f',style:'text-align:left'},T('WiFi 未连接 · 点此配网 / AP 直连','Wi-Fi not connected · tap to set up / AP direct')),h('span',{html:ICON.chev})));};
+  draw();
+  const tm=setInterval(async()=>{const was=INFO.ip+'|'+INFO.connected;await loadInfo();if(INFO.ip+'|'+INFO.connected!==was)draw();},8000);
+  WB_TIMERS.push(tm);   // 换页时由 route() 统一清掉(DOMNodeRemoved 事件已被浏览器删除,不能靠它)
+  return el;
+}
+function openSetup(){
+  const ssid=h('input',{class:'in',placeholder:T('WiFi 名称(SSID,可手输)','Wi-Fi name (SSID, or type it)'),maxlength:32,autocapitalize:'none'}),pwd=h('input',{class:'in',type:'password',placeholder:T('WiFi 密码','Wi-Fi password'),maxlength:63});
+  const nets=h('div'),msg=h('div',{class:'hint',style:'color:var(--sub)'});
+  const scanBtn=h('button',{class:'big',style:'margin-bottom:8px'},T('扫描附近 WiFi','Scan nearby Wi-Fi'));
+  scanBtn.onclick=async()=>{scanBtn.textContent=T('扫描中…','Scanning…');msg.textContent=T('设备正在扫描附近 WiFi…','Device is scanning for nearby Wi-Fi…');nets.innerHTML='';
+    try{let list=[];for(let k=0;k<6;k++){list=await get('/json/net');if(list&&list.length)break;await sleep(1500);}
+      if(!list||!list.length){msg.textContent=T('没扫到网络。路由器需为 2.4G(不支持 5G 频段)。','No networks found. The router must be 2.4 GHz; 5 GHz is not supported.');}
+      else{msg.textContent='';const seen=new Set();list.filter(n=>n.ssid&&!seen.has(n.ssid)&&seen.add(n.ssid)).sort((a,b)=>b.rssi-a.rssi).forEach(n=>nets.append(h('button',{class:'net',onclick:()=>{ssid.value=n.ssid;pwd.focus();}},h('span',null,n.ssid),h('small',null,(n.enc?'':T('开放 · ','Open · '))+n.rssi+'dBm'))));if(!ssid.value)ssid.value=list[0].ssid;}
+    }catch(e){msg.textContent=T('扫描失败:','Scan failed: ')+e.message;}scanBtn.textContent=T('扫描附近 WiFi','Scan nearby Wi-Fi');};
+  const okBtn=h('button',{class:'ok'},T('发送到设备','Send to device'));
+  okBtn.onclick=async()=>{const s=ssid.value.trim();if(!s){msg.textContent=T('请先选择或输入 WiFi 名称','Select or enter a Wi-Fi name first');return;}okBtn.disabled=true;okBtn.textContent=T('配网中…','Connecting…');msg.textContent=T('已发送凭据,设备连接路由中(最长约 40 秒)…','Credentials sent. The device is joining the router; this can take about 40 s…');
+    try{const r=await fetch('/wellvow/wifi',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'ssid='+encodeURIComponent(s)+'&pass='+encodeURIComponent(pwd.value)});if(!r.ok)throw Error('HTTP '+r.status);
+      let ip=null;for(let k=0;k<27;k++){await sleep(1500);try{const j=await get('/wellvow/info');if(j.connected&&j.ip){ip=j.ip;INFO=Object.assign(INFO,j);break;}if(j.wifiState===2){msg.textContent=T('✗ 密码错误','✗ Wrong password');okBtn.disabled=false;okBtn.textContent=T('发送到设备','Send to device');return;}}catch(e){}}
+      if(ip){msg.textContent=T('✓ 已连接 · ','✓ Connected · ')+ip+T('。手机连回路由器后,用 http://','. Rejoin the router on your phone, then open http://')+ip+T(' 或 http://',' or http://')+(INFO.mdns||'wellvow-strip')+T('.local 访问。','.local');toast(T('已连接 ','Connected ')+ip);setTimeout(()=>{m.remove();route();},1500);}
+      else msg.textContent=T('✓ 凭据已保存,设备仍在连接/获取 IP,稍后刷新本页查看。','✓ Credentials saved. The device is still connecting / getting an IP. Refresh this page in a moment.');
+    }catch(e){msg.textContent=T('✗ 提交失败:','✗ Submit failed: ')+e.message;}okBtn.disabled=false;okBtn.textContent=T('发送到设备','Send to device');};
+  const body=h('div',null,h('div',{class:'hint',style:'margin-top:0'},T('① 让设备扫描附近网络:','1. Have the device scan for nearby networks:')),scanBtn,h('div',{class:'hint'},T('② 选择你家的 2.4G WiFi 并输入密码:','2. Pick your 2.4 GHz Wi-Fi and enter the password:')),ssid,nets,pwd,msg,
+    h('div',{class:'card',style:'margin:14px 0 0;background:var(--card2)'},h('b',{style:'font-size:12px'},T('AP 直连模式','AP Direct Mode')),h('div',{class:'hint',style:'margin:6px 0 0'},T('手机连设备热点 ','Join the device hotspot ')+(INFO.ap||'WELLVOW-STRIP')+T(',浏览器打开 http://4.3.2.1 即可直接控制;连上路由器后请改用 http://',' and open http://4.3.2.1 in a browser to control it directly. Once it is on your router, use http://')+(INFO.ip||T('<设备IP>','<device IP>'))+T('。','.'))));
+  const m=modal(T('WiFi 配网 · ','Wi-Fi Setup · ')+(INFO.name||''),body,[h('button',{class:'no',onclick:()=>m.remove()},T('关闭','Close')),okBtn]);
+}
+/* 从 WELLVOW Studio 导入:布线图(.wmap,Studio“导出 .wmap”)存为控制器 /wellvow.wmap;效果(.wseq,Studio“导出 .wseq”)存到控制器槽位 /N.wseq。
+ * 两者都存在控制器 flash 里,与 IP 无关:换了 IP、换手机、离线再上线都还在;App 连上同一 Wi-Fi 会自动把布线图同步到手机本地。 */
+function pickFile(accept){return new Promise(res=>{const i=h('input',{type:'file',accept,style:'display:none'});i.onchange=()=>{res(i.files&&i.files[0]||null);i.remove();};document.body.append(i);i.click();});}
+async function uploadFile(name,blob){const fd=new FormData();fd.append('f',blob,name);const r=await fetch('/upload',{method:'POST',body:fd});if(!r.ok)throw Error('HTTP '+r.status);}
+async function importWmap(){const f=await pickFile('.wmap,.json,application/json');if(!f)return;
+  try{const j=JSON.parse(await f.text());if(!Array.isArray(j.coords)||!j.coords.length)throw Error(T('不是 Studio 导出的 .wmap(缺 coords)','Not a Studio .wmap export (no coords)'));
+    await loadInfo();
+    if(j.coords.length>512)throw Error(T('布线图是 ','The wiring map has ')+j.coords.length+T(' 个点,超过控制器上限 512。请在 Studio 里把总点数改成不超过 512',' points, over the controller limit of 512. Lower the total pixels in Studio to 512 or less'));
+    await uploadFile('wellvow.wmap',new Blob([JSON.stringify(j)],{type:'application/json'}));await loadWiring();
+    // Studio 里画的分段同步成设备的段配置(段数/每段点数),让网页、App、灯带三边一致
+    const segs=(Array.isArray(j.seg)&&j.seg.length?j.seg.map(n=>Math.max(1,n|0)):[j.coords.length]).slice(0,32);   // 灯数/分段跟随布线图
+    if(segs){const total=segs.reduce((a,b)=>a+b,0);W.segcfg={count:total,segments:segs,ts:Date.now()};saveW();
+      await send(async()=>{await Dps.pixelCount(total);await Dps.segConfig(segs);});await loadInfo();}
+    await sleep(1500);await loadInfo();
+    toast(T('布线图已导入:','Wiring imported: ')+j.coords.length+T(' 点 · ',' px · ')+segs.length+T(' 段,控制器灯数已设为 ',' segments. Controller pixel count set to ')+INFO.leds);route();}
+  catch(e){toast(T('导入布线失败:','Wiring import failed: ')+e.message);}}
+async function importWseq(onDone){const f=await pickFile('.wseq');if(!f)return;
+  try{const buf=new Uint8Array(await f.arrayBuffer());
+    if(buf.length<12||buf[0]!==87||buf[1]!==76||buf[2]!==86||buf[3]!==81)throw Error(T('不是 Studio 导出的 .wseq','Not a Studio .wseq export'));
+    if(buf.length>48*1024)throw Error(T('文件 ','The file is ')+(buf.length/1024).toFixed(0)+T('KB 超过控制器 48KB 上限,请在 Studio 里缩短或降帧率','KB, over the controller limit of 48KB. Shorten it or lower the frame rate in Studio'));
+    let used=[];try{used=(await get('/wfx/list')).map(x=>x.slot);}catch(e){}
+    let slot=-1;for(let k=0;k<=15;k++)if(!used.includes(k)){slot=k;break;}
+    const nm=prompt(T('效果名称(将存到控制器槽位 ','Effect name (will be stored in controller slot ')+(slot<0?'?':slot)+')',f.name.replace(/\.wseq$/i,''));if(nm==null)return;
+    if(slot<0){const s2=prompt(T('16 个槽位已满,输入要覆盖的槽位 0-15','All 16 slots are full. Enter the slot to overwrite (0-15)'),'0');slot=parseInt(s2,10);if(!(slot>=0&&slot<=15))return;}
+    await uploadFile(slot+'.wseq',new Blob([buf]));await fetch('/wfx/name?slot='+slot+'&name='+encodeURIComponent(nm),{method:'POST'});
+    toast(T('效果已存到控制器槽位 ','Effect stored in controller slot ')+slot+T(',点即播放','. Tap it to play'));onDone&&onDone();}
+  catch(e){toast(T('导入效果失败:','Effect import failed: ')+e.message);}}
+/* Wi-Fi 本地效果面板(对应 App WifiPanel):控制器 flash 里的帧序列,点即播、长按删 */
+function WifiPanel(){
+  const el=h('div',{class:'card'});const list=h('div');const err=h('div',{class:'hint',style:'color:#ff5a6e;margin:4px 0 0'});
+  const refresh=async()=>{try{err.textContent='';const l=await get('/wfx/list');list.innerHTML='';if(!l.length){list.append(h('div',{class:'hint'},T('控制器上还没有效果。用桌面 WELLVOW Studio 设计后“上传到控制器”,这里就会列出来;点即播放,长按删除。','No effects on the controller yet. Design one in WELLVOW Studio on desktop and use Upload to Controller, and it will show up here. Tap to play, press and hold to delete.')));return;}
+    l.forEach(it=>{const del=h('span',{style:'float:right;color:#ff5a6e;font-size:11px;padding:2px 8px',onclick:(e)=>{e.stopPropagation();if(confirm(T('删除控制器上的「','Delete ')+(it.name||T('槽位','Slot ')+it.slot)+T('」?',' from the controller?')))fetch('/wfx/delete?slot='+it.slot,{method:'POST'}).then(refresh);}},T('删除','Delete'));
+      const b=h('button',{class:'wi'+(it.playing?' on':'')},del,h('b',null,(it.playing?'▶ ':'')+(it.name||T('槽位 ','Slot ')+it.slot)),h('small',null,T('槽','Slot ')+it.slot+' · '+it.frames+T('帧',' fr')+' · '+it.fps+'fps · '+(it.frames/(it.fps||20)).toFixed(1)+'s · '+(it.size/1024).toFixed(0)+'KB'));
+      let lp;b.addEventListener('pointerdown',()=>{lp=setTimeout(()=>{lp=null;if(confirm(T('删除控制器上的「','Delete ')+(it.name||T('槽位','Slot ')+it.slot)+T('」?',' from the controller?')))fetch('/wfx/delete?slot='+it.slot,{method:'POST'}).then(refresh);},650);});
+      b.addEventListener('pointerup',()=>{if(lp){clearTimeout(lp);fetch('/wfx/play?slot='+it.slot,{method:'POST'}).then(refresh).catch(()=>err.textContent=T('播放失败','Playback failed'));}});b.addEventListener('pointerleave',()=>clearTimeout(lp));list.append(b);});}catch(e){err.textContent=T('读取效果列表失败','Could not load the effect list');}};
+  el.append(h('div',{style:'display:flex;justify-content:space-between;align-items:center;margin-bottom:8px'},h('b',{style:'font-size:11.5px'},T('Wi-Fi 本地效果 · ','My Effects · ')+(INFO.name||'')+(INFO.ip?' · '+INFO.ip:'')),h('button',{class:'lk',style:'color:var(--acct);font-size:11px',onclick:refresh},T('刷新','Refresh'))),
+    h('div',{class:'wb'},h('button',{class:'imp',onclick:importWmap},T('导入 Studio 布线图','Import Studio Wiring')),h('button',{class:'imp',onclick:()=>importWseq(refresh)},T('导入 Studio 效果','Import Studio Effect')),h('button',{onclick:()=>fetch('/wfx/stop',{method:'POST'}).then(refresh)},T('停止播放','Stop Playback')),
+      h('button',{style:'color:#ff5a6e',onclick:async()=>{if(!confirm(T('删除控制器上的布线图?(灯数/分段不变)','Delete the wiring map from the controller? Pixel count and segments stay unchanged.')))return;await fetch('/wellvow/ledmap?del=1',{method:'POST'});await loadWiring();toast(T('布线图已删除','Wiring map deleted'));route();}},T('删除布线图','Delete Wiring')),h('button',{onclick:()=>{location.href='/wled';}},T('WLED 完整界面','Full WLED UI'))),
+    h('div',{class:'hint',style:'margin:2px 0 6px'},WIRING&&WIRING.hasWiring?T('控制器已有布线图 · ','Controller has a wiring map · ')+WIRING.count+T(' 点(App 同一 Wi-Fi 下自动同步到手机,离线也能用)',' px (the app syncs it to your phone over the same Wi-Fi and works offline)'):T('控制器上还没有布线图:在 Studio 里“导出 .wmap”后点“导入 Studio 布线图”,或在 Studio 填控制器 IP 直接上传。','No wiring map on the controller yet. Export a .wmap in Studio and tap Import Studio Wiring, or enter the controller IP in Studio to upload it directly.')),err,list);
+  refresh();el.refresh=refresh;return el;
+}
+
+/* ============ Presets & Saved(open_strip PresetsPage) ============ */
+PAGES['/presets']=async(root)=>{
+  /* 与 App wled_strip PresetsPage 同构:顶部预览 + 亮度 / 速度一行 + 预设 | 已保存 两个 tab + 分类(收藏 … WLED 模式)
+   * + 固定三行格子窗口(点边行整体挪一行,上滑 → 整页);每个场景右上角小笔 → 改色弹层(12 组配色 + 收藏)。
+   * 色组选择 / 收藏 / 上次场景存控制器 /wvweb.json(W)。 */
+  const cfg=currentSegCfg(); const pts=layoutPoints(cfg.count,cfg.segments);
+  W.sceneSet=W.sceneSet||{};W.sceneFav=W.sceneFav||{};W.saved=W.saved||[];
+  let tab='presets',cat=W.lastCat||'natural',scene=W.lastScene||null,sel=Number.isInteger(W.lastFx)?W.lastFx:null,devCol=null,bri=255,spd=128,touched=false,sldTouched=false,curCols=null,curK=0,curPal=null;
+  const selName=()=>(ALL_FX.find(p=>p.id===sel)||{}).name;
+  const wledScene=(pr)=>({id:'w'+pr.id,zh:pr.name,en:pr.name,fx:pr.id,pal:-1,cols:wledIconCols(pr,devCol),wled:true});
+  const allScenes=()=>Object.keys(SCENES).reduce((a,k)=>a.concat(SCENES[k]),[]).concat(PRESET_FX.map(wledScene));
+  /* 预览模拟:选了配色组就把整组颜色传给模拟器(主色 / 过渡 1 / 过渡 2 → P / S / T3);吃调色板的渐变类效果选了非默认组时
+   * 灯带实际跑的是「所选颜色的渐变」(调色板 4),预览对应改走 gradient 家族;没选过颜色时沿用灯带当前色的色相 */
+  const effect=(i,l,t)=>{const ts=t*(0.12+(spd/255)*3.4);const cc=curCols&&curCols.length?curCols:null;if(sel==null)return (cc&&cc[0])||devCol||'rgb(30,36,46)';if(sel===0)return (cc&&cc[0])||devCol||'rgb(30,36,46)';
+    const fm=FX_SIM_MAP[sel];if(!fm)return cc?wledFx('solid',i,ts,cfg.count,hexHue(cc[0]),cc,curPal):genericFx(sel,i,ts,cfg.count);
+    const dh=hexHue(cc?cc[0]:devCol);const hue=fm[1]==null?null:(dh==null?fm[1]:dh);return wledFx(fm[0],i,ts,cfg.count,hue,cc,curPal);};
+  const pv=Preview({points:pts,effect}); const pre=h('div',{class:'fxn',style:'text-align:center;margin-top:6px;font-size:11px;color:var(--acct)'});
+  const wrap=h('div',{style:'opacity:'+(0.25+0.75*(bri/255))});wrap.append(pv.el.firstChild);pv.el.append(wrap,pre);
+  const sB=Slider({label:T('亮度','Bri'),value:bri,min:1,max:255,onChange:(v)=>{sldTouched=true;bri=v;wrap.style.opacity=0.25+0.75*(v/255);deb('b',()=>send(()=>Dps.brightness(v)));}});
+  const onSpeed=(v)=>{sldTouched=true;spd=v;sS.setValue(v);deb('s',()=>send(()=>Dps.speed(v)));if(scene){(W.sceneSpd||(W.sceneSpd={}))[scene]=v;saveW();}};   // 按场景记住用户调的速度
+  const sS=Slider({label:T('速度','Speed'),value:spd,min:0,max:255,onChange:onSpeed});
+  send(()=>Dps.brightness(255));   // 进预设页亮度默认 100%(与 App 一致)
+  const toggleFav=(sc)=>{if(W.sceneFav[sc.id])delete W.sceneFav[sc.id];else W.sceneFav[sc.id]=true;saveW();drawGrid();};
+  const applyScene=(sc,idx)=>{touched=true;
+    if(sc.wled){sel=sc.fx;W.lastFx=sc.fx;}else{scene=sc.id;W.lastScene=sc.id;}saveW();
+    if(sc.fx==null){curCols=null;curK=0;curPal=null;send(()=>Dps.power(false));drawGrid();return;}   // 「关灯」场景
+    const k=idx!=null?idx:(W.sceneSet[sc.id]||0);if(idx!=null){W.sceneSet[sc.id]=idx;saveW();}
+    if(sc.wled&&k===0){curCols=null;curK=0;curPal=null;send(()=>Dps.applyLook({on:true,bank:0,index:sc.fx}));drawGrid();return;}   // WLED 固定模式默认组:只切效果号
+    const cols=sceneColorSets(sc)[k]||sc.cols,pal=paletteFor(sc,k);sel=sc.fx;devCol=cols[0];curCols=cols.slice();curK=k;curPal=pal;
+    send(async()=>{if(sc.id==='sunrise')await Dps.customPalette(0,cols);if(sc.id==='sunset')await Dps.customPalette(1,cols);await Dps.applyDiyLook({on:true,colors:cols,fx:sc.fx,palette:pal});if(cols.length>1)await Dps.segmentColors([cols]);
+      const useSpd=(W.sceneSpd&&W.sceneSpd[sc.id]!=null)?W.sceneSpd[sc.id]:sc.spd;if(useSpd!=null){await Dps.speed(useSpd);spd=useSpd;sldTouched=true;sS.setValue(spd);}});drawGrid();};   // 用户调过的速度优先,没调过用场景默认   // 场景自带速度(日出 / 日落 = 时长)在效果之后发
+  const edit=(sc)=>ColorSheet(sc,{onPick:(s2,i)=>applyScene(s2,i),onToggleFav:toggleFav,spd,onSpeed});
+  const catItems=()=>cat==='wled'?PRESET_FX.map(wledScene):cat==='favs'?allScenes().filter(sc=>W.sceneFav[sc.id]):(SCENES[cat]||[]);
+  const tileOf=(sc,inModal,close)=>sceneTile(sc,sc.wled?sel===sc.fx:scene===sc.id,sceneColorSets(sc)[W.sceneSet[sc.id]||0]||sc.cols,sc.wled?wledColorable(sc.fx):sceneColorable(sc),(s2)=>{applyScene(s2);if(inModal)close();},edit);
+  const savedItems=()=>[...W.saved,{plus:true}];
+  const savedTile=(c,inModal,close)=>{if(c.plus)return h('button',{class:'tile2',onclick:()=>{if(inModal)close();go('/diy');}},h('div',{class:'disc plus'},'+'),h('div',{class:'tname'},T('去 DIY 添加','Add in DIY')));
+    const cols=(c.cols&&c.cols.length)?c.cols:['#7c5cf0'];
+    return h('button',{class:'tile2',onclick:()=>{touched=true;if(inModal)close();const fx=wledIdOf({fx:c.snap?c.snap.fx:'static',wledId:c.snap?c.snap.wledId:undefined});sel=fx;devCol=cols[0];curCols=cols.slice();curK=1;curPal=cols.length>1?5:0;
+      send(async()=>{const pal=diyPalette(fx,cols);if(pal===DIY_TONE_PALETTE_ID)await Dps.customPalette(2,tonePalette(cols[0]));await Dps.applyDiyLook({on:true,colors:cols,fx,palette:pal});if(cols.length>1)await Dps.segmentColors([cols]);});drawGrid();}},
+      h('div',{class:'disc'},...cols.map(col=>h('span',{style:'background:'+col}))),h('div',{class:'tname'},c.name));};
+  const rw=RowWindow({rows:3,cols:4,tileH:103,renderTile:(x)=>tab==='presets'?tileOf(x,false):savedTile(x,false),onOpenAll:()=>openAll()});
+  const catBox=h('div');const emptyFav=h('div',{class:'hint',style:'padding:0 4px'},T('还没有收藏。点场景右上角的小笔,在弹出页点星星收藏。','No favorites yet. Tap the pen on a tile, then the star in the sheet to add one.'));
+  const tabsEl=h('div',{class:'tabs2'});
+  const drawTabs=()=>{tabsEl.innerHTML='';[['presets',T('预设','Presets')],['saved',T('已保存','Saved')]].forEach(([k,lb])=>tabsEl.append(h('button',{class:'tab2'+(tab===k?' on':''),onclick:()=>{tab=k;drawTabs();drawGrid();}},lb)));};
+  const drawGrid=()=>{pre.textContent=selName()?selName()+T(' · 已应用到灯带',' · Applied to strip'):T('点一个模式应用到灯带','Tap a mode to apply it to the strip');
+    catBox.innerHTML='';if(tab==='presets')catBox.append(catChips([{id:'favs',zh:'收藏',en:'Favorites'},...SCENE_CATS],cat,(v)=>{cat=v;W.lastCat=v;saveW();drawGrid();}));else catBox.append(h('div',{style:'height:8px'}));
+    const items=tab==='presets'?catItems():savedItems();const selIdx=tab==='presets'?items.findIndex(sc=>sc.wled?sel===sc.fx:scene===sc.id):-1;
+    emptyFav.style.display=(tab==='presets'&&cat==='favs'&&!items.length)?'':'none';rw.style.display=emptyFav.style.display===''?'none':'';
+    rw.update({items,selectedIndex:selIdx});};
+  const openAll=()=>{const items=tab==='presets'?catItems():savedItems();const c=SCENE_CATS.find(x=>x.id===cat)||{};
+    const title=(tab==='presets'?(cat==='wled'?T('WLED 模式','WLED Modes'):cat==='favs'?T('收藏','Favorites'):T(c.zh||'',c.en||'')):T('已保存','Saved'))+' · '+(tab==='presets'?items.length:W.saved.length);
+    AllModal(title,(body,close)=>{const g=h('div',{class:'agrid'});items.forEach(x=>g.append(tab==='presets'?tileOf(x,true,close):savedTile(x,true,close)));body.append(g);});};
+  drawTabs();drawGrid();
+  root.append(Head('Presets & Saved',T('WLED 全部模式 · 普通模式','All WLED Modes · Standard')),pv.el,sB,sS,tabsEl,catBox,emptyFav,rw);
+  // 主动查询颜色/模式/亮度/速度:灯带是什么色,预览就显什么色(对应 dpGet 0x06/0x05/0x02/0x03)
+  const query=async()=>{try{const st=await getState();if(st.cols&&st.cols[0])devCol=st.cols[0];if(Number.isInteger(st.mode)&&!touched)sel=st.mode;if(Number.isInteger(st.bri)&&!sldTouched){bri=st.bri;sB.setValue(bri);wrap.style.opacity=0.25+0.75*(bri/255);}if(Number.isInteger(st.speed)&&!sldTouched){spd=st.speed;sS.setValue(spd);}drawGrid();}catch(e){}};
+  query();const t=setTimeout(query,800);
+  return ()=>{pv.stop();clearTimeout(t);};
+};
+const debT={};function deb(k,fn,ms){clearTimeout(debT[k]);debT[k]=setTimeout(fn,ms||80);}
+
+/* ============ Music 律动(open_strip MusicPage) ============ */
+PAGES['/music']=async(root)=>{
+  /* 与 App wled_strip MusicPage 同构:预览 + 灵敏度 + 麦克风电平(信号条 / 噪声门线 / 音量细条 + 校准底噪)+ 停止
+   * + 固定四行格子(每个音乐效果一个独立图标,可改色的放笔)。电平每 500ms 从 /wellvow/audio 读(只在本页)。 */
+  const cfg=currentSegCfg();const pts=layoutPoints(cfg.count,cfg.segments);const total=cfg.count;
+  W.sceneSet=W.sceneSet||{};W.sceneFav=W.sceneFav||{};
+  let sens=5,muFx=null,sensTouch=false,level={vol:0,raw:0,cal:0,gate:0},calMsg='',curCols=null,curK=0,curPal=null;
+  try{const st=await getState();if(st.music&&MUSIC_FX_IDS.has(st.mode))muFx=st.mode;}catch(e){}
+  const items=MUSIC_FX.map(pr=>({id:'m'+pr.id,zh:pr.name,en:pr.name,fx:pr.id,pal:-1,cols:wledIconCols(pr,null),wled:true}));
+  const pv=Preview({points:pts,effect:(i,l,t)=>{if(muFx==null)return DIM;const cc=curCols&&curCols.length?curCols:null;const m=FX_SIM_MAP[muFx];return wledFx(m?m[0]:'noise',i,t,total,cc?hexHue(cc[0]):(m?m[1]:null),cc,curPal);}});
+  /* 第 4 字节 = WLED 音频效果号:具体效果号 = 开律动并切到该效果;0 且已在律动 = 只改灵敏度 */
+  const push=(fxId,sv)=>deb('music',()=>send(async()=>{await Dps.power(true);await Dps.music(true,0,sv,fxId==null?0:fxId);}),120);
+  const stop=()=>{muFx=null;send(()=>Dps.music(false,0,sens,0));drawAll();};
+  const toggleFav=(sc)=>{if(W.sceneFav[sc.id])delete W.sceneFav[sc.id];else W.sceneFav[sc.id]=true;saveW();};
+  const pick=(sc,idx)=>{sensTouch=true;muFx=sc.fx;push(sc.fx,sens);const k=idx!=null?idx:(W.sceneSet[sc.id]||0);if(idx!=null){W.sceneSet[sc.id]=idx;saveW();}
+    if(k>0||sc.id==='sunrise'||sc.id==='sunset'){const cols=sceneColorSets(sc)[k]||sc.cols;curCols=cols.slice();curK=k;curPal=paletteFor(sc,k);setTimeout(()=>send(async()=>{if(sc.id==='sunrise')await Dps.customPalette(0,cols);if(sc.id==='sunset')await Dps.customPalette(1,cols);await Dps.applyDiyLook({on:true,colors:cols,palette:paletteFor(sc,k)});}),250);}else{curCols=null;curK=0;curPal=null;}drawAll();};
+  const edit=(sc)=>ColorSheet(sc,{onPick:(s2,i)=>pick(s2,i),onToggleFav:toggleFav});
+  const tileOf=(sc,inModal,close)=>sceneTile(sc,muFx===sc.fx,sceneColorSets(sc)[W.sceneSet[sc.id]||0]||sc.cols,wledColorable(sc.fx),(s2)=>{pick(s2);if(inModal)close();},edit);
+  const sS=Slider({label:T('灵敏度','Sens'),value:sens,min:1,max:10,onChange:(v)=>{sensTouch=true;sens=v;push(muFx,v);}});
+  // 电平:条 = 过门前的信号幅度,黄线 = 噪声门(灵敏度越高越靠左);信号过线灯才动;细条 = 归一化后的音量
+  const bar=h('i'),gate=h('b'),vol=h('i'),lvlTxt=h('span',{class:'hint',style:'margin:0;width:74px;text-align:right'});
+  const calBtn=h('button',{class:'stopb acc',onclick:()=>{calMsg=T('校准中,请保持安静 2 秒…','Calibrating — keep quiet for 2 s…');drawLevel();send(()=>Dps.musicCalibrate(sens));setTimeout(()=>{calMsg='';drawLevel();},3500);}});
+  const lvl=h('div',{class:'lvl'},h('span',{class:'hint',style:'margin:0;width:34px'},T('电平','Level')),h('div',{style:'flex:1'},h('div',{class:'lvlbar'},bar,gate),h('div',{class:'lvlvol'},vol)),lvlTxt,calBtn);
+  const msg=h('div',{class:'hint',style:'margin-top:0'});
+  const drawLevel=()=>{const raw=level.raw||0,g=level.gate||0;bar.style.width=Math.min(100,Math.round(raw/255*100))+'%';bar.style.background=raw>g?'#2ea84f':'#8b93a0';gate.style.left=Math.min(99,Math.round(g/255*100))+'%';vol.style.width=Math.round((level.vol||0)/255*100)+'%';
+    lvlTxt.textContent=T('信号 ','sig ')+Math.round(raw)+T(' 门 ',' gate ')+g;calBtn.textContent=level.cal?T('校准中','Calibrating'):T('校准底噪','Calibrate');
+    msg.textContent=calMsg||T('灰条 = 麦克风信号,黄线 = 噪声门(灵敏度越高线越靠左);信号过线才律动。安静时信号一直在线右边就点「校准底噪」。','Grey bar = mic signal, yellow line = noise gate (higher sensitivity moves it left); the lights react only when the signal crosses it. If the bar sits past the line while quiet, tap Calibrate.');msg.style.color=calMsg?'#f0c04a':'';};
+  const stopB=h('button',{class:'stopb',onclick:stop},T('停止律动','Stop'));
+  const rw=RowWindow({rows:4,cols:4,tileH:103,hint:false,renderTile:(x)=>tileOf(x,false),onOpenAll:()=>AllModal(T('WLED 音乐效果','WLED Music Effects')+' · '+items.length,(body,close)=>{const g=h('div',{class:'agrid'});items.forEach(x=>g.append(tileOf(x,true,close)));body.append(g);})});
+  const drawAll=()=>{stopB.style.display=muFx!=null?'':'none';rw.update({items,selectedIndex:items.findIndex(sc=>sc.fx===muFx)});};
+  drawLevel();drawAll();
+  root.append(Head(T('Music 律动','Music'),T('设备板载麦克风 · WLED 音频效果','Onboard microphone · WLED audio effects')),pv.el,sS,lvl,msg,
+    h('div',{style:'display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;gap:8px'},h('div',{class:'hint',style:'flex:1;margin:0'},T('灵敏度越高越小的声音也能触发。点一个效果开始律动。','Higher sensitivity reacts to quieter sounds. Tap an effect to start.')),stopB),rw);
+  // 电平轮询(固件 GET /wellvow/audio:pre = 过门前幅度,squelch = 门,vol = 归一化音量,cal = 校准中,sens = 当前灵敏度,on = 律动开)
+  const poll=async()=>{try{const j=await get('/wellvow/audio');level={vol:+j.vol||0,raw:+j.pre||0,cal:+j.cal||0,gate:+j.squelch||0};if(!sensTouch&&j.sens>=1&&j.sens<=10&&j.sens!==sens){sens=j.sens;sS.setValue(sens);}
+    if(j.on===false&&muFx!=null){muFx=null;drawAll();}drawLevel();}catch(e){}};
+  poll();const tp=setInterval(poll,500);
+  return ()=>{pv.stop();clearInterval(tp);};
+};
+
+/* ============ DIY(open_pix DiyPage, stripLayout 模式) ============ */
+PAGES['/diy']=async(root)=>{
+  const cfg=currentSegCfg(); const segmentSizes=cfg.segments.slice(0,120); const segmentCount=segmentSizes.length; const pixelTotal=segTotal(segmentSizes);
+  const segOffsets=[];{let s0=0;segmentSizes.forEach(n=>{segOffsets.push(s0);s0+=n;});}
+  const pts=layoutPoints(pixelTotal,segmentSizes);
+  let seg=-1, cat='基础', mode=ALL_MODES[0], ci=0, bright=85, speed=5, dir='fwd', activePal=-1, segModes={}, favs=W.favs||{};
+  let segColors=initSegColors(mode.colors,segmentCount), previewSegColors=segColors.map(a=>a.slice());
+  // 恢复上次 DIY(App: storage strip_diy_<id>)
+  const saved=W.diy; if(saved&&saved.modeId){const m=ALL_MODES.find(x=>x.id===saved.modeId);if(m){mode=m;cat=m.cat;}if(Array.isArray(saved.segColors)&&saved.segColors.length){segColors=initSegColors(mode.colors,segmentCount).map((a,i)=>saved.segColors[i]?saved.segColors[i].slice():a);previewSegColors=segColors.map(a=>a.slice());}
+    if(saved.bright)bright=saved.bright;if(saved.speed)speed=saved.speed;if(saved.dir)dir=saved.dir;}
+  // 进 DIY 先核对固件分段(DP_GET 0x1C):不一致就重发 0x1C,按段效果/按段颜色才有段可落
+  (async()=>{try{const s=await getState();if(s.segments&&s.segments.join()!==segmentSizes.join()&&segmentSizes.length<=32){await send(()=>Dps.segConfig(segmentSizes));await sleep(700);pushColors();}}catch(e){}})();
+
+  const refColors=()=>segColors[seg===-1?0:seg]||segColors[0]||['#3a86e0'];
+  const modeOf=(l)=>segModes[l]||mode;
+  const currentId=()=>(seg>=0&&segModes[seg])?segModes[seg].id:mode.id;
+  const effect=(i,l,t)=>{const cols=previewSegColors[l]||previewSegColors[0];const mm=modeOf(l);const len=segmentSizes[l]||pixelTotal;const p=Math.max(0,Math.min(1,((i-(segOffsets[l]||0))+0.5)/len));const sp=SPEED_WLED(speed);
+    if(mm.fx==='wled'){const fm=FX_SIM_MAP[mm.wledId];return wledFx(fm?fm[0]:'solid',(i-(segOffsets[l]||0)),t*speedScale(sp),len,hexHue(cols[0]),cols,paletteOf(mm));}
+    return wledDiyColor(mm.fx,cols,p,i,t,dir,sp);};
+  const pv=Preview({points:pts,effect,height:96,selected:seg,onPartPress:(part)=>{seg=part;ci=0;refreshAll();}});
+  pv.el.append(h('div',{style:'font-size:9.5px;color:var(--acct);text-align:center;margin-top:5px'},(WIRING&&WIRING.hasWiring?T('Wiring 形状','Wiring shape'):T('默认直线','Straight line'))+' · '+pixelTotal+T(' 灯',' px')+' · '+segmentCount+T(' 段',' seg')));
+
+  // —— 实时下发(App 里的 lcTimer effect):power + 颜色 + 效果 + 调色板 + 按段覆盖(0x17)
+  let lcT=null;
+  function pushColors(){clearTimeout(lcT);lcT=setTimeout(()=>send(async()=>{
+    const wledId=wledIdOf(mode);const overrides=Object.entries(segModes).filter(([k,mm])=>mm&&+k<segmentCount);
+    const segs=previewSegColors.map((a,si)=>{const mm=segModes[si]||mode;return ((a&&a.length)?a:['#3a86e0']).slice(0,Math.max(1,mm.colors||1));});
+    const same=!overrides.length&&segs.every(a=>a.join()===segs[0].join());
+    await Dps.power(true);
+    if(same)await Dps.color(segs[0]);else await Dps.segmentColors(segs);
+    if(paletteOf(mode)===DIY_TONE_PALETTE_ID)await Dps.customPalette(2,tonePalette(segs[0][0]));
+    await Dps.mode(0,wledId);await Dps.palette(paletteOf(mode));
+    for(const [k,mm] of overrides)await Dps.segment(+k,{on:1,bri:255,fx:wledIdOf(mm),sx:SPEED_WLED(speed),ix:128,pal:paletteOf(mm)});
+  }),120);}
+  let bsT=null;const sendBS=(b,sp)=>{clearTimeout(bsT);bsT=setTimeout(()=>send(()=>Dps.brightSpeed(Math.round(b*2.55),SPEED_WLED(sp))),200);};
+  const commit=()=>{previewSegColors=segColors.map(a=>a.slice());pushColors();if(segColors[0]){W.modeCols=W.modeCols||{};W.modeCols[(seg>=0&&segModes[seg])?segModes[seg].id:mode.id]=segColors[0].slice();deb('mc',saveW,800);}};
+  const paintStop=(hex)=>{(seg===-1?[...Array(segmentCount).keys()]:[seg]).forEach(si=>{if(segColors[si])segColors[si][ci]=hex;});};
+
+  // —— 段选择(StripSegmentSelector)
+  const segBox=h('div',{class:'segs'});
+  function drawSegs(){segBox.innerHTML='';const total=pixelTotal;const compact=segmentCount>4;
+    const slot=(item)=>{if(!item)return h('div',{class:'segslot'});const on=item.v==='more'?seg>=8:seg===item.v;
+      return h('div',{class:'segslot'},h('button',{class:'segt'+(on?' on':''),onclick:()=>{if(item.v==='more')openMore();else{seg=item.v;ci=0;refreshAll();}}},compact?(item.title+' · '+item.meta):item.title,compact?null:h('small',null,item.meta)));};
+    const first=[{v:-1,title:'ALL',meta:total+T('点',' px')}].concat([0,1,2,3].map(i=>i<segmentCount?{v:i,title:T('段','Seg ')+(i+1),meta:segmentSizes[i]+T('点',' px')}:null));
+    const second=[4,5,6,7].map(i=>i<segmentCount?{v:i,title:T('段','Seg ')+(i+1),meta:segmentSizes[i]+T('点',' px')}:null);
+    second.push(segmentCount>8?{v:'more',title:seg>=8?(T('段','Seg ')+(seg+1)):'9+',meta:seg>=8?(segmentSizes[seg]+T('点',' px')):((segmentCount-8)+T('段',' segs'))}:null);
+    segBox.append(h('div',{class:'segrow'},...first.map(slot)));if(segmentCount>4)segBox.append(h('div',{class:'segrow'},...second.map(slot)));}
+  function openMore(){let pend=seg>=8?seg:null;const list=h('div',{class:'list'});const ok=h('button',{class:'ok',disabled:pend==null},T('确认','OK'));
+    const draw=()=>{list.innerHTML='';let start=segTotal(segmentSizes.slice(0,8))+1;segmentSizes.slice(8).forEach((n,k)=>{const idx=k+8;list.append(h('button',{class:'gr'+(pend===idx?' on':''),onclick:()=>{pend=idx;ok.disabled=false;draw();}},h('span',null,h('b',{style:'color:'+(pend===idx?'var(--acct)':'inherit')},T('段 ','Seg ')+(idx+1)),h('div',{class:'ps'},T('灯 ','LED ')+start+'–'+(start+n-1))),h('span',{class:'ps'},n+T(' 点',' px'))));start+=n;});};
+    draw();const m=modal(T('选择第 9 段及后续分段','Pick segment 9 or later'),h('div',null,h('div',{class:'hint',style:'margin-top:0'},T('段数和点数来自“段配置”,DIY 仅选择效果范围。','Segment count and pixel counts come from Setup. DIY only picks which range the effect covers.')),list),[h('button',{class:'no',onclick:()=>m.remove()},T('取消','Cancel')),ok]);ok.onclick=()=>{if(pend==null)return;seg=pend;ci=0;m.remove();refreshAll();};}
+
+  // —— 色环 + 色标
+  // 页面可能在面板还没量出宽度时构建(clientWidth 只有十几像素 → 色环算成 0),用文档宽度兜底并夹在 120~220
+  const RING=Math.round(Math.max(120,Math.min(220,Math.max(root.clientWidth,document.documentElement.clientWidth||0,360)-28))*0.5);
+  const ringCv=h('canvas',{width:RING*2,height:RING*2,style:'width:'+RING+'px;height:'+RING+'px'});const ringC=h('div',{class:'c'});const ring=h('div',{class:'ring'},ringCv,ringC);
+  (function drawRing(){const c=ringCv.getContext('2d'),R=RING,cx=R,cy=R;for(let a=0;a<360;a+=1){c.beginPath();c.moveTo(cx,cy);c.arc(cx,cy,R,(a-91)*Math.PI/180,(a-89)*Math.PI/180);c.closePath();c.fillStyle='hsl('+a+',100%,50%)';c.fill();}
+    const g=c.createRadialGradient(cx,cy,0,cx,cy,R);g.addColorStop(0,'rgba(255,255,255,1)');g.addColorStop(0.72,'rgba(255,255,255,0)');c.fillStyle=g;c.beginPath();c.arc(cx,cy,R,0,6.283);c.fill();
+    c.globalCompositeOperation='destination-out';c.beginPath();c.arc(cx,cy,R*0.42,0,6.283);c.fill();c.globalCompositeOperation='source-over';})();
+  const ringHex=(e)=>{const rc=ringCv.getBoundingClientRect();const x=e.clientX-rc.left-RING/2,y=e.clientY-rc.top-RING/2;const d=Math.hypot(x,y);if(d<RING*0.21)return null;const ang=(Math.atan2(y,x)*180/Math.PI+90+360)%360;const sat=Math.min(1,Math.max(0,(d/(RING/2)-0.42)/0.58*1.4));return cssToHex(hsl(ang,100,100-50*sat));};
+  let dragging=false;ringCv.addEventListener('pointerdown',(e)=>{const hx2=ringHex(e);if(hx2==null){openRgb();return;}dragging=true;ringCv.setPointerCapture(e.pointerId);paintStop(hx2);refreshRing();});
+  ringCv.addEventListener('pointermove',(e)=>{if(!dragging)return;const hx2=ringHex(e);if(hx2){paintStop(hx2);refreshRing();}});
+  ringCv.addEventListener('pointerup',()=>{if(!dragging)return;dragging=false;commit();});
+  const stops=h('div',{class:'stops'});const hintTxt=h('div',{style:'font-size:8.5px;color:var(--sub);line-height:13px;margin-top:3px'});
+  function refreshRing(){const rc=refColors();const c=hx(rc[ci]||'#3a86e0');ringC.innerHTML='R '+c[0]+'<br>G '+c[1]+'<br>B '+c[2];
+    stops.innerHTML='';const n=rc.length;const w=stops.clientWidth||150;const pos=(k)=>n===1?w/2:13+(w-26)*k/(n-1);
+    if(n>1)stops.append(h('div',{class:'ln',style:'background:linear-gradient(90deg,'+rc.join(',')+')'}));
+    rc.forEach((col,k)=>{stops.append(h('button',{class:'d'+(k===ci?' on':''),style:'left:'+pos(k)+'px;background:'+col,onclick:()=>{ci=k;refreshRing();}}),h('div',{class:'lb'+(k===ci?' on':''),style:'left:'+pos(k)+'px'},STOPL[k]||T('色'+(k+1),'Color '+(k+1))));});
+    hintTxt.textContent=(seg===-1?'ALL':T('段','Seg ')+(seg+1))+' · '+(STOPL[ci]||T('色'+(ci+1),'Color '+(ci+1)))+T(' / 共'+n+'色',' / '+n+(n>1?' colors':' color'));}
+  function openRgb(){const rc=refColors();const c=hx(rc[ci]||'#3a86e0');const ins=['R','G','B'].map((k,i)=>h('input',{class:'in',type:'number',min:0,max:255,value:c[i],style:'text-align:center'}));
+    const m=modal(T('修改 RGB 数值','Edit RGB Values'),h('div',{style:'display:flex;gap:8px'},...ins.map((inp,i)=>h('div',{style:'flex:1'},h('div',{class:'hint',style:'text-align:center;margin:0 0 5px'},['R','G','B'][i]),inp))),
+      [h('button',{class:'no',onclick:()=>m.remove()},T('取消','Cancel')),h('button',{class:'ok',onclick:()=>{const cl=(v)=>Math.max(0,Math.min(255,parseInt(v,10)||0));const hex='#'+ins.map(i=>cl(i.value).toString(16).padStart(2,'0')).join('');paintStop(hex);m.remove();refreshRing();commit();}},T('应用','Apply'))]);}
+
+  // —— 胶囊(Capsule,与 App open_pix/Capsule.js 同构):亮度 / 速度 / 方向 / 配色收成一行,点哪个展开哪个
+  const cap=Capsule({bright:()=>bright,speed:()=>speed,dir:()=>dir,cols:()=>refColors(),colorCount:()=>(seg>=0?modeOf(seg):mode).colors,activePal:()=>activePal,
+    onBright:(v)=>{bright=v;sendBS(v,speed);},onSpeed:(v)=>{speed=v;sendBS(bright,v);},onDir:(v)=>{dir=v;send(()=>Dps.direction(v==='rev'));},
+    onPalette:(pl,i)=>{activePal=i;const pal=[];const mc=(seg>=0?modeOf(seg):mode).colors;for(let k=0;k<mc;k++)pal.push(pl.cols[k%pl.cols.length]);segColors=segColors.map((a,si)=>(seg===-1||si===seg)?pal.slice():a);ci=0;refreshRing();commit();}});
+
+  // —— 分类 + 模式(与 App open_pix ModeStrip / ModeCard 同构):圆形线稿图标 + 名字,图标颜色 = 该模式当前选的颜色;心形收藏挂右上角
+  const CATS=[...new Set([...DIY_CATS,...WLED_COLOR_CATS,'收藏'])];
+  W.modeCols=W.modeCols||{};   // 每个模式图标各自记住用户在它名下改过的颜色(App diy_mode_cols_<id>)
+  const catC=Chips(CATS.map(c=>({v:c,label:catName(c)})),cat,(v)=>{cat=v;drawModes();},'catc');
+  const custom=()=>(W.saved||[]).map(c=>({id:c.id,name:c.name,sub:c.modeName,fx:c.snap?c.snap.fx:'static',wledId:c.snap?c.snap.wledId:undefined,colors:(c.cols||[]).length||1,block:(c.snap&&c.snap.block)||'#7c5cf0',_custom:true,snap:c.snap}));
+  const iconColsOf=(m)=>m.id===currentId()?(segColors[0]||[m.block]):(W.modeCols[m.id]||[m.block]);
+  function modeCard(m,inModal,close){const on=m.id===currentId();const iw=h('div',{class:'iw'},effectIconEl(m.fxName||(m.fx==='wled'?(ALL_FX.find(p=>p.id===m.wledId)||{}).name:m.fx)||m.name,iconColsOf(m),54,on));
+    if(!m._custom)iw.append(h('button',{class:'heart'+(favs[m.id]?' on':''),onclick:(e)=>{e.stopPropagation();favs[m.id]=!favs[m.id];W.favs=favs;saveW();drawModes();}},favs[m.id]?'♥':'♡'));
+    return h('button',{class:'mcard'+(on?' on':''),onclick:()=>{chooseMode(m);if(inModal){cat=m.cat||cat;catC.setValue&&catC.setValue(cat);close();drawModes();}}},iw,h('div',{class:'mname'},m.name));}
+  const modeList=()=>(cat==='收藏'?[...ALL_MODES.filter(m=>favs[m.id]),...custom()]:ALL_MODES.filter(m=>m.cat===cat)).slice().sort((a,b)=>(a.colors||1)-(b.colors||1));
+  const emptyFav=h('div',{class:'hint',style:'text-align:center'},T('还没有收藏。点模式卡右上角心形添加。','No favorites yet. Tap the heart on a mode card to add one.'));
+  /* 10-23 用户:不要“上滑查看全部”,当前分类的模式全部铺开随页面滚动;手机 4 列、宽屏 6 列(CSS) */
+  const rw=h('div',{class:'rg'});rw.update=({items})=>{rw.innerHTML='';items.forEach(m=>rw.append(modeCard(m,false)));};
+  const _unusedAll=()=>AllModal(T('全部模式','All Modes')+' · '+ALL_MODES.length,(body,close)=>{
+    CATS.filter(c=>c!=='收藏').forEach(c=>{const list=ALL_MODES.filter(m=>m.cat===c);if(!list.length)return;body.append(h('div',{class:'acat'},catName(c)+' · '+list.length));const g=h('div',{class:'agrid'});list.forEach(m=>g.append(modeCard(m,true,close)));body.append(g);});});
+  function drawModes(){const list=modeList();emptyFav.style.display=list.length?'none':'';rw.style.display=list.length?'':'none';rw.update({items:list,selectedIndex:list.findIndex(m=>m.id===currentId())});
+    if(segColors[0]){W.modeCols[(seg>=0&&segModes[seg])?segModes[seg].id:mode.id]=segColors[0].slice();}}
+  function chooseMode(m){
+    if(m._custom&&m.snap){ // 收藏里的自定义效果:恢复保存时的模式与各段颜色
+      const base=ALL_MODES.find(x=>x.id===m.snap.modeId)||mode;mode=base;segModes={};segColors=initSegColors(base.colors,segmentCount).map((a,i)=>m.snap.segColors&&m.snap.segColors[i]?m.snap.segColors[i].slice():a);ci=0;activePal=-1;refreshAll();commit();return;}
+    if(seg>=0){segColors[seg]=initSegColors(m.colors,1)[0];segModes[seg]=m;ci=0;activePal=-1;refreshAll();commit();return;}   // 只改当前选中的这一段(DP 0x17 / 0x07)
+    segModes={};mode=m;segColors=initSegColors(m.colors,segmentCount);ci=0;activePal=-1;refreshAll();commit();}
+  function refreshAll(){pv.set({selected:seg});drawSegs();refreshRing();drawPal();drawModes();}
+
+  // —— Save(命名 → 存到控制器 /wvweb.json,并让设备把当前状态存进槽位 DP 0x18)
+  const saveBtn=h('button',{style:'background:var(--acc);color:#fff;padding:6px 16px;border-radius:10px;font-size:11px',onclick:()=>{const inp=h('input',{class:'in',placeholder:T('例如:门店晚间','e.g. Storefront Evening')});
+    const m=modal(T('保存效果 · 起个名字','Save Effect · Name It'),inp,[h('button',{class:'no',onclick:()=>m.remove()},T('取消','Cancel')),h('button',{class:'ok',onclick:()=>{const savedColors=[...new Set(segColors.flat().filter(Boolean))];W.saved=W.saved||[];
+      W.saved.push({id:'c'+Date.now(),name:inp.value||T('我的效果','My Effect'),modeName:mode.name,snap:{modeId:mode.id,fx:mode.fx,wledId:mode.wledId,block:mode.block,segColors:segColors.map(a=>a.slice())},cols:savedColors.length?savedColors:['#3a86e0']});
+      const slot=(W.saved.length-1)%8;send(()=>Dps.presetSave(slot));
+      W.diy={modeId:mode.id,segColors:segColors.map(a=>a.slice()),bright,speed,dir,ts:Date.now()};saveW();m.remove();saveBtn.textContent=T('已保存 ✓','Saved ✓');setTimeout(()=>saveBtn.textContent='Save',1200);drawModes();}},T('保存','Save'))]);setTimeout(()=>inp.focus(),50);}},'Save');
+
+  root.append(Head('DIY · STRIP',(INFO.name||'')+T(' · 自动读取 Wiring / 段配置',' · reads Wiring / segments automatically'),null,saveBtn),segBox,pv.el,
+    h('div',{class:'wheel'},ring,h('div',{style:'flex:1;min-width:0'},h('div',{style:'font-size:11.5px;font-weight:600;margin-bottom:6px'},T('选一个颜色,再用色盘调整','Pick a color, then fine-tune it on the wheel')),stops,hintTxt)),cap,
+    /* 10-23:不再固定在屏幕底部(以前预留 262px,手机上停靠区更高就压到胶囊栏);分类 + 完整模式网格跟着页面流式排列,整页自然滚动 */
+    h('div',{class:'modesec'},h('div',{class:'catrow'},h('span',{style:'font-size:10px;color:var(--sub);flex:none'},T('分类','Category')),catC),emptyFav,rw));
+  refreshAll();
+  return ()=>{pv.stop();clearTimeout(lcT);clearTimeout(bsT);};
+};
+
+/* ============ 配置(open_strip SegCfgPage):总点数 / 段数 / 线序自动校准 ============ */
+PAGES['/segcfg']=async(root)=>{
+  const cur=currentSegCfg(); let count=cur.count, segN=cur.segments.length;
+  const COLOR_ORDER_CODE={GRB:0,RGB:1,BRG:2,RBG:3,BGR:4,GBR:5};
+  let colorOrder=COLOR_ORDERS.includes(W.order)?W.order:'RGB', calTouched=false, positions={R:null,G:null,B:null}, active=null, done=false;
+  const orderFromAssignments=(pos)=>{const bytes=[null,null,null];['R','G','B'].forEach(ch=>{const p=pos[ch];if(p!=null&&bytes[p]==null)bytes[p]=ch;});const rem=['R','G','B'].filter(ch=>!bytes.includes(ch));bytes.forEach((v,i)=>{if(v==null)bytes[i]=rem.shift();});return bytes.join('');};
+  const norm=(raw,fb,min,max)=>{const p=parseInt(String(raw||''),10);return Math.max(min,Math.min(max,Number.isFinite(p)?p:fb));};
+  const cntI=h('input',{class:'ni',inputmode:'numeric',maxlength:3,value:count}),segI=h('input',{class:'ni',inputmode:'numeric',maxlength:3,value:segN});
+  const MAX_SEG=(INFO.maxseg>=1&&INFO.maxseg<=32)?INFO.maxseg:8;   // 段数上限由固件上报(N4 8 / S3 16)
+  const reqSeg=()=>norm(segI.value,segN,1,MAX_SEG), reqCnt=()=>norm(cntI.value,count,Math.max(1,reqSeg()),512);
+  const applyCount=(raw)=>{count=norm(raw,count,Math.max(1,reqSeg()),512);cntI.value=count;hint1.textContent=hintTxt();};
+  const applySeg=(raw)=>{const avail=norm(cntI.value,count,1,512);segN=norm(raw,segN,1,Math.min(MAX_SEG,avail));segI.value=segN;hint1.textContent=hintTxt();};
+  const hintTxt=()=>T('每段 ≈','About ')+Math.floor(count/segN)+T(' 点,总点数最多 512、最多 '+MAX_SEG+' 段。总点数改变时控制器会按两路输出的比例重新分配灯数并保存。',' px per segment. Up to 512 pixels and 8 segments. When the total changes, the controller re-splits the pixels across the two outputs in the same ratio and saves it.');
+  const hint1=h('div',{class:'hint'},hintTxt());
+  cntI.onchange=()=>applyCount(cntI.value);segI.onchange=()=>applySeg(segI.value);
+  const calBox=h('div',{class:'cal'}),calHint=h('div',{class:'hint'}),ordTxt=h('span',{style:'font-size:15px;font-weight:700;letter-spacing:2px'}),ordSub=h('span',{style:'font-size:10px;color:var(--sub);flex:1;text-align:right'});
+  const saveBtn=bigBtn(T('保存全部配置','Save All Settings'),null);
+  function drawCal(){calBox.innerHTML='';[['R',T('红色','Red'),'#ff0000'],['G',T('绿色','Green'),'#00ff00'],['B',T('蓝色','Blue'),'#0000ff']].forEach(([ch,name,hex])=>{const isA=active===ch,isS=positions[ch]!=null;
+    calBox.append(h('button',{class:(isA?'on':'')+(isS&&!isA?' as':''),style:'background:'+hex,disabled:done,onclick:()=>testCal(ch)},name,isS?h('small',null,'byte '+(positions[ch]+1)+(isA?T(' · 当前',' · current'):T(' · 已确认',' · confirmed'))):null));});
+    calHint.textContent=done?T('线序已锁定,请点击保存全部配置提交','Color order locked. Tap Save All Settings to submit.'):active==null?T('第 1 步:任选一个颜色开始','Step 1: tap any color to begin'):T('当前颜色正确后,点击另一个颜色以锁定并继续','When the current color looks right, tap another color to lock it in and continue');
+    ordTxt.textContent=colorOrder;ordSub.textContent=T('红=','R=')+(colorOrder.indexOf('R')+1)+T('  绿=','  G=')+(colorOrder.indexOf('G')+1)+T('  蓝=','  B=')+(colorOrder.indexOf('B')+1)+' byte';
+    saveBtn.disabled=active!=null&&!done;}
+  function testCal(ch){if(done)return;calTouched=true;const cur2={...positions};const occ=['R','G','B'].filter(c=>c!==ch&&cur2[c]!=null).map(c=>cur2[c]);const cands=[0,1,2].filter(p=>!occ.includes(p));if(!cands.length)return;
+    let next;if(active===ch){const idx=cands.indexOf(cur2[ch]);next=cands[(idx+1)%cands.length];}else next=cands.includes(cur2[ch])?cur2[ch]:cands[0];
+    cur2[ch]=next;positions=cur2;active=ch;done=['R','G','B'].filter(c=>cur2[c]!=null).length===3;colorOrder=orderFromAssignments(cur2);drawCal();
+    const hex=ch==='R'?'#ff0000':ch==='G'?'#00ff00':'#0000ff';send(()=>Dps.calibrateColor(COLOR_ORDER_CODE[colorOrder],hex));}
+  drawCal();
+  saveBtn.onclick=async()=>{if(calTouched&&!done)return;const nextSegN=reqSeg();const nextCount=norm(cntI.value,count,Math.max(1,nextSegN),512);const safeSegN=Math.min(nextSegN,nextCount);count=nextCount;segN=safeSegN;cntI.value=count;segI.value=segN;
+    const base=Math.floor(count/segN);const segments=Array.from({length:segN},(_,i)=>i===segN-1?count-base*(segN-1):base);
+    // 只有灯珠数/分段确实变化时才下发 0x0D/0x1C(固件 resetSegments 会把段重置成默认色),仅重新校准线序时不动分段
+    const prev=W.segcfg;const segChanged=!prev||prev.count!==count||JSON.stringify(prev.segments||[])!==JSON.stringify(segments);
+    W.segcfg={count,segments,ts:Date.now()};const commit=calTouched&&done;const finalOrder=colorOrder;if(commit)W.order=finalOrder;saveW();
+    await send(async()=>{if(segChanged){await Dps.pixelCount(count);await Dps.segConfig(segments);}
+      if(commit){await Dps.colorOrder(COLOR_ORDER_CODE[finalOrder]);
+        const lastFx=Number(W.lastFx)||0;const fm=FX_SIM_MAP[lastFx];const previewCol=cssToHex(fm?wledFx(fm[0],0,0,120,fm[1]):genericFx(lastFx,0,0,120));
+        await sleep(450);await Dps.power(true);await Dps.color(previewCol);await Dps.mode(0,lastFx);}});
+    saveBtn.textContent=T('已保存 ✓','Saved ✓');saveBtn.className='big ok';await loadInfo();setTimeout(()=>go('/'),500);};
+  // 输出口布局(10-21):OUT1 / OUT2 各自起点、终点(1 基,含)、方向;总点数 = 两口灯数之和。POST /wellvow/outputs?len=a,b&start=a,b&rev=0,1
+  const outBox=h('div');
+  (async()=>{try{const o=await get('/wellvow/outputs');const outs=[0,1].map(i=>o.outputs[i]||{pin:i?2:15,start:0,len:0,rev:false});
+    const rows=outs.map((b,i)=>{const s0=h('input',{class:'ni',inputmode:'numeric',maxlength:3,value:b.len?b.start+1:'',placeholder:T('起','From')}),s1=h('input',{class:'ni',inputmode:'numeric',maxlength:3,value:b.len?b.start+b.len:'',placeholder:T('止','To')});
+      let rev=!!b.rev;const dir=h('button',{class:'st',style:'width:auto;padding:0 10px;font-size:11px'},'');const lab=()=>{dir.textContent=rev?T('反向 ←','Rev ←'):T('正向 →','Fwd →');};lab();dir.onclick=()=>{rev=!rev;lab();};
+      return {s0,s1,dir,get:()=>{const a=parseInt(s0.value,10),e=parseInt(s1.value,10);if(!Number.isFinite(a)||!Number.isFinite(e)||a<1||e<a)return {start:0,len:0,rev};return {start:a-1,len:Math.min(512,e-a+1),rev};}};});
+    const apply=h('button',{class:'st',style:'width:auto;padding:0 10px;font-size:11px'},T('应用','Apply'));
+    apply.onclick=async()=>{const l=rows.map(r=>r.get());const total=l.reduce((x,y)=>x+y.len,0);if(!total||total>512)return toast(T('两路灯数合计要在 1–512 之间;不用的口留空','The two outputs together must cover 1–512 pixels; leave an unused output blank'));
+      await fetch('/wellvow/outputs?len='+l.map(x=>x.len).join(',')+'&start='+l.map(x=>x.start).join(',')+'&rev='+l.map(x=>x.rev?1:0).join(','),{method:'POST'});await sleep(1500);await loadInfo();count=INFO.leds;cntI.value=count;segN=1;segI.value=1;hint1.textContent=hintTxt();W.segcfg={count,segments:[count],ts:Date.now()};saveW();apply.textContent=T('已应用 ✓','Applied ✓');toast(T('输出口布局已设置,总点数 ','Output layout set, total ')+INFO.leds);};
+    outBox.append(h('div',{class:'blk',style:'margin-top:14px'},T('输出口布局','Output Layout')),
+      ...outs.map((b,i)=>h('div',{class:'cfg'},h('span',{class:'l'},'OUT'+(i+1)+' (GPIO'+b.pin+')'),rows[i].s0,h('span',null,'–'),rows[i].s1,rows[i].dir)),
+      h('div',{class:'cfg'},h('span',{class:'l'}),apply),
+      h('div',{class:'hint'},T('起点/终点是整条灯带的序号(从 1 起,含两端),两口合计 = 总点数;不用的口留空。方向 = 该口数据线的走向,接反了就切成反向。','Start/end are positions on the whole strip (from 1, inclusive); both outputs together make the total. Leave an unused output blank. Direction follows the data wire; flip it if the strip runs backwards.')));}catch(e){}})();
+  root.append(Head(T('配置','Setup'),T('灯带 ','Strip ')+count+T(' 点 · ',' px · ')+segN+T(' 段 · ',' seg · ')+'DP 0x0D/0x1C'),
+    h('div',{class:'cfg'},h('span',{class:'l'},T('总点数','Total pixels')),h('button',{class:'st',onclick:()=>applyCount(reqCnt()-30)},'−'),cntI,h('button',{class:'st',onclick:()=>applyCount(reqCnt()+30)},'+')),
+    h('div',{class:'cfg'},h('span',{class:'l'},T('段数','Segments')),h('button',{class:'st',onclick:()=>applySeg(reqSeg()-1)},'−'),segI,h('button',{class:'st',onclick:()=>applySeg(reqSeg()+1)},'+')),hint1,
+    h('div',{class:'blk'},T('灯带线序自动校准','Color Order Auto-Calibration')),h('div',{class:'hint'},T('可从任意颜色开始:反复点当前颜色直到灯带颜色正确,再点另一个颜色。已确认颜色占用的 byte 会自动排除,第三种颜色自动使用最后一个 byte。','Start with any color: tap the same color until the strip shows it correctly, then tap another color. Bytes already taken are skipped, and the third color uses the remaining byte automatically.')),calBox,calHint,
+    h('div',{class:'cfg'},h('span',{class:'l'},T('当前字节格局','Current byte order')),ordTxt,ordSub),outBox,saveBtn);
+};
+
+/* ============ 分组(open_strip GroupSetPage):组号 = 列表下标+1,DP 0x0A 位掩码 ============ */
+PAGES['/groupset']=async(root)=>{
+  let selected=W.group||null;let cur=null;try{cur=(await getState()).group;}catch(e){}
+  if(selected==null&&Number.isInteger(cur)&&cur>0){const i=Math.log2(cur&-cur)|0;if(GROUPS[i]&&cur===(1<<i))selected=GROUPS[i].id;}
+  const tip=h('div',{class:'hint',style:'margin-top:10px'});const list=h('div',{class:'list',style:'gap:8px'});
+  const move=async(gid)=>{tip.textContent=T('正在写入分组号…','Writing group number…');tip.style.color='var(--sub)';const i=GROUPS.findIndex(g=>g.id===gid);const mask=i>=0?(1<<i):0;
+    const ok=await send(()=>Dps.setGroup(mask));if(!ok){tip.textContent=T('分组写入失败,请重试。','Could not write the group. Try again.');tip.style.color='#ff6b6b';return;}selected=gid;W.group=gid;saveW();draw();tip.textContent=gid?T('已加入分组,组号已写入设备。','Joined the group. The group number is stored on the device.'):T('已移出所有分组。','Removed from all groups.');tip.style.color='var(--green)';};
+  const draw=()=>{list.innerHTML='';list.append(h('button',{class:'gr'+(selected==null?' on':''),onclick:()=>move(null)},T('未分组(移出当前分组)','Ungrouped (leave current group)'),selected==null?'✓':''));
+    GROUPS.forEach((g,i)=>list.append(h('button',{class:'gr'+(selected===g.id?' on':''),onclick:()=>move(g.id)},g.name+T(' · 组号 ',' · Group ')+(i+1),selected===g.id?'✓':'')));};
+  draw();
+  root.append(Head(T('分组设置','Groups'),(INFO.name||'')+T(' · STRIP 设备分组',' · STRIP device groups')),h('div',{class:'hint',style:'margin-top:0'},T('STRIP 与 HUB“自己控制”使用同一种组控参数,只能加入 STRIP 类型分组。组号决定本机是否执行 HUB 转发来的整组指令。','STRIP and the HUB self-control mode share the same group parameter, so this device can only join STRIP groups. The group number decides whether it runs group commands forwarded by the HUB.')),list,tip,
+    h('div',{class:'blk',style:'margin-top:16px'},T('多设备联动(不经手机)','Multi-device linking (no phone needed)')),h('div',{class:'card'},h('div',{class:'hint',style:'margin-top:0'},T('主从角色、局域网内的控制器列表和整组测试已移到「同步 / HUB」页。','Host/follower roles, the list of controllers on the LAN and the group test have moved to the Sync / HUB page.')),h('button',{class:'big',onclick:()=>go('/hub')},T('打开 同步 / HUB','Open Sync / HUB'))));
+};
+
+PAGES['/hub']=async(root)=>{
+  await loadInfo();
+  let role=Number.isInteger(INFO.link)?INFO.link:0,peers=null,src='';
+  const ROLE_TAG={0:T('独立','Standalone'),1:T('主设备','Host'),2:T('从设备','Follower')},ROLE_COLOR={0:'#8b93a0',1:'#8a5adb',2:'#2fa06a'};
+  const ROLE_TIP={0:T('不参与联动:本机只响应手机 / 网页发给它自己的指令。','Not linked: this device only responds to commands sent to it from the app or this page.'),
+    1:T('本机是 HUB:手机只需连本机,组指令由本机经 Wi-Fi 转发给同一路由器下的全部控制器;本机的开关 / 亮度 / 速度 / 模式 / 颜色也会同步给从设备;播放 Studio 帧序列时从设备自动对齐同一帧。','This device is the HUB: the phone only connects here, and group commands are forwarded over Wi-Fi to every controller on the same router. Power, brightness, speed, mode and color are mirrored to followers, and Studio frame sequences stay frame-aligned.'),
+    2:T('本机跟随主设备:主设备的控制与播放进度会同步到本机(各机放自己那片切片就能拼成整幅画面)。','This device follows the host: the host mirrors its controls and playback position here, so each device plays its own slice of one picture.')};
+  const tip=h('div',{class:'hint'},ROLE_TIP[role]),msg=h('div',{class:'hint',style:'color:var(--green);margin-top:0'});
+  const testBox=h('div');
+  const roleC=Chips([{v:0,label:T('独立','Standalone')},{v:1,label:T('主设备 (HUB)','Host (HUB)')},{v:2,label:T('从设备','Follower')}],role,(v)=>setRoleTo(v));
+  const setRoleTo=async(v)=>{try{const j=await (await fetch('/wellvow/link?role='+v,{method:'POST'})).json();role=j.role;INFO.link=role;tip.textContent=ROLE_TIP[role];msg.textContent=role===1?T('已设为主设备,正在扫描局域网内的控制器…','Set as host. Scanning the LAN for controllers…'):T('角色已写入控制器(断电保留)。','Role stored on the controller; it survives a power cycle.');drawTest();if(typeof drawRoute==='function')drawRoute();setTimeout(()=>scan(true),600);}catch(e){toast(T('设置失败:','Could not apply: ')+e.message);roleC.setValue(role);}};
+  const net=h('div',{class:'card',style:'display:flex;align-items:center;gap:10px'});
+  const drawNet=()=>{const ok=INFO.connected&&INFO.ip;net.innerHTML='';
+    net.append(h('span',{html:ICON.wifi(ok?'#2ea84f':'#8b93a0')}),h('div',{style:'flex:1'},h('div',{style:'font-size:12px'},ok?('Wi-Fi · '+(INFO.sta||T('路由器','Router'))):T('未连接路由器','Not connected to a router')),
+      h('div',{class:'ps',style:'margin-top:2px;line-height:14px'},ok?(INFO.ip+(INFO.mdns?' · '+INFO.mdns+'.local':'')+(INFO.rssi?' · '+INFO.rssi+' dBm':'')):T('联动需要所有控制器接同一个路由器的 Wi-Fi;点上方状态条配网。','Linking needs every controller on the same router Wi-Fi. Tap the status bar above to set it up.'))),
+      h('span',{style:'font-size:10px;color:'+(ok?'var(--green)':'var(--sub)')},ok?T('已连接','Connected'):T('未连接','Not connected')));};
+  drawNet();
+  const cnt=h('span'),list=h('div',{class:'list'}),note=h('div',{class:'hint'});
+  const setPeer=async(p,r)=>{try{await fetch('http://'+p.ip+'/wellvow/link?role='+r,{method:'POST',mode:'no-cors'});msg.textContent=(p.name||p.ip)+T(' 已设为',' set to ')+ROLE_TAG[r]+T('。','.');setTimeout(()=>scan(true),500);}catch(e){toast(T('无法访问 ','Cannot reach ')+p.ip);}};
+  let onPeers=null;
+  const drawPeers=()=>{if(onPeers)onPeers();list.innerHTML='';const on=(peers||[]).filter(p=>p.online!==false);cnt.textContent=peers?' · '+on.length+T(' 台在线',' online'):'';
+    if(!peers){note.textContent=T('正在扫描…','Scanning…');return;}
+    if(!peers.length){note.textContent=T('没发现别的 WELLVOW 控制器。请确认其它控制器已配网到同一路由器、并已升级到带 HUB 功能的固件;主设备每 5 秒自动扫一次。','No other WELLVOW controllers found. Check that they are on the same router and running firmware with HUB support. The host rescans every 5 seconds.');return;}
+    note.textContent=T('点行内按钮可直接改那台控制器的角色(需与本页同一 Wi-Fi)。','Use the buttons in a row to change that controller role directly; it must be on the same Wi-Fi as this page.');
+    peers.forEach(p=>{const c=ROLE_COLOR[p.role]||'#8b93a0';
+      list.append(h('div',{class:'card',style:'margin-bottom:0;'+(p.online===false?'opacity:.45':'')},
+        h('div',{style:'display:flex;align-items:center;gap:10px'},h('span',{style:'width:9px;height:9px;border-radius:5px;background:'+(p.on?'var(--green)':'var(--dim)')}),
+          h('div',{style:'flex:1'},h('div',{style:'font-size:12px'},p.name||p.ip),h('div',{class:'ps',style:'margin-top:2px'},p.ip+' · '+p.leds+T(' 点',' px')+(p.playing>=0?T(' · 播放槽 ',' · slot ')+p.playing:'')+(p.online===false?T(' · 离线',' · offline'):''))),
+          h('span',{style:'font-size:9px;border:1px solid '+c+';color:'+c+';border-radius:8px;padding:2px 6px'},ROLE_TAG[p.role]||'?')),
+        h('div',{class:'chips',style:'margin-top:8px'},h('button',{class:'chip',onclick:()=>setPeer(p,2)},T('设为从设备','Make Follower')),h('button',{class:'chip',onclick:async()=>{await setPeer(p,1);roleC.setValue(2);roleC.querySelectorAll('.chip')[2].click();}},T('设为主设备','Make Host')),h('button',{class:'chip',onclick:()=>setPeer(p,0)},T('设为独立','Make Standalone')),h('a',{class:'chip',href:'http://'+p.ip+'/wellvow',target:'_blank'},T('控制台','Console')))));});};
+  const scan=async(force)=>{try{const p1=await get('/wellvow/peers'+(force?'?scan=1':''));peers=Array.isArray(p1.peers)?p1.peers:[];if(force){await sleep(800);try{const p2=await get('/wellvow/peers');if(Array.isArray(p2.peers))peers=p2.peers;}catch(e){}}drawPeers();}catch(e){note.textContent=T('读取失败:','Load failed: ')+e.message;}};
+  const grp=async(tlvBytes,label)=>{try{const r=await fetch('/wellvow/group?d='+tohex([0xff,...tlvBytes]),{method:'POST'});if(!r.ok)throw Error('HTTP '+r.status);msg.textContent=T('已发送「','Sent ')+label+T('」:本机执行并经 Wi-Fi 转发给全部控制器。',': this device ran it and forwarded it to every controller over Wi-Fi.');setTimeout(()=>scan(false),700);}catch(e){toast(T('发送失败:','Send failed: ')+e.message);}};
+  const drawTest=()=>{testBox.innerHTML='';if(role!==1)return;
+    testBox.append(h('div',{class:'blk',style:'margin-top:12px'},T('测试模式 · 整组控制(组号 0xFF = 全部)','Test mode · group control (group 0xFF = all)')),h('div',{class:'chips'},
+      h('button',{class:'chip',onclick:()=>grp(tlv.bool(0x01,1),T('全组开','All On'))},T('全组开','All On')),h('button',{class:'chip',onclick:()=>grp(tlv.bool(0x01,0),T('全组关','All Off'))},T('全组关','All Off')),
+      h('button',{class:'chip',onclick:()=>grp(tlv.u8(0x02,128),T('全组亮度 50%','Group brightness 50%'))},T('亮度 50%','Brightness 50%')),h('button',{class:'chip',onclick:()=>grp(tlv.u8(0x02,255),T('全组亮度 100%','Group brightness 100%'))},T('亮度 100%','Brightness 100%'))),
+      h('div',{class:'hint'},T('App 首页“全开 / 全关”和分组页的整组操作走同一条路:手机只发一帧给 HUB,HUB 经 Wi-Fi 转发;控制器按自己的组号(分组页)决定是否执行。','All On / All Off on the app home screen and the group actions on the Groups page take the same path: the phone sends one frame to the HUB, which forwards it over Wi-Fi. Each controller decides whether to run it based on its own group number.')));};
+  drawTest();
+  /*
+   * 之后都是:局域网内的控制器(主 / 从)→ 测试模式(整组控制)→ 怎么用。角色选择块仍不显示(roleC 留给行内按钮用)。 */
+  const isDec=!!INFO.decoder;
+  const routeBox=h('div');let outs=null,outEdit=null,outsDone=false,ST=null,outType=null;W.hubRoute=W.hubRoute===1?1:0;
+  /*
+   */
+  const STRIP_CHIPS=[{v:30,label:'WS2814 / SK6812 · RGBW'},{v:22,label:'WS2812 · RGB'},{v:24,label:'WS2811 · 400k'},{v:31,label:'TM1814 · RGBW'},{v:32,label:'WS2805 · RGBCW'},{v:34,label:'SM16825 · RGBCW'},{v:26,label:'UCS8903 · 16bit'},{v:27,label:'APA106'},{v:33,label:'TM1914'}];
+  const IS_H706=/H706/i.test(INFO.model||'');   // H706 固件:只适配 H706 / Pro,接口正负极与 H705 相反
+  const stripTypeBox=h('div');
+  const drawStripType=()=>{stripTypeBox.innerHTML='';const cur=STRIP_CHIPS.some(c=>c.v===outType)?outType:30;
+    stripTypeBox.append(h('div',{class:'sect',style:'margin-top:12px'},T('灯带设置','Strip settings')),h('div',{class:'card'},h('div',{class:'blk'},T('灯带型号(按这个芯片的驱动协议发码)','Strip chip (drives the strip with this chip protocol)')),
+      Chips(STRIP_CHIPS,cur,async(v)=>{try{await fetch('/wellvow/outputs?type='+v,{method:'POST'});outType=v;drawStripType();toast(T('灯带型号已切换,几秒后生效','Strip chip switched, takes effect in a few seconds'));}catch(e){toast(T('设置失败','Failed'));}}),
+      h('div',{class:'hint',style:'margin:6px 0 0'},T('默认 WS2814。颜色顺序不对就去「配置」页做线序校准。','Default WS2814. If colors come out in the wrong order, run the color-order calibration on the Setup page.')),
+      h('div',{style:'display:flex;gap:10px;align-items:center;background:rgba(240,200,40,.10);border:1px solid rgba(240,200,40,.35);border-radius:12px;padding:10px;margin-top:10px'},
+        h('span',{style:'font-size:18px;color:#f0c828'},'⚠'),
+        h('div',{style:'flex:1;font-size:10.5px;line-height:15px;color:#f0c828'},(IS_H706?T('该型号适配 H706 屋檐灯串。如果接其他灯串,请参考右侧控制器输出的正极、负极、数据线。接错可能导致灯串损坏或灯串上的电解电容爆炸。','This model is for the H706 eave string lights. For any other string, follow the +, − and DATA positions of the controller output on the right. A wrong connection can damage the string or make its electrolytic capacitors explode.'):T('确认灯带型号:1. 从购买链接查看产品型号;2. 查看原来控制器背面的丝印。目前明确适配 H705 / H805 与 H706 两款灯带。H706 与 H705 的正负极是相反的,接错会导致灯带内的电解电容爆炸;选 H706(SM16825)请使用 Type-B 转接线。接其他灯带前请确认正负极与数据线和右图接口定义一致。如有其他未知型号需要支持,可向我们反馈。','Confirm the strip model: 1. check the product model on your purchase page; 2. check the silkscreen on the back of the original controller. Verified with the H705 / H805 and H706 strips only. H706 and H705 have opposite polarity; wiring the wrong one can make the electrolytic capacitors inside the strip explode. For H706 (SM16825) use the Type-B adapter cable. Before connecting any other strip, check its +, − and DATA wiring against the connector on the right. Need another model supported? Send us feedback.'))+' '+(IS_H706?T('供电:控制器供电支持 12–36V。如果驱动灯带,则根据灯带电压大小选择适配器;H706 系列的灯带驱动电压 29V。接线提示:该系列控制器输出接口为公头,要接灯带的母头;如果输出接口不对,请上亚马逊更换。','Power: the controller accepts 12–36 V. To power the strip, choose an adapter for the strip voltage; H706 series strips run on 29 V. Wiring: the controller output is a male connector and mates with the strip female connector; if it does not match, exchange it on Amazon.'):T('供电:控制器供电 12–36V。如需驱动灯带,请按灯带实际电压选择对应电压的适配器;适配 H705 或 H706 时使用 29V 电源。','Power: the controller accepts 12–36 V. To power the strip, choose an adapter matching the strip voltage; use a 29 V supply for H705 or H706.'))),
+        h('span',{html:'<svg width="64" height="78" viewBox="0 0 64 78"><circle cx="32" cy="32" r="29" fill="none" stroke="#dfe4ea" stroke-width="2"/><rect x="25" y="2" width="14" height="9" fill="#1a1f27" stroke="#dfe4ea" stroke-width="2"/><rect x="25" y="0" width="14" height="4" fill="#1a1f27"/><circle cx="16" cy="32" r="5" fill="none" stroke="#dfe4ea" stroke-width="1.5"/><circle cx="48" cy="32" r="5" fill="none" stroke="#dfe4ea" stroke-width="1.5"/><circle cx="32" cy="46" r="5" fill="none" stroke="#dfe4ea" stroke-width="1.5"/><text x="5" y="36" font-size="10" font-weight="700" fill="#dfe4ea">'+(IS_H706?'−':'+')+'</text><text x="55" y="35" font-size="12" font-weight="700" fill="#dfe4ea">'+(IS_H706?'+':'−')+'</text><text x="19" y="74" font-size="9" letter-spacing="1" fill="#dfe4ea">DATA</text></svg>'}))));};
+  const loadOuts=async()=>{try{const [j,st]=await Promise.all([get('/wellvow/outputs'),getState().catch(()=>null)]);outs=j.outputs||[];ST=st;outEdit=null;if(j.type!=null)outType=j.type;drawRoute();drawStripType();}catch(e){}};
+  const applyOuts=async()=>{if(!outs)return;const lens=(outEdit||outs.map(o=>String(o.len))).map(v=>Math.max(0,Math.min(512,v|0)));
+    if(lens.reduce((a,b)=>a+b,0)>512){toast(T('各输出口灯数合计不能超过 512。','The combined LED count across outputs can’t exceed 512.'));return;}
+    try{const r=await fetch('/wellvow/outputs?len='+lens.join(','),{method:'POST'});if(!r.ok)throw Error('HTTP '+r.status);outsDone=true;drawRoute();setTimeout(loadOuts,1500);}catch(e){toast(T('应用失败:','Could not apply: ')+e.message);}};
+  const drawRoute=()=>{if(isDec)return;routeBox.innerHTML='';
+    routeBox.append(h('div',{class:'sect'},T('输出路由','Output Routing')),
+      Chips([{v:0,label:T('有线分路器','Wired splitter')},{v:1,label:T('WiFi 同步','WiFi Sync')}],W.hubRoute,async(v)=>{W.hubRoute=v;saveW();if(v===1&&role!==1)await setRoleTo(1);drawRoute();}));
+    if(W.hubRoute===0){
+      routeBox.append(h('div',{class:'hint',style:'margin-top:12px'},T('有线分路:本机效果按下面的灯数拆段,OUT1 发第 1 段,OUT2 接着发第 2 段(合计 ≤ 512)。','Wired split: this device’s own effect is cut by the LED counts below; OUT1 sends the first stretch and OUT2 continues with the next (total ≤ 512).')));
+      const grid=h('div',{class:'pgrid'}),on=!!(ST&&ST.on),c0=ST&&ST.cols&&ST.cols[0]?ST.cols[0]:'var(--acct)';
+      (outs||[]).forEach((o,i)=>{const start=(outs||[]).slice(0,i).reduce((a,b)=>a+(b.len||0),0),act=(o.len||0)>0&&on;
+        const inp=h('input',{class:'pnum',type:'number',inputmode:'numeric',value:outEdit?outEdit[i]:String(o.len)});inp.addEventListener('input',()=>{outEdit=outEdit||outs.map(q=>String(q.len));outEdit[i]=inp.value;outsDone=false;});
+        grid.append(h('div',{class:'pcard',style:o.len>0?'':'opacity:.45'},
+          h('div',{class:'phead'},h('span',{class:'sdot',style:act?'background:var(--green)':''}),h('span',{class:'pname'},'OUT '+(i+1)),h('span',{class:'pst'},o.len>0?(act?T('输出中','Sending'):T('待机','Standby')):T('关闭','Off'))),
+          h('div',{class:'phead',style:'margin-top:8px'},inp,h('span',{class:'pst'},T('个灯','LEDs')+' · GPIO '+o.pin)),
+          h('div',{class:'pst',style:'margin-top:6px'},o.len>0?T('第 '+(start+1)+'–'+(start+o.len)+' 颗','LEDs '+(start+1)+'–'+(start+o.len)):T('未使用','Unused')),
+          h('div',{class:'mline'},...Array.from({length:8},()=>h('span',{class:'mpx',style:act?'background:'+c0:''})))));});
+      routeBox.append(grid,h('button',{class:'apply',style:outsDone?'background:var(--green)':'',onclick:applyOuts},outsDone?T('已应用 ✓','Applied ✓'):T('应用分路(OUT 灯数)','Apply Split (OUT LED Counts)')));
+      if(!outs)routeBox.append(h('div',{class:'hint'},T('正在读取输出口…','Reading outputs…')));
+    }else{
+      const card=h('div',{class:'card',style:'margin-top:10px'},h('div',{style:'font-size:12px;font-weight:600'},T('WiFi 同步节点','WiFi Sync Nodes')),
+        h('div',{class:'ps',style:'margin-top:3px;line-height:15px'},T('局域网内的 WELLVOW 控制器,勾选的设为从设备:跟随本机(主设备)的开关 / 亮度 / 速度 / 模式 / 颜色;不勾选 = 独立。','WELLVOW controllers on this LAN. Checked = follower: it mirrors this device’s power, brightness, speed, mode and color. Unchecked = standalone.')));
+      /* 主从设置就放在这里:本机角色(独立 / 主设备 / 从设备)+ 下面每个节点勾选 = 从设备、「设为主设备」= 那台当主、本机转从 */
+      card.append(h('div',{class:'rolebox'},h('div',{class:'ps'},T('本机角色','This device')),roleC,tip));
+      const onl=(peers||[]).filter(p=>p.online!==false);
+      if(!peers)card.append(h('div',{class:'ps',style:'margin-top:8px'},T('正在扫描…','Scanning…')));
+      else if(!onl.length)card.append(h('div',{class:'ps',style:'margin-top:8px'},T('还没发现别的控制器(需与本机接同一路由器)。','No other controllers found yet (must be on the same router).')));
+      else onl.forEach(p=>{const chk=p.role===2;card.append(h('div',{class:'wnode'},h('button',{class:'pchk'+(chk?' on':''),onclick:()=>setPeer(p,chk?0:2)},chk?'✓':''),h('span',{class:'sdot',style:p.on?'background:var(--green)':''}),h('span',{class:'wname'},(p.name||p.ip)+'  '+p.ip),h('span',{class:'wlat'},p.leds+T(' 灯',' LEDs')+(p.role===1?T(' · 主设备',' · Primary'):'')),p.role===1?null:h('button',{class:'lk',style:'font-size:9.5px;flex:none',onclick:async()=>{await setPeer(p,1);setRoleTo(2);}},T('设为主设备','Make primary'))));});
+      if(role!==1)card.append(h('div',{class:'hint',style:'margin:8px 0 0;color:#f0c04a'},T('本机还不是主设备,勾选节点时会自动设为主设备。','This device is not the primary yet; it becomes the primary when you check a node.')));
+      routeBox.append(card);
+    }};
+  onPeers=()=>{if(!isDec&&W.hubRoute===1)drawRoute();};
+  if(!isDec)loadOuts();
+  const tabs=h('div',{class:'tabs'},h('button',{class:'tab on'},T('HUB 控制','HUB Control')),h('button',{class:'tab',onclick:()=>go('/')},T('自己控制','Self Control')));
+  root.append(Head(T('HUB 控制','HUB Control'),(INFO.name||'')+(isDec?T(' · 协议解析 · 分路 / WiFi 同步',' · Protocol Parsing · Split / WiFi Sync'):T(' · 分路 / WiFi 同步 · 局域网主从',' · Split / WiFi Sync · LAN primary/follower'))),WifiBar(),tabs,
+    msg,
+    h('div',{class:'blk'},T('网络','Network')),net);
+  drawStripType();root.append(routeBox,stripTypeBox);   // STRIP:分路 / WiFi 同步 + 灯带型号;没有测试模式
+  root.append(h('div',{style:'display:flex;align-items:center;justify-content:space-between;margin-top:12px'},h('div',{class:'sect',style:'margin:0'},T('局域网内的控制器(主 / 从)','Controllers on this LAN (primary / follower)'),cnt),h('button',{class:'lk',style:'color:var(--acct);font-size:10.5px',onclick:()=>{peers=null;drawPeers();scan(true);}},T('↻ 重新扫描','↻ Rescan'))),
+    note,list,...(isDec?[testBox]:[]),
+    h('div',{class:'blk',style:'margin-top:12px'},T('怎么用','How to use')),h('div',{class:'card'},h('div',{class:'hint',style:'margin:0'},T('1. 所有控制器配网到同一个路由器。','1. Put every controller on the same router.'),h('br'),T('2. 选一台设为“主设备 (HUB)”,其余在列表里点“设为从设备”。','2. Set one device to Host (HUB) and tap Make Follower on the rest in the list.'),h('br'),T('3. 之后手机 / 网页只需连主设备:开关 / 亮度 / 模式 / 颜色 / 整组指令都会同步到从设备;Studio 里“按设备导出”的切片放到各机同一槽位,主设备播放时自动拼成整幅画面。','3. After that the phone or this page only talks to the host: power, brightness, mode, color and group commands all reach the followers. Put the per-device slices exported from Studio in the same slot on each device, and the host lines them up into one picture on playback.'),h('br'),T('4. “单独控制”就是设备首页,只控制本机(独立模式)。','4. Single control is just the device home page, which controls this device only (standalone mode).'))));
+  scan(true);
+  const t=setInterval(()=>{loadInfo().then(drawNet);scan(false);},10000);
+  return ()=>{clearInterval(t);};
+};
+
+/* ============ 定时设置(open_strip SchedulePage 布局;保存走 DP 0x09,对时走 DP 0x08) ============ */
+PAGES['/schedule']=async(root)=>{
+  const s=W.sched||{on:'18:00',off:'23:30',en:true};
+  const onI=h('input',{type:'time',value:s.on}),offI=h('input',{type:'time',value:s.off});
+  const enC=Chips([{v:true,label:T('启用','Enabled')},{v:false,label:T('停用','Disabled')}],!!s.en,(v)=>{s.en=v;});
+  const btn=bigBtn(T('保存定时','Save Schedule'),async()=>{const [oh,om]=onI.value.split(':').map(Number),[fh,fm]=offI.value.split(':').map(Number);s.on=onI.value;s.off=offI.value;W.sched=s;saveW();
+    const ok=await send(async()=>{await Dps.syncTime();await Dps.schedule([{id:0,enable:s.en?1:0,repeatMask:0x7F,onH:oh|0,onM:om|0,offH:fh|0,offM:fm|0}]);});
+    if(ok){btn.textContent=T('已保存 ✓','Saved ✓');btn.className='big ok';setTimeout(()=>{btn.textContent=T('保存定时','Save Schedule');btn.className='big';},1200);}});
+  root.append(Head(T('定时设置','Schedules'),T('每天到点自动开/关 · DP 0x09','Turns on and off at set times each day · DP 0x09')),h('div',{class:'sch'},h('span',null,T('开启时间','On time')),onI),h('div',{class:'sch'},h('span',null,T('关闭时间','Off time')),offI),h('div',{class:'sch'},h('span',null,T('状态','Status')),enC),btn,
+    h('div',{class:'hint'},T('定时依赖设备时钟:每次打开本页/保存时会自动把手机时间同步给设备(DP 0x08);设备断电重启后需再次打开 App 或本页对时。','Schedules rely on the device clock. Opening this page or saving syncs your phone time to the device (DP 0x08). After a power cycle, open the app or this page again to re-sync.')));
+};
+
+/* ---------------- 启动 ---------------- */
+(async()=>{await Promise.all([loadInfo(),loadW(),loadWiring()]);try{Dps.syncTime();}catch(e){}route();})();
+</script></body></html>

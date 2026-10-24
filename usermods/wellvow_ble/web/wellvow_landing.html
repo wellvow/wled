@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#10151c"><title>WELLVOW</title><style>
+:root{--bg:#10151c;--card:#171d26;--card2:#232b36;--text:#f2f4f7;--sub:#8b93a0;--p:#716cff;--green:#54d39a}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -20%,#242b56,transparent 42%),var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,"PingFang SC",sans-serif;min-height:100vh}.app{max-width:520px;margin:auto;padding:calc(40px + env(safe-area-inset-top)) 16px 40px}header{display:flex;align-items:center;gap:14px;margin-bottom:28px}.logo{width:52px;height:52px;border-radius:17px;background:linear-gradient(145deg,#857cff,#4b4fd6);display:grid;place-items:center;font-weight:900;font-size:22px;box-shadow:0 12px 30px #4b4fd655}h1{font-size:22px;margin:0}.muted{color:var(--sub);font-size:12px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:5px}a.card{display:block;text-decoration:none;color:var(--text);background:linear-gradient(145deg,#1d2430,#141a22);border:1px solid #ffffff0d;border-radius:22px;padding:20px;box-shadow:0 15px 40px #0004;margin-bottom:14px}a.card b{display:block;font-size:17px;margin-bottom:4px}a.card small{color:var(--sub)}a.card.primary{background:linear-gradient(135deg,#8179ff,#575bd5)}a.card.primary small{color:#e8e6ff}.foot{margin-top:24px;text-align:center}.foot a{color:#7f9cf0;font-size:12px;margin:0 8px}
+</style></head><body><main class="app"><header><div class="logo">W</div><div><h1>WELLVOW STRIP</h1><div class="muted"><i class="dot"></i><span id="conn"></span></div></div></header>
+<a class="card primary" href="/wellvow"><b id="t1"></b><small id="s1"></small></a>
+<a class="card" href="/wled"><b id="t2"></b><small id="s2"></small></a>
+<div class="foot"><a href="/settings" id="f1"></a><a href="/settings/leds" id="f2"></a><a href="/update" id="f3"></a></div></main>
+<script>
+const ZH = /^zh/i.test((navigator.languages && navigator.languages[0]) || navigator.language || '');
+const T = (zh, en) => (ZH ? zh : en);
+document.documentElement.lang = ZH ? 'zh-CN' : 'en';
+const S=(id,t)=>{document.getElementById(id).textContent=t;};
+S('conn',T('正在读取设备信息…','Reading device info…'));
+S('t1',T('WELLVOW 简易控制','WELLVOW Control'));
+S('s1',T('颜色 · 效果 · 场景 · Wi‑Fi 配网 · 线序校准','Color · Effects · Scenes · Wi-Fi setup · Color order'));
+S('t2',T('WLED 完整界面','Full WLED UI'));
+S('s2',T('分段、调色板、高级效果参数与全部设置','Segments, palettes, advanced effect parameters and all settings'));
+S('f1',T('设置','Settings'));S('f2',T('灯带与 GPIO','LEDs & GPIO'));S('f3',T('升级固件','Update Firmware'));
+fetch('/json/info',{cache:'no-store'}).then(r=>r.json()).then(i=>{S('conn',(i.name||'WLED')+' · '+(i.ver||'')+' · '+(i.ip||''))}).catch(()=>{S('conn',T('设备在线','Device online'))});
+</script></body></html>

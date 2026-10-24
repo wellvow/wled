@@ -1,0 +1,27 @@
+.cache
+.clang-format
+.direnv
+.DS_Store
+.idea
+.pio
+.pioenvs
+.piolibdeps
+.vscode
+
+esp01-update.sh
+replace_fs.py
+wled-update.sh
+
+/build_output/
+/node_modules/
+/logs/
+
+/wled00/extLibs
+/wled00/LittleFS
+/wled00/my_config.h
+/wled00/Release
+/wled00/wled00.ino.cpp
+/wled00/html_*.h
+
+# WELLVOW: 手写的落地页/简易控制页头文件,不是 cdata.js 产物,需要入库
+!/wled00/html_wellvow.h
