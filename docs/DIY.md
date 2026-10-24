@@ -42,6 +42,5 @@ Building without the flag stops with `#error` on purpose.
 
 ## Notes
 - The web console (`http://<controller-ip>/wellvow`), Wi‑Fi setup, groups, schedules, Studio uploads and host/follower sync are all included.
-- HUB features (signal capture and distribution) are not part of this repository.
 - To regenerate the embedded web console after editing `usermods/wellvow_ble/web/wellvow_ctrl.html`, run `python3 usermods/wellvow_ble/web/gen_html.py`.
 - Firmware base: WLED 0.15.0-b6, MIT license. Keep the `LICENSE` file when you redistribute.

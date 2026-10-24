@@ -18,7 +18,6 @@ Step-by-step guide: [docs/DIY.md](docs/DIY.md).
 
 ## What is included
 - Bluetooth control, Wi‑Fi setup, web console, groups, schedules, Studio uploads, host/follower sync.
-- Not included: HUB (signal capture / distribution) features of the WELLVOW HUB product line.
 
 ## Layout
 - `usermods/wellvow_ble/wellvow_ble.h` – the usermod (BLE, HTTP API, scenes, defaults)
