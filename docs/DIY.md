@@ -40,6 +40,10 @@ Building without the flag stops with `#error` on purpose.
 2. Reconnect to the controller in the app (no need to delete it). When it connects, you are done.
 3. If the app cannot connect: the code is not this controller's code, or it was copied wrong (`WV1-` plus 32 hex characters).
 
+## Board note: N4 vs S3
+- **WLED-STRIP-W705 / H706 (ESP32-MINI-1-N4, classic ESP32)**: limited RAM. Use this repository (WLED 0.15.0-b6). Do not build these boards on WLED 16.x: with Bluetooth on and a longer strip (tested with 288 LEDs) the device freezes and reboots in a loop and cannot be used.
+- **S3 version (ESP32-S3-WROOM-1-N8R2, with PSRAM)**: supports 288 LEDs with Bluetooth on, also on WLED 16.x (tested 2026-10-25, 10 minutes without a single reset).
+
 ## Notes
 - The web console (`http://<controller-ip>/wellvow`), Wi‑Fi setup, groups, schedules, Studio uploads and host/follower sync are all included.
 - To regenerate the embedded web console after editing `usermods/wellvow_ble/web/wellvow_ctrl.html`, run `python3 usermods/wellvow_ble/web/gen_html.py`.

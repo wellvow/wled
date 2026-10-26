@@ -19,6 +19,10 @@ Step-by-step guide: [docs/DIY.md](docs/DIY.md).
 ## What is included
 - Bluetooth control, Wi‑Fi setup, web console, groups, schedules, Studio uploads, host/follower sync.
 
+## Board note: N4 vs S3
+- **WLED-STRIP-W705 / H706 (ESP32-MINI-1-N4, classic ESP32)**: limited RAM. Use this repository (WLED 0.15.0-b6). Do not build these boards on WLED 16.x: with Bluetooth on and a longer strip (tested with 288 LEDs) the device freezes and reboots in a loop and cannot be used.
+- **S3 version (ESP32-S3-WROOM-1-N8R2, with PSRAM)**: supports 288 LEDs with Bluetooth on, also on WLED 16.x (tested 2026-10-25, 10 minutes without a single reset).
+
 ## Layout
 - `usermods/wellvow_ble/wellvow_ble.h` – the usermod (BLE, HTTP API, scenes, defaults)
 - `usermods/wellvow_ble/wellvow_board.h` – board pins (N4 / S3)
